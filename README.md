@@ -21,6 +21,8 @@ Thank you!
 0. Linux USB HID Interfacing in Userspace - William Light
 0. Empathetic communication: why vulnerability is the key to collaboration - Sharon Steed
 0. Techniques for writing concurrent applications with asynchronous I/O - Matthieu Wipliez
+0. [Microsoft talk]()
+0. [Mozilla talk]()
 0. **Keynote**: Science tools borrow Rust - Hanneli Tavante
 
 ### Sunday
