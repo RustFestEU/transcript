@@ -362,7 +362,7 @@ So now, we have another stack frame that points to the val.
 And another reference to the cell.
 `rc_2`.
 Then we call set with our Val so we move the pointer so the cell points to Val on the stack frame.
-We pop the stack once and we ask hey, RC1, what do you hold?
+We pop the stack once and we ask hey, `rc_1`, what do you hold?
 Oh.
 I told 13 much that's the first line and we have a pointer.
 This is the kind of bug that Rust is supposed to stop.
