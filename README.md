@@ -12,18 +12,18 @@ Thank you!
 0. [Ethcore talk](talks/01-ethcore.md)
 0. [1aim talk](talks/02-1aim.md)
 0. **Keynote**: [Subtyping in Rust and Clarke's Third Law](talks/03-felix-klock.md) - Felix Klock
-0. Learning to Love the Unfamiliar - Brian Pearce
-0. Panopticon - A Libre Cross-Platform Disassembler in Rust - Kai Michaelis
-0. Sensors, Servos, and Signals with Rust - Tim Cameron Ryan
-0. intermezzOS: a teaching operating system - Ashley Williams
-0. Teaching myself Rust through the medium of coordinate system transforms and FFI - Stephan Hügel
-0. Why you'd be better off using QuickCheck when porting to Rust - Martin Hellspong
-0. Linux USB HID Interfacing in Userspace - William Light
-0. Empathetic communication: why vulnerability is the key to collaboration - Sharon Steed
-0. Techniques for writing concurrent applications with asynchronous I/O - Matthieu Wipliez
-0. [Microsoft talk]()
-0. [Mozilla talk]()
-0. **Keynote**: Science tools borrow Rust - Hanneli Tavante
+0. [Learning to Love the Unfamiliar](talks/04-brian-pearce.md) - Brian Pearce
+0. [Panopticon - A Libre Cross-Platform Disassembler in Rust](talks/05-kai-michaelis.md) - Kai Michaelis
+0. [Sensors, Servos, and Signals with Rust](talks/06-tim-cameron-ryan.md) - Tim Cameron Ryan
+0. [intermezzOS: a teaching operating system](talks/07-ashley-williams.md) - Ashley Williams
+0. [Teaching myself Rust through the medium of coordinate system transforms and FFI](talks/08-stephan-hugel.md) - Stephan Hügel
+0. [Why you'd be better off using QuickCheck when porting to Rust](talks/09-martin-hellspong.md) - Martin Hellspong
+0. [Linux USB HID Interfacing in Userspace](talks/10-william-light.md) - William Light
+0. [Empathetic communication: why vulnerability is the key to collaboration](talks/11-sharon-steed.md) - Sharon Steed
+0. [Techniques for writing concurrent applications with asynchronous I/O](talks/12-matthieu-wipliez.md) - Matthieu Wipliez
+0. [Microsoft talk](talks/13-microsoft.md)
+0. [Mozilla talk](talks/14-mozilla.md)
+0. **Keynote**: [Science tools borrow Rust](talks/15-hanneli-tavante.md) - Hanneli Tavante
 
 ### Sunday
 0. Hobby-oriented programming - Sonja Heinen
