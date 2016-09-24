@@ -219,7 +219,8 @@ And there's a `num_divisors` function want it's going to give the number of devi
 I can give you some example inputs and results for that function.
 The point is, if you try to point to divisors, you get `num_divisors` to 2.3 and there doesn't make sense.
 I can't talk about the number of divisors a sensible way so the point here, definitely, no matter what, there's another example.
-If I have an example of real to int and I want one that takes reals to real, does that not work? So in this case, this works out.
+If I have an example of real to int and I want one that takes reals to real, does that not work?
+So in this case, this works out.
 Something where you can have a function and pass it to something that wants reals to reals.
 I give an example of passation ceiling function.
 This modified ceiling function and it all works out, you plug the types together.
@@ -276,7 +277,8 @@ This is what the type theorists will write down.
 Co Senator and contra eventer, with respect to archetype.
 And again, this is me repeating myself.
 The idea is the caller can feed in a specific Y and get out more general X and it's more liberal N providing a function that request accept any at all, generalizing the potential inputs and narrowing the potential outputs as to why if you want to have Y arrow C and X arrow -- think about that for a little bit.
-Now, we might ask the question, does Rust have these properties and it kind of variance property I've been describing? We can try plugging in those types I just showed at the very beginning.
+Now, we might ask the question, does Rust have these properties and it kind of variance property I've been describing?
+We can try plugging in those types I just showed at the very beginning.
 Here, I have a reference to a vector and integer, and I showed how on the left-hand side of this picture, how these things are compatible.
 But if I try to generalize that to this Senator type stuff N terms of functions, and make a function type that rather than vector and pass it to a thing that want ace function that returns an integer slice T turns out this doesn't compile.
 Rust compiler rejects this there's something funny going on here.
