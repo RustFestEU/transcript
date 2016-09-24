@@ -207,18 +207,18 @@ Is or a function that takes int to int.
 If I have a function that takes integers to integers, and I want to pass it to a place that takes reals to real estate.
 Is that going to work? It won't work because the integer-to-integer function, it assumes it's input type is always integer.
 So you're going to break things you pass to clients, that want a real function because they might pass in a real number.
-So here, I have an example where we have a twice function that applies its first argument twice to some input.
-And there's a none devisers function want it's going to givity number of devisers for tainteger.
+So here, I have an example where we have a `twice` function that applies its first argument twice to some input.
+And there's a `num_divisors` function want it's going to give the number of devisers for that integer.
 I can give you some example inputs and results for that function.
-The point is, if you try to point to deviceers, you get non-devisers to to.3 and there doesn't make sense.
-I can't talk about the number of wise nears a sensible way so the point here, definitely, no matter what, there's another example.
+The point is, if you try to point to divisors, you get `num_divisors` to 2.3 and there doesn't make sense.
+I can't talk about the number of divisors a sensible way so the point here, definitely, no matter what, there's another example.
 If I have an example of real to int and I want one that takes reals to real, does that not work? So in this case, this works out.
 Something where you can have a function and pass it to something that wants reals to reals.
 I give an example of passation ceiling function.
 This modified ceiling function and it all works out, you plug the types together.
 And there's no errors along the way.
 And this makes sense.
-If we ignore about runtime representations mathematically, this seeps like it makes sense.
+If we ignore about runtime representations mathematically, this seems like it makes sense.
 The client is saying, I handle any real number.
 So if you give me something I'll give a real number and a.m.v I'm going to handle any real number back if I felt give a function that is guaranteed to turn reals into integers, that's fine.
 The client is able to handle integers.
@@ -230,21 +230,21 @@ You can encode this by vague class real, and method.
 You then have a subclass int.
 Can you have methods, Java compiler, compile this is just fine.
 And actually, if I want to encode this more accurate.
-Have fun, that turns real to reals and but actually, the interesting thing here is that sun didn't really originally support this code T.
+Have fun, that turns real to reals and but actually, the interesting thing here is that Sun didn't really originally support this code T.
 only add it in 2004 with covariant return types.
 We'll talk about that in a little bit.
 
 
 
-So to try to reason about these kinds of relationships, to be able to argue why int-sparrow int and int arrow real are not subtypes but these, are.
+So to try to reason about these kinds of relationships, to be able to argue why int-arrow-int and int-arrow-real are not subtypes but these, are.
 Type theorists use deduction rules.
-The right of recondition and opposed condition with a line between them.
+They write a precondition and post-condition with a line between them.
 So, for example, of one of these would be, hey, if A is true and B is true, then the statement A and B is also true.
 That's the kind of reasoning you can use.
 So a rule for function values is if I can prove Y, the subtype of X.
-I should be able to prove A arrow Y is a subtype of A rareo X.
-The A arrow is coSenator with respect to its return type.
-If int say subtype of real, then real arrow i neigh t say subtype of real arrow real.
+I should be able to prove A arrow Y is a subtype of A arrow X.
+The A arrow is covariant with respect to its return type.
+If int is a subtype of real, then real-arrow-int is a subtype of real-arrow-real.
 Get out an X component functions.
 It's safe to narrow it and say, I'm going to give you you a Y.
 And they can handle Y's.
@@ -252,7 +252,7 @@ And Y say subtext of X.
 
 
 
-What about if I have a real arrow int and I want a function that takes ints to ints.
+What about if I have a real-arrow-int and I want a function that takes ints to ints.
 The client isation, I will feed integer into the function.
 If you give me something that can handle reals as well.
 
@@ -267,8 +267,8 @@ This is what the type theorists will write down.
 
 Co Senator and contra eventer, with respect to archetype.
 And again, this is me repeating myself.
-The idea is the caller can feed in a specific day and get out more general X and it's more liberal N providing a function that request accept any at all, generalizing the potential inputs and narrowing the potential outputs as to why if you want to have Y arrow C and X arrow -- think about that for a little bit.
-Now, we might ask the question, does Rust have thesis properties and it kind of variance property I've been describing? We can try plugging in those types I just showed at the very beginning.
+The idea is the caller can feed in a specific Y and get out more general X and it's more liberal N providing a function that request accept any at all, generalizing the potential inputs and narrowing the potential outputs as to why if you want to have Y arrow C and X arrow -- think about that for a little bit.
+Now, we might ask the question, does Rust have these properties and it kind of variance property I've been describing? We can try plugging in those types I just showed at the very beginning.
 Here, I have a reference to a vector and integer, and I showed how on the left-hand side of this picture, how these things are compatible.
 But if I try to generalize that to this Senator type stuff N terms of functions, and make a function type that rather than vector and pass it to a thing that want ace function that returns an integer slice T turns out this doesn't compile.
 Rust compiler rejects this there's something funny going on here.
@@ -296,7 +296,7 @@ So Simon made his own version of cell.
 When he did that, the problem within away.
 So let's try this ourselves.
 Let's make the standard library cell or cells.
-Here, we have my cell.
+Here, we have MyCell.
 It has some type T.
 Stores T.
 Embedded directly.
@@ -339,18 +339,18 @@ That's a sign, something is very wrong.
 I want to explain how this is happening.
 This is the same code but I reduce today a bit to fit fit on the slide.
 We're going to create this my cell thing and call it step 1.
-We're creatation reference, with the initial let cell = call, with a reference to X next line, we're going to call step 1 so there's a new stock frame now.
-Below it on the stock and it passes in a reference to the cell.
+We're creatation reference, with the initial let cell = call, with a reference to X next line, we're going to call step 1 so there's a new stack frame now.
+Below it on the stack and it passes in a reference to the cell.
 So took a reference to the cell.
-That's what RC1S.
+That's what `r_c1` is.
 and there's a reference to the cell itself as well as value we create on the stack frame.
 The value, 13.
 Then step 2 with a reference to the value.
 So now, we have another stack frame that points to the val.
 And another reference to the cell.
-RC2.
+`rc_2`.
 Then we call set with our Val so we move the pointer so the cell points to Val on the stack frame.
-We pop the stack once and we ask hey, RC1, what do you hold? Oh.
+We pop the stack once and we ask hey, `rc_1`, what do you hold? Oh.
 I told 13 much that's the first line and we have a pointer.
 This is the kind of bug that Rust is supposed to stop.
 We're not supposed to have daily pointers anymore.
