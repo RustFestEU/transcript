@@ -26,8 +26,8 @@ Thank you!
 0. **Keynote**: [Science tools borrow Rust](talks/15-hanneli-tavante.md) - Hanneli Tavante
 
 ### Sunday
-0. Hobby-oriented programming - Sonja Heinen
-0. The Rust That Could Have Been - Marijn Haverbeke
+0. [Hobby-oriented programming](talks/16-sonja-heinen.md) - Sonja Heinen
+0. [The Rust That Could Have Been](talks/17-marijn-haverbeke.md) - Marijn Haverbeke
 
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
