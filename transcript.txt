@@ -68,13 +68,13 @@ We have two sponsors, one is key task and the other is Thought Works we have ven
 
 [Applause].
 
-<< 1-ethcore.md >>
+<< 01-ethcore.md >>
 
 [Applause].
 
 >> MODERATOR: So next, we have a quick talk from YAN.
 
-<< 2-1aim.md >>
+<< 02-1aim.md >>
 
 [Applause].
 
@@ -94,7 +94,7 @@ So next, we have our first keynote, our speaker is somebody to get very excited 
 
 [Applause].
 
-<< 3-felix-klock.md >>
+<< 03-felix-klock.md >>
 
 [Applause].
 
@@ -121,68 +121,7 @@ Hello, hello. Welcome back from the break. We're going to get started once again
 [Applause].
 
 
-
->> BRIAN PEARCE: I'm excited to be in Germany and Berlin for the first time. I showed up a few days ago and I've had some time to get into some of the food, drink and history F. anyone has a recommendation of places to G. I've got another week here, so catch me in the hallway track. I'd love to hear what you suggest. I'm also flying out to Switzerland. Switzerland has a lot of things relevant to my interest. Watches, chocolate and I'm sure it's complete he undeniable that their flag is a bug plus.
-
-[Laughter]
-
-Now we're here to talk about learning to love the unfamiliar. And what this is, is, it's kind of journey I had while learning Rusts. It's stuff they ran into when I was unfamiliar with compiled languages. It's use annuals and concept that is were unfamiliar to me, coming from languages like Ruby or Java script or python. In the next 30 minutes, what I want to do is I want to help introduce people who are new to language. To these concepts. That way when, they hit them for the first time, it's not going to be as big of a hurdle to get over. I want to help you kind of ease into that a little bit nicer. My name is Brian Pearce. Thank you for being with me this morning.
-
-
-
-According to the Rusts survac 2016, 1 in 4 people being believe that Rusts has a steep learning curve. I don't think there are too many people that are going to argue that.
-
-There are a lot of new concepts, depending on where you're coming from. Concepts that will just be new to you. Submitted that it takes three weeks to get over this hump. With that if mind, let's talk a little about frustration. Within the fist three weeks, there are things that can be barriers for people. Poor documentation or maybe the community access isn't as open or friendly as Rusts community actually is. When you hit some of these bumps, you just might not know what to do about T. don't know where to go, who to turn to. You're potentially trying to achieve something you don't know how to do in another language, and you just can't work it out here. And that gets incredibly frustrating. When you first decide to pick up a new language, have you something in mind. I want to build this or I want to do this thing I know how to do in another language. Have you a single purpose you want to accomplish, when you can't accomplish T it's frustrated.
-
-
-
-So let's take a look at an example. When I first started learning Rusts want I wanted to port a little bit of code I had somewhere else, into Rusts. So we're anything to look at a little bit of python code. So what have you here are two function that is read in a time file and process the lines of that file, send it to a process funk, check to see if the line takes a pon. If it contains a PON, you should tell a friend. Highlighted, if highlighted, the key points in these two functions, the first highlighted lines we're going to opt file. Second highlighted line,ityerrates over the lines of that file. Cross choke see if it's a pun. Tell a friend. I want to port this over to Rusts. So let's look at what that looks like. So it's not too different. Again, the key areas are highlighted and they're probably much exactly the same. You have a file open call want you have a loop to iterate over the lines of the file and pass throughout process funk and check to see if it's a pun and again, tell a friend. Key points highlighted other it's very similar. It's almost what you might expect if you're coming from another language and trying to put something together. The thing I begin to notice when I started writing more Rust were these. The unwrap calls. I didn't know what they were for. I knew the compiler told them, they had to get the values that I wanted to get. I didn't know if it was boilerplate. I didn't know what was going on.
-
-And I'd look at this time a file after a couple hours work and be like what, is this? I don't understand understand it. My code would have looked a lot nicer if these were inn here and that was frustrated.
-
-
-
-I want to take a bit of a dive into why that is there, why we end up seeing it in a lot of places. So Rust doesn't claim to have maybes but it does have maybe types. Maybe is a pattern and Rust implements T via option and result. So we're going to look at option first. And how option works, it's an enum that contains some or none. It contains something or nothing. And when I first read that, that didn't seem incredibly helpful. I'm callation function, I thought every time I call a finger, I'm going to get something, like the value I expected or a runtime function. But I never expected to get nothing so I never really understand this as a concept.
-
-
-
-I don't want to just try to entertain T. I want to talk about where it should be used and Y. so on the screen, I've got a ring. The string contains the character 7 and we're going to convert to do an integer with a Ruby Y. We get a 7. Pretty much way expect. What happens if we do it within Emoji. If I call 2Ion an Emoji in Ruby, does anyone have any clue what's going to happen? A nil in anyone else? 0 zero. Exception. You get 0. Which is not what I was expecting. Looked like a credit card number 2I. You would get what is represented as a credit card number. A malformed what, do you think you're going to get this time? 4,520, which again, is just not what I was expecting. So now, let's look at that in Rust. So we have a character, 7. Again, the room has a lot people who have been doing Rusts for a long time. What are we going to get here? We're going to get a sum of seven. If we do it with know Emoji. What do you think we're going to get here? Perfect. So we're going to get a none. Same thing with credit card number. Get a whole number. We're going to settle that number. If we did it with a malformed credit card number, we would get none. So this is interesting. It's interesting because we're getting a different response or result when the conversion doesn't work. As opposed to getting kind of like a mangled conversion that you don't necessarily know what to do with afterwards which is nice, but the thing S this isn't what I was expecting still. When I call 2 digit on a 7, I was expecting to get a 7. What I have is a sum of 7. And that's not a 7. I can't do arithmetic with a sump 7. Depending on how you understand that sent. See let's take this back around again. So we now know when we call [indiscernible] we get a value of 7. To get an actual value of 7. We have to call [indiscernible]. This gives us the 7 value we were originally expecting and this is I didn't had to litter my code with unwrap, just to get value I was expenninging to get. Coming from another language accident I'm not used to some things or nothings. I'm used to get the value they expect from my function. If we do it with the Emoji here, we get a pick. So what this means is maybe that we are initially getting, the maybe that we are getting, was there to protect us. If we get unwap, the code is not better than when we were getting values that we weren't expecting, bad one versions and things like that. The unwrap will only work on positive response from the function, assuming that actually got a value I was getting the sum or none. What I wanted was the value. But now, I can at least see where some or none becomes important. We're going to look at another example just to drive it home.
-
-
-
-So here, I have a Ruby application. It asks user at the command line to enter a number. It uses the two integer to convert the string into a number. Checks to see if the number is a number and if it is, bring the right number. If it's not, we'll say that wasn't a number. But as we have seen in the previous slides, 2Iand Ruby will convert everything to a number. Which means, this is actually dead code. This will never happen. You will always have a number.
-
-
-
-In Rust I would have originally written it something like this and called it the unwrap. But now, we know that's bad and wean why that's bad. And wean what we actually get is a maybe request we call a two digit. I can begin changing this to something that looks a little more like this.
-
-I can take the maybe and now, I can check to see if that maybe is some, did I get the conversion or is the maybe none? That's nice. The maybe is guaranteeing values for us. One thing I want to point out here, this kind of if else condition really isn'tityio mattic Rusts, in a case like this we would use pattern matching. So I'm going to change that over to pattern matching really quick. Pattern matching in Rusts is exhaustive. Have you to count for every case and it's incredibly powerful and used in a lot places in Rusts. That's as much I'm going to say on pattern matching. I want to point that out in the slide. So in the beginning, when I first started writing Rust. We saw all of those unwraps. They were frustrating because I had to put them there, and I didn't understand why. Now they can see why and see what they bring, value wise to me, it's not so frustrated anymore. It's incredibly beneficial, and I can start using that. Not just in Rust, but can I begin using that type of pattern in other language that is I write.
-
-
-
-So we're going to talk a little bit about Err handling. In other languages, there's time that is I write code, I just expects something to go long. I'm going to call a funk and, you know, maybe I'm going to get a time-out from someone's API, or a value that I wasn't expecting. In a lot of the languages I normally write, I use something like a rescue. Try and catch. Rescue crew. We're going to look at those real quick. So this is Java's try and catch. If you're not familiar with Java how it works, is if you have code that you want to execute, that you're worry body, throwing exceptions, you put it between the try and the catch. If the code throws an exception, then the between the catch and the bottom parentheses, becomes executed. In Ruby, we have begin rescue crew end. It works very similarly. We begin on rescues executed. If something goes wrong, between rescue and executed. Python's very similar. So the next session S what do we have in Rusts. I I'm writing code. I want to try and catch an exception so I'm going to hit Google and look at stack over flow. What am I anything to find? I'm going to find the try macro. Now, this looks kind of nice. It's small, simple, but approximately 50% of what every, language had. Where Do I catch the errors in I don't understand what tow do with this. So let's talk about frustration again. I know what I need to achieve. I know how to achieve it in another language. I do a quick Google search. This is what I get and I just don't seat direct comparison. It doesn't immediately make sense what I need to do with this. And it didn't really begin to make sense until I looked at combining it with the result, maybe, which was the other maybe type I mentioned. So let's take a quick look at result before I come back to how to use try.
-
-
-
-So much like the option, which returns some or none, the result returns okay. If you get an okay. You know the functions that you called was successful. If you get an error. Something went wrong.
-
-We're I know something went wrong when I opt file. If I want to do this in Rust. I'm going to look at our readfile function again from Rusts and there's a few things here I'm going to change. I'm going to give myself a little space. Going to highlight the two place that is I'm going to chairman first. First one is going to be the method signature. Second one is going to be where I'm actually calling file open. Method silt has a result type. And result type is a result. That lets, or that says that now something somewhere in this function could potentially go wrong, and I am going to return this result type, maybe. So now, we're going to look at tri. Tri is the second thing. Tri macro around our file open call. And what tri does for us, is it will execute the file open function and if something goes wrong, tell actually capture that error, put it into an error type or an error result type and then return an error funk immediately. So it's going to capture the error. It in the proper too much. And return funk. Now that lets the caller of this function decide what to do with it at that point. Call a file, something went wrong, then can you begin to pattern match on that, much like we did on the option type. And can you decide what you want to do with it.
-
-
-
-You can begin mapping the error. So you can cane it on to the initial call. And if something goes wrong, can you turn it into something else. Instead of just taking the panic that file open gave you, you could add text to it. You could turn it especially a custom type. --
-
-
-
-Last thing that you need to D. now that we are returnation result, under the assumption that everything actually went well, you need to return an okay. An okay is the other type in the result and okay says that everything successfully went okay. Like, your function did exactly what it expected you to, and now, can you return that. So now, we're going to talk a little bit about testing. Testing in Rust for me, was kind of like a bit of an up and down, it was a roller coaster. Coming from languages that have a lot test frameworks and that kind of thing. I, again, had expectations, I had how I knew how to do things in other languages, and I wanted to just like, drop into Rusts and do exactly those things, and expects it to work. And unfortunately, it didn't quite work like that. So some of some of the things for me, as opposed to Ruby or python or Java script, where a lot people write their test in a test directly, Rust lets you write every test in line. So can you define the function in Rust. In whatever file you're writing in. And immediately use the test macro that's highlighted here and define the test. And that works. It's again, not necessarily idiomatic Rust a lot of people would prefer to put it in the module. And change the sim phantom dataics how they organize that file. And can you do this. It's kind of nice, actually, once I got over the fact that I'm not doing it like I used to, I kind of like this now. When I'm looking for the test of a particular function that's modifying, I just know it's in that file, as opposed to having to search through the project and finding where those things are. Rust being one of the first compiled languages I dealt with, the other next thing that I didn't really realize at first was all of the test code, that goes in the files, and my source files is not going to be compiled in the end. The compiler strips a lot of stuff out so you don't have to worry about it. So now that we know, we don't have to write our unit tests inside the test directory, that's great. But Brian, what's the deal with this test directory -- this is where can you write your integration tests. And how the integration tests work in Rust is every file in your test directory will get compiled into its own crate. Which is why I tried to write my tests, I had a lot hair pulling and didn't really know what was going on there. But how it works S every file in here gets compiled into its own crate. So if you've written a library, what you want to do is include your library into that crate. Your test file is now consumer of your li library. It's where anyone else that's going to pull in your library would be. So can you test it from that point. You only get to test what's made publicly available. Which is nice. It's like better, true, black box integration test. But again, it's not necessarily what I expected. Some of the, nice things about Rust testing is the random order testing by default want a lot of languages have that built into their frameworks now, that didn't initially run with those things beforehand. So testing says all of your tests, instead of running in a linear process, they're just going to get randomized. Your last one will get run first and so on and so forth. Which is great. It's great this dedefaults where the test you run first, runs second.
-
-
-
-Another thing Rust has is parallel testing and parallel testing sounds great at first. But let's talk about frustration. So if I've got some code in Ruby and I'm going to explain this the top function does a little bit of setup. It creates a directory that I'm going to do some writing to in my tests. The terdown clears up that directory completely, and the tests themselves, actually just read a file, and assert to see whether weather that file exists. So it's not doing too much, but there's a lot writing. And in Ruby, these tests pass everything single time. If import this over to Rust. I'm not use anything particular framework. So the setup is specifically in my test. Set up does the same thing. Makes sure that the directory exists, the teardown makes sure the directory is clear and then the test, actually just writes a file and asserts to see if a file exists. If I have 10 tests like this. I'm going to say 8 out of 10 of them are going to fail every single time, and they're going to fail differently. It's not going to be consistent which once will fail bithey're going to continue failing. When I started learning Rust. I legitimately ran into this problem. This exact problem and more hair was pulled. I was sit in a hotel in Portland, like, trying to blame it on everything I could, run into code and new VM's. The code works fine in Ruby it's going to work fine here. And the problem leer is parallel testing is that in a ways where you're doing a lot of I.O. or sharing resource, you're going to run into problems like this. The problems that actually are occurring, your fist test has started to run. It's make sure the directory exist. Written its file, done his ashes sertion, to make sure the file exists and the second test comes along. Make sure the directory is there. And the assertion, fist test goes, okay I'm done can't here, let's just clear this correctly out. And the second test S my file is not here anymore. Everything's failed. Everything's terrible here. And if you don't know what's happening, if you've come from a language why things don't run in parallel by default then it's not going to come to your mind at first. Oh. you know, things are running if a parallel execution. It took me a long time to realize, this was actually happening. But now they know it's happening. I know how to work around it. I know how to write better tests and not share resource. What this has done, all of my tests tar right, I'm going to think about where my code is going to run. I don't know if my code's going tend up being run parallel. I give it to someone, they can run it parallel. Have I to make sure there's not going to be a detriment to that happening and I'm going to write better tests. We're going to talk about frustration last time. The definition of frustrate by Webster Miriam, I believe, was to --
-
-
-
-Have I one thing to accomplish and I can't. And that's frustrating. In programming, frustration can frequently mean we're learning something new. Once you have a better understanding of why those things were frustrating and you can see them clearly, you my actually find yourself applying in different places. Can you learn to appreciate those things that were frustrate being for you, initially want so now, even if you're writing more Ruby code and your Ruby code runs linearly, you're going to think about that problem you ran into, when you were writing Rust. I'm going to think about writation better test to make sure those things couldn't go possibly wrong. Next time I write a function of python I'm going to think, what were the possible result types. Like, what things can go wrong? Am I going to get responses that are just like, I'm not expecting? Is the conversion going to come out properly. Can I verify that before I work with that data? A quote from Henry Ford. For the world was built to develop character. We must learn that the setback which is we endure, help us in our marching onward. That said, the unfamiliar can be challenging. But there can be so much to learn and love, well overcoming can. And once you have, you'll come out a better programmer than when you went in. I'm Brian Pearce. Thank you very much for listening and it's been a pleasure to be with you here today.
+<< 04-brian-pearce.md >>
 
 [Applause].
 
@@ -196,70 +135,7 @@ Have I one thing to accomplish and I can't. And that's frustrating. In programmi
 
 
 
->> KAI MICHAELIS: Hello, everybody, my name is Kai. And today, I'm here to talk about my first project I did. A cross platform. Written in Rust. So what's a disassembler? When you program in languages like Rust or C++ you write your code, in your compiler language, that's a compile tore transform this high representation into a lower representation that's executable by the CPU this transformation is combination and get out [indiscernible] language. It has not much of the features you have in your high level presentation. You can see how this looks like. It always starts with shorthand for struck. In this case, SUB. Subis the stat arc the nemonic for subtract and after comes RSP, that's symbolic name for an internal memory area in the region, there are no ifs or loops. When you do Cole Ctrl flow, you have brach instructions where I make this check and depending on the outcome. I either continue with the instruction or start at another memory address. And use some writer to transfer text presentation, on the CPU connection. This is more more or less, a one on one method. Most of the time, you're in ray situation where you have a program, and you want to know thing about the program, but you don't have the soft code. This is often times, proprietor software and with proprietary software, it has some protocol implemented and want ton how this one. Disassemble it, and try to find out from the patterns of the implication how Ts with.
-
-
-
-Other situations, it's more how did d it get into the system, how does it spread, how did d it hide from the user and how does it get the information. So it's not the first application you can use now, roughly for under three category. Have you simple tools. These are often parts of larger compatible interests, and they are only there for analyzing the interest. And there's not much more. There's no [indiscernible] done. Then have the prototypes. Binary elements, in the selected field of research, there's a lot of research going into what can do in this binaries and these things are very impressive. But they're not really, they are to be used by nonexpert users. So they are always labbing documentation, and if you didn't read the research paper, you won't be able to use them. And then the commercial offerings. That are ate indisbetween those 2. They're easy to use. And they have parts documented. It's proprietary software. They can do some things, they can change some parts but not everything. And they cost obscene amounts of money.
-
-
-
-Projected started in 2009. I wanted to analyze some proprietor application, and there must be millions of them, and none of them were actually useable on my machine. So there were some softwares that -- there were commercial offerings that didn't work. So I thought to myself, how hard could it be turns out, it's hard. I was told you have to throw one away. Between 2009 and 1011, dia lot research in how to build these kinds of things and analyze the stuff can you do on them and sometimes, I program myself into the Corner whericn't get out. And sometimes, these were never meant to be really extensible. So in 2011. I started with the real thing, and I start with the C++ at that time, it start to improve the standard again, and I thought, I might as well use that. Until 2015, grew to a size of around 10,000 and Rusts came and solved pretty much all of the problems I had for C++ and it took me a few months to convince myself that, again, taking all this code, I was the contributor to this problems all the type. And in writing it again, alone, was best thing to do. I'm here to convince you, this was really a great idea.
-
-
-
-So in June, I start, and it went really good and I was surprised how fast it was. In October, I was at the point that the Rust version has the same feet feet features as C++ version. I got rid of a lot of code, mostly because Rust alluse allows me to better match, and this means have you to do computable programming, which is very hard tow use and gets [indiscernible]. So this is some boring metrics about the current state of the project. What's maybe a bit interesting is how much went up. 30%. This is not good. But it's definitely better than before. I had 50%, maybe. And this is mostly because testing in Rusts is super easy. You can put a test in line with the code. You have to remember to test all the funks, and this wasn't working for pee me at least. I have 980 Rusts points on the computer.
-
-
-
-So what is the current state of the project? You can open up, you can open the standard format for binary systems, and instructions -- but again, a list of functions. And the functions, you get pictured here, a control for graphs so you have these, each box represents one sequence of the cord that's executed, always. So you know there are no jumps inside this box and no one coming out from the end. This really add to the flow throughout this program and analyzes. So what it can do then, is add comments to the sides Q. figure out what the funk does. Can you give it a name. For example, proprietary application. Can you read the functions of a matching number. M.O.S.6502, which is the [indiscernible]. That's pretty much it for now. So how did this conversion go? It was really fun. I have experience with C++ and comparing to them, this was really fun watching Rust and learning Rust. What I really liked in the beginning, for example. I open the book and 50%. And start to
-
-dive dive in and you have to use something like [indiscernible] lifetimes. And program is the best way to learn, it really helped me to get over this initial bump and really got me interesting. You have this but when you compile a test, you only get the long error many.
-
-
-
-[Laughter]
-
-
-
-And in C++ when you have dependency to your application and people want to compile, they have done every single dependency and compilers, and you really have to go and decide if I compile it much set of pass, the binaries and this makes deployment very, very hard. So I had to think very hard about every dependency on the project. And I had no dependency. Easy to -- put dependencies in there. This way, I could reuse much of the code that was already done.
-
-
-
-I am reimpressed how much packages are in this, compared to wop year ago. Reading ERF structure and use the code done by,s that, most of the time is written better and maintained, as opposed to the stuff that's more right on. Getting back to the application is always hard. And when I start to put in my code, I had a situation where I parted some functions and displayed the graphs. And there was some functions to do here, to remove something from that.
-
-Way do is, remove one and so pretty straightforward. And I follow this function to Rusts as soon as possible. I have no idea what happened, but digital file. So diwell. I always do with a piece of board checker, I start exploring things more and more. At the end, I was at the point where I just copied the whole container. And this was the first time, I actually looked, and checked anything. And I realized, there was a need for the [indiscernible] problem. C++, in Rust. Plus, they are not checked or something like that.
-
-You start incrementing until you get to the end. And muted container, these problems come from, these are rehabilitated. They are three later structures. These month Estopped being developed. If you don't do this, things will happen F. you're lucky, [indiscernible] goes up F. you're unlucky, you're like me. The Rusts, of course doesn't work because hasn't referenced others container and muted the container. This was the first time, I saw this checking thing, really finds a spot and this is something that is that is not very based and you find this all the time.
-
-
-
-When you write and record in C++, you never know when I compiled in Rust. I know that certain box in there that can, give it encourage -- Rustsism occasions, and when you do this tract come, there is there's some part that more more or less emulates or really executes the instructions. Over flow integers are pretty complacent this is pretty annoying. I understand that my special case is probably not a general case. For pee, I'm not sure I come from C++. And in Rusts, in C++, using ate programming a lot. Duly designed to do things.
-
-
-
-
-
-
-
-
-
-
-
-what we actually do is write them, a machine that looks for some patterns, and the first pattern T generates some structure. Now, this is the nemonic XY. This is the argument much and if you are, for example, you have thisration that's called O.I.I. immediate value. We have two arguments. For each of these operations, a CPU. You only have 100 of them. More more or less looked like the -- in the other half you see what is in the reference documentation, and can you [indiscernible] copy for reverse itch implementation and this makes it easy to check qualify these things are correct. One bit, for example, T does work. And you have a function to it. So what happens, the Rust cost function and eventually, creates all the meta data in that situation, I have cogeneration of macros, it can understand what nemonic operation actually does. This enables us to do a little bit more. And this, for example, tells you how data flows throughout implication. You need to define some kind of intermediate language. Like compiler. This is ray part that generates immediate construction that is easy to be analyzable. And uses rays. RAEIL. Kind of a standard, and I built a macro, which was more Les, the derivations for another. An assemble ler, for 6502. And it looks like the fight and applications and research papers. Again, you can just copy your stuff into the macro and then makes it easy to verify there are some things I don't like about Rust currently. Doing rough output is very hard. They are they allow to you draw if rectangle and stream. Bicomplex [indiscernible], that's hard to do. And I use QLRS this is another problem because cube K + and you can't interact C++ directly. Just makes it hard to deploy. And then -- you have to declare independency beforehand and then you use then. That's a problem. The guys have enough to solve. But for me, that means have I to wait until the problem is solved before I can try to get the official package which is really important. Because publics and so O. and one last thing about, I really like [indiscernible]. I wish they were a bit more flexible for example, tree part. I use it and I know what products but I don't really know how it works.
-
-
-
-Why I'm really here is to tell you about my projects, and you will help me because I'm programming more or Les alone. Miurus is terrible and there's a lot of unrep in there and a lot of okay and unrep. And just returning this to an error, already sufficient to get a request in there. If interested, the website is:
-
-And for the problems is.
-
-Panopticon.re.
-
-And E-mail is@ _{~cibo _ .
-
-And that's T.
-
+<< 05-kai-michaelis.md >>
 
 
 [Applause].
@@ -276,111 +152,7 @@ So E-mail, it was not formatted. So hopefully, things are going much better sinc
 
 
 
->> TIM CAMERON RYAN: Oh. hold on. The Internet of things involves setting up monitors. So if you can seat state of the Internet of things right now. Hi, everywhere. I love being the talk before lunch because it ends in lurch, which means my talk always has a good ending to it. So hopefully, you're all psyched for that.
-
-Thank you for letting me talk here today.
-
-
-
-My name is Tim Ryan, I'm a developer from the U.S., I've lived in San Francisco worry two careers, and then, most recently, moved to Boston and that entire time, I've been working on developer tools, specifically, developer tools for devices for drones, for basically any problem where a software developer would say, hey, I want to sense that or talk to that or move that around. Anything outside of the confines of what a computer or a phone can do, I've been interested in and I know that the talk has Sirvo in the tideel which is the name of an experimental web browser. Unfortunately, I'm to the knot going to talk about it at all. So sorry about the disappointed. So things one the Rusts talks, like the hobbyist motor. Hopefully, in the future, I'll make it up to you and talk about Servo talk to the browser.
-
-
-
-How does Rusts interact with hardware and circuits? So the biggest problem in hardware, I have information or there's something I want to accomplish. How Do I want to talk to it. Million you have a laptop and temperature sensor, which could look like this or you just have the idea that I want to go ahead and see what the temporary in the room is essentially, some of these can you plug into your laptop via USB. But most likely they can talking some embedded protocol. You need to build a circuit on the other hand them and what is the standard in Rusts in order to want to circuits, is it just like reading to a file system, talking to a web server? A lot of software developes probably don't van an log for what this looks like, evening if they go and develop the circuits. Especially because Rusts is built around developing laptops right now. Let's say I even solve this problem. I have Rust code and I'm talking to a sensor and this is happening at my home and I am now, 3,000 miles away.
-
-And I would love to know from my mobile phone what, temporary is in Boston, pass mass and my house. Is it really cold right now. Is my house burning down. I don't know. These will be great questions finding out. This is the other problem of Internet of things, which is connectivity. A micro controller board is a breakout board with its own CPU on it. You plug it into a computer and you develop for that target. And that is what communicates to a device. A lot of these board vs. Different pins on them. Basically, little ports, that say can you wire this to a circuit and these pins do various functions, sometimes specializized, sometimes not. There are a lot of common once you might be familiar with. For example, at one end of the spectrum is micro controllers. Here I have have eighteensy board, it's a micro controller, uses one from free scale. It has 32 pins on T. it may have a few hundred kill bites of memory. It is a completely different programming model than what you're use touchdown it's probably single threaded. You don't really have to worry about memory races. You're not really maintaining orship. It's actually just one somewhere space. You don't need a lot of the guarantee that is Rusts provides U. and we'll talk about that later it's a very exotic programming model. At the other end of the spectrum, you have micro processors. The raspberry pie. In an embedded computer. And it can do high-level tasks. Say it is ruppation python science library or a GPU. The micro processor, has its open GPIOpeps, which is to say, it can talk to a circuit. The biggest difference is on the micro controller side. Reliability is keep the predict ability is key. You're doing things as fast as a processor can do things O. the micro processor, when running Linux, you have a scheduler. Things are competing for miles an hour, compete for example time. You can't do real-time things most often on a micro processor, when you're doing something built on a standard raspberry pie distribution.
-
-
-
-For the past few years, I've been working on a prejudice called teasesel, another micro controller board. I've been excited about T. because it's fully open source hardware and for our particular example, it tile has a hi crow processor and a micro controller. We can get the best of both world I've been working on it since 1013, originally, it was a company and now issue it's an open source group with a small steering committee, and accepts open source contributions.
-
-
-
-Originally, we targeted OJS. All of our libraries are written in OJS. Our command lines, et cetera. And more recently, because Rusts reached maturity, with 1.0. We've been excited to say, let's develop an environment caring oh, Rusts C, et cetera and bring them into a platform that's really easy so we found a lot of low-level C code. Imported it on to Java script and are now porting it to Rusts.A each time, learning a lot of other cell system like, wow, we were really young programmers back then. Another interesting thing about this, it's in the wild use of target, developing for teases cell actually, stretch happening the bound easier quaff my knowledge is about Rusts and how it cross compiles so it's been exciting to say, well, take all the features and all the extensibility of Rusts. Marry it to the development we have built out and see if we can't get the best of both worlds.
-
-
-
-The basic hello world example is a blinging example. This is a combination of command line tools to make it real easy to get started on it. And the cardioecosystem. We can create a directory. We can say, the target language has been rust and this will create a sample repository. We can teach you rup and specify the name of the file and your tesla lights are blinking. The entire point is that we leverage the entire ecosystem. From here on out can you do same dependencies that you're using, add your own source code. You can build it into your existing system. That is out of the way.
-
-
-
-Let's go back to basics Q. you're talking about signal says and sevos we're talking about circuits. How many of you have circuit experience? About 50% of the room. Maybe a little lower. We're talking mostly about digital logic. Means there are high and low values and they're being interpreted in some way. If I have a circuit and say, the voltage is 3.3. That is what I declare as a high voltage. Any it is high, I want to turn the light O. similarly, say, when the circuit is 0 volts, I want to turn the light off. You can get close to 3.3, get close to zero volts. Everywhere just sort of agrees when, you're close enough to these, these will be represented as those values. But this match is really cleanly to binary values. So a high voltage might be one and a low might be zero. One thing about this, is that you can actually look at this as a power source, not just as a small. I can switch it from high to low and send out a square wave, which would switch on for equal parts. And now, this is happening over time. So if I stretch out any of those signals, the light will be on for longer. Light will be on for a shorter amount time. If I blink it fast enough there are a lot of fun things can you do with that.
-
-
-
-To what we might want to say San imperative way of generating that same signal. So we have a few lines of set up in the beginning to say, we want to get a port. We want tow know it's there so we unrap wrap it and select, IN0 and it'll loop. We want to turn the pin high. Sleep for a second. We want to turn pin low want sleep for okay second. This will generate same signal we just saw of the notoriety now, this is spiral synchronous, it's putting the thread to sleep while we're doing this.
-
-Because we're on a bed of platform, it's okay we're doing this.
-
-
-
-So kissed could be inputs as well as an output. An inpit pins, is this value high or low. So if I have a wire, which is connected to a high voltage and then a switch in the middle, that switch is going to break theet. So when I press down on the button, I'm literally, saying here's the material, I'll know conditioning the circuit. And in the same way, we can say, we want to turb on an LED with the switch. Can you do this with a circuit. If you were going to say, all right. There's pin 0 and pin one and we're going to select them and call them LED and switch. And then in our same loop, every time we read the switch, we say, is it switch on, turn the LED. If -- what if when the switch goes down, I make a post request to tweet that I'm home. Thats, hey, everyone, I'm home, I'm lonely, give me friends. That is the magic of hardware. We can do complexing like sensors. A sensor is basically a small IK or a chip which is able to talk some sort communication protocol. And this uses the same basics as what we were using before. Input and output values. The sensor itself, although it has a lot of pins, including power and round to GIOpence. We care about the data and clock signal. These two in combination, allows for talking to the micro controller and malicious something in -in-the- out world.
-
-
-
-Those two things, data and clock pin, can be wire to the protocol, I2C, which is a protocol dating back 30 years. And this is an agreement between the two processors about how the signal oncer New Mexico same way that your web browser Uyour smart watch, pacemaker, all of these understand http. Eveno though it's just plain text, it's sort of similar to this.
-
-There's two signals and the way they modulate each other. That is what determines what the signal S. everything time it goes up, you might measure a data on the value line.
-
-
-
-The basic agreement here is when the data lines go low, the processer will emit clock fixing. The I.C., will write back and say good. And then we'll write over a bit another over to T. the key point to notice about this is that it's happening at 100 kill Hertz. So if you member human can measure hurts. A hundred kill -- your PC is probably running --
-
-
-
-When you were trying to to these perfect communication protocols you're not going to be sitting there, flippation switch on and off in order to say what the sensor should read. It's going to be handled by something at a lower level. They exist with your USB controllers, the way the lap talk talks to your screen. We're going to tell the what to do. Do some black magic and then give us a result, whether it's the input that we wantd to read over the output. So what do we do when we have a low level protocol that we want to wrap in a high-level system? We write an A.P.I. for T. here's the came example. This is using all the lower level primitives we want. We fist do a transfer to the address, 0X1D. Can you please send me back the registered value. Woe say, this is our handshake value. We know we're talking to an accelerator rate.
-
-
-
-What it boils down to is we now have a two fold of 3D success aleration factors, depending on which way we we angle T we will get different values here and that was gist four teamlip of codes in arbitrary I.C. and started talking to it you might look at that and say, pretty ugly. Let's make it nicer, creatan accelerometer. Expect that it is actually connecteds to and read the acceleration. And you can go do Ohio right now.
-
-
-
-One key thing about Rusts here is that we actually have a very strong advantage of using Rusts over any other system language that I've used. Especially if we're using Java script in this case, let's million I was trying to write at the same time, at the same time. I have an LED and I want to suspected it high or low but I have the ports upon. It happeneds to send its signals Q. we have apITC port, we can write some data if we want to accidentally send a high value because we want to turn LED on. But we do it on the wrong pen, we can say, Rust Bridge will prevent this from doing
-
-.
-
-
-
-Basically, in designing this, we realize that Rusts provides high level objection extraction for things, and allows us to do it in a way that's really approachable. Really, you would want to encourage anyone to be able to talk to an arbitrary crimp. To do the logic. And this, the quote I read from Rusts camp last year, do programming in place you were afraid to do it before.
-
-
-
-Another way of phrasing is have without fear. This is also the quote they used last year to sort summarize the Rusts methodology. So I actually started hacking away at things. Power words, in order to fake a few demos. On the left, you see the two leads pointing out. You definitely shouldn't plug this in and touch the bolt at the same time or either of them. But they do plug into a circle really well. On the left Othe right here is a warning that I actually stripped off of the power strip saying, specifically, don't do this. So given that there are no more warns. We can go ahead and produce a demo. So over the past pretty much, the past two weeks, we went shopping. Bought a bunch of sensors and came up with five different crate that is exemplified different sensors, blue tooth energy. Climate sensor. And so for the first example, I want to go back to the accelerometer demo. I want to check the temporary of our home. If it's too hot, I'm going want to to up the temperature sensor. For the, one, I want to say, pick a relay, a very high-powered switch and write to it saying hi High to turn on the switch or low to turn off the switch.
-
-
-
-I'm using a web server, host on the teasesel and I'm going to hit start cooling button. So can you seat temporary dropping inside the Tessle itself. But you believe me any way. We're actually reading life temperature data can you imagine if I was a mile away, in Berlin, we tried to measure this at my house. I want to be able to go home, turn on the air conditioner, 30 minutes before I arrive. So a very simple example, using a micro controller and a few sensors. Next one I want to show you, an actual use of the Servo. A hobby motor that can turn from 0 to 180 diagnose. And best part about a Servo, is it can turn to a fixed point. Unleak a motor where you're saying, go forward, go backwards at a certain speed. Servo can have certain positions on them. And this one is actually very similar to the demo that we saw earlier today. Where it's turn on light automatically when you walk into a room. This can also scale to, I want to unlock my door when I approach my door. But we're going to start with the Servo crate and a blue tooth low-energy model and do a low quality version of this. So easy approach the front door, a sensor inside is reading blue tooth ID's and servo is noon turn the light O. when it detects the blue tooth ID of my phone, as I look proudly over my domain that.
-
-Took 20 lines of code.
-
-[Applause].
-
-
-
-Entirely Rusts code, that is doing things, with sensors, in Servas, that is very like, applicable to our daily lives, like, we are developing companies around these I.O.T. Connecticut septs. Buying new products around. So in true Rusts fashion we have been to ask ourselves is, are we I.O.T. yet? I don't want to give a definitive answer yes. I'm just one developer in a full of you. I want you to borrow.
-
-Problems is security, reliability and power. A few years ago, we had the shellshocked bug, was bug that allowed to you do a buffer overrun in a router so essentially F sent a malformed http to a router, it would run past the buffer it allocate forward that. And you could get repot code execution on T. remote code execution isn't a big deal itself. But the idea you have a router in your home, in millions of homes and you can't update those, that's how many. You really have to get security right the first time by make sure you have all these guarantees. It happens at the O.S. level and S.E. left Lynn crux. But Rust Bridge is the final defense for what puts into your program and what you're going to be able to do.
-
-
-
-Second one is reliability. And I don't mean this in the way that my blue tooth is suddenly not working. Or my app crashed. Rep liability means we are going to continue to put these on our diss, to protect our children, to protect us while we're driving cars. Technology ising so many cop com.s of our lives. IOT gets a Pat blah. Even though every system has its own trail tee, when you do these embedded system, thank you really see that a lot are M. so when we're talking about explicit error handling or the ability to not have your program crash at random. Like, the extreme wop day, this might be it'll save you time money if you're not dedugging these things. So Rusts does a real investment.
-
-
-
-The last one is power. We talk about zero cost allocation and these are hugely important when you're doing bench marks biit's very important when all you have is like a few kill bites of memory to spare, and I think what julia ef ABC said off our Rust Bridge conf, if there's going to be a new generation of I.O.T. developes, they're going to rup into these problems. D.
-
-
-
-Most month, an embedded sen aryear, it's a cost between answer trust transaction and doing safely and hope it works I'm going to leave I off with some goals. Cross compilation has been like air, goal standard for rust right now. We also have my A which sets the baseline for working out all these different operating systems. Upon why ph why you're watchation a bear is nice to have. But there are more platforms than that. As it becomes more popular. We should really think about what is it going to be, this constant scheme uphill. Is it something we maintain.
-
-
-
-The second question is can we have a goal of combining real time and non-rel time systems. Basically what, this boils down to for embedded. Is, can I provide synchronous and A sinks in system. Zero allocation -- sorry. Zero allocation on computers, possible, which is an amazing boom for anybody anyone writing high performance code F. you look at a low embedded system. You may not have the option to use threads. So as we moving forward. Being able to target low, embedded platforms. It's still something.
-
-
-
-Another goal is to see Rusts at its lower level. There are a lot of embedded presence, including Skink and Talk and there are hardware problems in Rust Bridge. Specifically typed to do what I was demonstrated today to, talk to circuits. There's more. In the server, the sensorily bear they wrote today, currently only work on one platform K. we design a foundation that brings all these things together. If we're able to do that. I think Rusts, where previously, we would pick C++ for robotics. C for embedded systems, and maybe Java strict for system like servers and browsers. We make rush wop of the prelanguages of the Internet of I thinks. I hope you share with the credit. Thank you very much for let ming talk today. Can you see any of the code demos at Ruststest 2016 and see what I'm working on at Tessleel Rusts. Go enjoy your lunch.
+<< 06-tim-cameron-ryan.md >>
 
 
 
@@ -432,91 +204,7 @@ Next, we have a talk, near and dear to my heart, a project I've contributed. And
 
 
 
->> ASHLEY WILLIAMS: All right there's some small tech work we need to do here here. Start the screen recording as well.
-
-Computers. How do they work. There we G. hi. My name is Ashley. You may know me as GW dubs from twitter and I'm coming you to you from not exactly the Rust community, but I work at this little company called NPM, which is keened of like the cargo for no JS, which is a runtime for this language that everybody loves to him but I really love Java scrip. Do I quite a bit television if node. I used to be a Ruby developer and I've even dabbled in Erlang, which is a super cool language as well.
-
-I really love programming languages. Part of the reason I love programming languages, I really like to think about thinking. In particular, the type of thinking that what happens people write code and this is personally, because my background is as a teacher this.
-
-Kind of led me to influential called intermesos. I'm going to continue to say we, because it's a collaborative project. But it's a teaching operating system. So intermesos is a teaching operating system. Focused on introducing systems, programming concepts to experienced developers from other areas of programming. We anticipate that you have probably programmed in something. But it really doesn't matter away.
-
-And in particular, the program of intermesos is for people whom system program suggest terribly not friendly. Probably the best way to say it is, do you know Java script? Why don't we write an operating system together?
-
-
-
-The origin of this project is because somebody, who will go unnamed but who looks exactly like their twitter "Avatar" accident asked me this one night. They said, do you want to stay in and put on some comfy pants and do a neat Colonel tutorial. Circle yes or no. Oh, heck yes I do, that's awesome want is like, let's get close to the metal. That's what the real programmers D. side bar. Real program suggest not a thing. So definitely don't say that.
-
-But I was ready to get close. This is something, and I had this immediately, I thought oh, no. An operating system. Like can I write an operating system and should I write an operating system. A question we don't often ask ourselves. And part of the reason I had this feeling is best tembest demonstrate by the this amazing website. OSDev.org. Has anyone been to this website? Full disclosure. Thing website is horrible horrible. This is the worse website. One of the worse pieces of Internet I've seep and there are terrible things remember and the reason I'm so mad, this is the required knowledge page for OSDev. Let's take a look at some of things they state. So basic computer science. You need to be intimately familiar with hexahexades mal. We'll see how much you know. So no. What intimately you know. Programming experience. Learning about program withing an OS problems is considered a bad idea. I feel like this term considered a bad idea or considered harmful is done and I'm done with as well.
-
-But last but not least, fail tower comply will make you look silly.
-
-
-
-[Laughter]
-
-
-
-Okay. Now, I'm really take theming seriously. Definitely, not. So enter this tutorial that we happened upon on the Internet. Writing an OS in Rusts. And it's a series of Blog posts that take you from absolutely nothing, into an operating system that you are able Tex tend, however you'd like in Rusts. Which is super cool. What's important is that it's the exact opposite of OS Dev.org. Hey, you're not stupid because you don't know this.
-
-We are not going to continue to refer to you read books that we don't actually list on the website. No. We're just going to be like air, this is what this thing S. why don't do you. So the real title of this Doc is I can operate a system and so can you. All right. So this is the treat I got when I got my operating system working. This is my hello world from Rusts in my very, very small operating system. And what is an operating system near you telling me this thing with this tiny blue thing here, hello, world San operating system. Yes. Yes. Actually, this is an operate system. It is extremely small but it is indeed one. So the question here is what is operate system and it's actually kind of a complicated thing, potentially, but the way I like to define it is, an operating system say program that provide ace platform for other programs. It provides two things to these programs. Abstractions, and isolation. So what do we mean by abstractions in I can get pretty come byia and go continental deep. And G everything is a distraction upon but we can talk about that at party. For now, what I'm going to say is when you're thinking about the types of instruction that an operating system does. That program runs on hardware A. That's all fine and good until it turns out that we have hardware B. So originally, a program is officially written for just hardware A. You're not going to be able to support something like hardware B and the way you're able to support these sustick an abstraction in the middle here. So that you can z operation system A is what we have the program for and praying A is what we're epiabled to distract. We see other types of distraction when is we bring up the idea of a VM. Say into the write a program, but I don't want to write the program for any specific operating system. I want to be able to support multiple operating systems. In this sense, we can write the program for a VM and that VM extracts the way the boundary between the program and the operators system, allowing you to support both, in a very similar pattern to the way operating system abstracts over that boundary with the hardware. Now, we have got to have a Patter here, it's abstractions all the way down, but we'll sit with these, I guess. The Pat certain this.
-
-I have A. A is written explicitly for X, but I want to support X and Y. So I put an abstraction in the middle. Now, you could say this this is what we're doing in allotypes of programming. In particular, this is what we're doing in operating systems programming. Now, the other thing that I said the operating system provide system icelation. So isolation is a little bit more difficult to talk about, particularly, because it's very closely tied with extraction. I stepped to think abstraction and isolation are two sides of the piece of paper. I think the nice way to talk about T bring into the idea of intermesos title. Conveniently, ending in an OS, intermeso meanness a light dramatic musical or other performance inserted between the angs of the play.
-
-
-
-So as we saw before with abstraction, sort of should go in between, allowed us to be able to generalize over a lot things but additionally, it allowed us to separate things. So these abstractions and isolations, come hand and hand in hand. That's what we're doing when we're writing an operating system. So the next question I have, is operating system much everybody's talking about a Colonel. What the heck say Colonel. And it turns out this.
-
-Comes into the question of okay. What kind of operating system are we talk B. so the definition I'm going to use for now is Colonel, is just the core component of an OS. And we can show that forever, but again, it is outside the scope of this talk. As I said, there is this question. Let's write an operating system. What kind of operating system? There's tons. I know if I mentiond to my parents, Oh, I'm running an operating system. They'd be like, windows or Mac. And I'd be like, noo. Neither. Not anywhere close. But it turns out when we're think going doing operating systems development as the thing to learn with, it really doesn't matter what kind of operating system. In fact, this question is irrelevant and this is Y. we could waste a lot of time trying to design our perfect OS. As people who only use operating systems, I'm sure we have things we'd really like it to have. So we can sit down and dream in the clouds any any type ofs system we'd want. If we did this, the chances are, we would never actually build it. With intermesos and coding in gym, the goal here is to leadership, not to make the best OS that ever exited. The type of operating system we're making right now does not super matter. All right. So let's talk about intermesos. We're actually going to dig into a little bit of the code. So for starters, there's a few prerequisites. And that's going to be some virtualization, so long as you're basically not using Linux. And a couple lip you can coincidies and a couple option that is make peering when you're peering into an operates system, easier.
-
-
-
-While program and operating system is within your grasp much debugging is very hard on and I find building that operating system feels like coding in the dark. So for virtualization, I started to build an operating system on a chrome book pixel, so this was a somewhat hostile environment for trying to build an operating system, and I very quickly found out, I was going need some sort virtualization. Interesting enough, nearly quell equally difficult was the Mac OS. OSX, Macro S. Don't quote me. It's actually easiest to do this work on a Linux machine. But what I use for doing the virtual situation is Vagran, development environment manager, which uses virtual box to virtualize machine and experts to forward graphics, which was one of the biggest problems, particularly when I was trying to do some of the chrome book pixel. So this is, maybe I thought what was really amazing. Original Philadelphia inoperative tutorial, he had written it exclusively for Linux. My name is now in the tutorial for being like, hey, if you're stuck in one of these environments, use this lady's vagrant file because you can be running up in a second. I'm like oh, my gosh, I'm in the big leagues, this is so neat.
-
-
-
-Once have I an environment that's virtualized, you're going to need Linux dependencies, these are very new for me. But Nasm is what we use as the assembler. Took the assemble ler and put it into binary and L.D. which was a linker, made by the other files. Then we had grub. Which we'll talk a little more later. But that's the bootable ISO. And I don't know how to pronounce that one. Chorizo. That's not right, but I'm going to call it that now. Finally, you have Kimu, which I do know how to pronounce. I call it a fake computer emulator. Which is pretty much exactly what it does. All right. Then finally, we had a couple utilities. You don't need these but they are super nice for viewing the generated code. It's difficult to peer into some of these things, especially after assembled and compiled. I was excite that would I'm not the first person to mention [indiscernible] today. Did not anticipate that would come up in another talk. We have hexadump and Ovs dump, which will allow you to view some of the code you're generating. All right. So one of the things I found the most tricky when think going develop ang operating system is like, I don't really, really know where to start. I need to ask myself the question. Okay. What are the tasks that the operating system needs to do? So it turns out, I really needed to answer this question . what happen when you say turn on your computer. And so I'm a huge fan of having a generalized journey, like, description. To understand what's going on.
-
-So in my mind, the way the things happen are, the hardware loads bio, which stands for your bisque input/output service. And bios loves grub. Grand unified boot leader. And I million a weird cater-P-type worm with a crown on it. That's Grub for me and finally, Grub is going to be what loads our kernel.
-
-
-
-One of the big things was linking and that is that L.D. utility I mentioned earlier. What the linker does, is figures out how the sections of the input file should be matched in the output and should really the memory layout of the output file. In intimacies on right now, the only thing you need tonight with linking is you have two things and you really need to make sure that one comes first. So linking, just make sure the header inno no is up at the top. And we'll show that code in a second. So speaking of show the code, now, it's time to do the temO. this is where I hope you all show me your hexadecimal skills. I'm ready and excited for that.
-
-So let's pop this open. So I already have this. How are we doing on slides for that? Can everybody see? Pretty good. Okay. Fantastic. So right now, I'm here in vagrant and we have mellow -- oh. I'm turning that off. That's horrible. All right. So here are the file that is we have. So just to talk quickly about what we have in here, the first file is multiheader.asn. It's going to say, hey, I am something you can load with multi food. So this is the thing that Grub needs to see to see it knows how to note T. second thing that's important is this boot.asm. This is going to say, okay, grub, you know I'm the best thing can you use with multi boot. What are you going to do once I get booted? And here, we have the linker.LD file. That's saying in there just make surety header comes first. If Grub doesn't know what I am. We're already in trouble. So what I want to point out here, let's take a look at the boot file. So here is some very lovely assembly here. And so what we can see is we have all of these move word statements. So let's break down what these mean. So move is going to be the instruction. Word is the size and then it is next thing that comes is the pointer to where we are going to put it in memory. Then we have this little concoction right here. What happens here is the first two characters are going to describe the foreground and background color that we would like to display on our screen. Then the next is going to be the character that we're showing. So just to show you what this ends up looking like. Turn that off. I am so sorry. It says off. Can't account for T. so what we can do here, we can say make run. And this is going to pop this up. And here, in the Corner, we can see that it says hello world. This is an operating system. Yay! This is really cool.
-
-
-
-Now, let's go to where we can get it to say, hello RustFest.
-
-Does anyone know off the top of their head what capital R is? An ASCII. Oh, want that's Borg. Wow. Tough crowd. I would just like to point out that nobody is jumping to say what this character S. so your deep knowledge of hexadesimal is make me sad. I have this baked in my important secret speaker notes. So these letter vs. Changed. But let's just take a look and see what this ends up saying. We can say run. So it says, hello rest fian ... which is almost close little but it turns out writing all of this assembly, isn't, you know, I mean, it's cool. You can wake around and say, ah, writing assembly and everyone's going to be like, I don't know what that is. But I bet it's awesome. But nobody really want a program like this.
-
-And here's the deal want the level of fail I can have much I can have this cheat sheet if I type out some numbers the it'll be a mess and turns out the error immensely aren't error manies, it would just not work or it would print something random and it would be really hard to debug. What happened was relatively complicated and we had a pretty fine grade control over what we were doing. So we had the bioload that boot loader grub. From the virtual hardware and boot loader read and found that multi boot header. All right. I can do this. Then it copied the boot and text sections that were inside much that, to some of course specific memory addresses and it jumps to this industry point and that's when our Colonel prints the message, this is pretty cool. Now, in order to go from this, to Rust. Have you to do this tricky thing which is called jumping into long mode. What we were just writing we were in 32 bit. Without having to do quite a bit of hoop jumping, you're going to want to be in 64 bit mode. To actual how to jump into long mode would be way to long to show next year. Next year F someone wants to show, how to jump into long mode, thwack be a 30-minute talk. It's not that it's hard. It's really tedious. You have to create this table and shifting a bunch of things over. It's like reorganizing. But I do think what could be interesting is to take that assembly and refactor it, using Rust so we could now have a hello world from our rust program. And so we can jump back in and I'll click this. And I'll go into hello Rust. So sorry. And similarly, we have like, well, I'll clear this here. We have something that looks relatively similar to what we had before. We do have a bunch of stuff that jumps us into long mode, which we haven't extracted away.
-
-But what we can see is if we hop into our lib do the s. This is printing hello world for us. So let's walk through what this code is actually doing. I should put some numbers in there for us. I have my K name. Inside what, I'm able to do, I'm able to grab the characters as bites by putting the B before hello world. So this is the many I'm going to be printing right here and then I define the color I want to use here, using 1 and F. There's actually a whole bunch of different colors can you use. That I can quickly show. These are the color option that is we have. Actually, a pretty good set. So we can play with those in a second. But then what I do, I create a mutable array, and I just automatically fill that entire array with what I want the color to be. And the length of that array needs to be double the size of my message because for each letter what I need to say is the foreground color, the background color, and the two-character code for what the letter S. once I create that array, then what I do, Iityer 8 through it, and for every other in that array, I replace the color code with the character code that I would like. Then finally, I create a buffer pointer, and I set that to the message. And that many is an array with alternating color and character codes. That is unsafe because we are just writing to something in memory. And that's extremely dangerous. Don't recommend doing it. The computer doesn't know how to break at this point. But it's definitely not something it would let you do. If it knew, it would tell you, definitely don't do this.
-
-
-
-Finally at the end, we have this loop here. We don't want it to just immediately shut off. We want it to stay up. And so F we take a look here. Make run and we can see tait says hello world here employed now, we can change this significantly easier in the Rusts code. I don't need a cheat sheet ton what the characters are. Instead, I can go to my passage and change it to say hello RustFest. Whoever thought I would be doing something -- I feel like I'm doing a little CSS in Rust, which is pretty strange. And I'm actually a big fan of the bright blue color. It looks more like the logo. So I am going to set that instead. So then I can shave that. Hop in here. And oh. the demo gods are not a fan of me. Let's take a look what the heck happened. Didn't I actual about the errors you get in doing this? It's very fun. All right. Oh. right. Excellent. I love teaching want it's like pair withing 200 people. Because that's always fun. So the character, so what's interesting is that if you make the array too big T prints like these cute triangle bus turns out F. make the array too small T transfers a lot horrible text in your editor, when you're giving a talk in front of a whole bunch of people. So since you're all paying so much attention. What should the length with.
-
-
-
-So we need it to be double. Double the length here. With we'll check do you want say, 42. We'll say make run. There we go. Yay. Ooh.
-
-
-
-[Laughter]
-
-
-
-That's fun. This actually plays perfectly into the whole point. Doing this is just something that's like, a fun exploration, not cute triangles this time, we have got some F's. That's cool. Yay. All right. So what just happened is this a lot things, include something whole area code mistakes. Fundamentally, what I was doing is creating this big array and filling it up with colors, and ultimately, I would put letters in there and I put that as a piece of data, and I assigned it to the pointer and that's what made it print to the screen. Now, something I would love to do is in that room where I'm keeping everything open, that's no reason I can't gist print tons of different things to different parts of the screen, you could have annex plosion of RustFest all over screen. You can crash your computer doing that, but it might be really fun any way. I was told this was way too complicated of a way of trying to do this. If I really wanted to demonstrate T instead of doing this whole loop shenanigans, I should just have written it out one by one the way I did it in the assemble least I don't really care. It's like, super fun to write and joy I felt whennic get N incredibly, at least what I believed, complicated set of build tools to finally print some tiny word to the screen. I was like, okay. This is really, really fun.
-
-
-
-So I kind of want to leave you all with this many which is that this is from Leslie Lamp owe rt. He wrote a presentation called "Writing for Programmers" and this cartoons, "writing nature's way of letting you know how sloppy your thinking is." and I've been in my talks before, kind of reappropriating this, to teaching is nature's way of letting you know how sloppy your understanding is. And if anyone here has ever been a teacher, teachers in the room, not enough. Let that be the lesson if anything. If you ever want to know how little you know about something, try and explain thank you to somebody. And you'll be surprised. Beginners ask extremely difficult questions that are very hard to answer sometimes. So what I want to say is go write some irresponsible code. Write a tiny operating system that does something it is or could have and he go teach somebody else to do the same thing. You're probably going to end up learn seeing much more, just from that exploration and teaching experience alone, than following any sort of terribly structured tutorial. And even though the RustFest tutorial are good, you should stray from that and do some super goofy things. Intermesos has gotten you out of this kind of how to get started part. So intermesos is ready for people tow take a look at this, and extend it to Rust Bridge. It's already started for you to have RustFest connect to T. it's only nine months old, which is an awkward amount of time. But any way, it's interesting. We have 12 contributors. 233 commits and 444 GitHub stars for those who care about GitHub stars. There's only 12 contributors but there should be more. It's a very extensible thing. Can you build out your own little things on it and they can all work together.
-
-
-
-I also want to centers the fact you don't have to contribute code to contribute to intermesosF. take a look at the book, which is the comp pannian to the Colonel's code base, we have 47 contributors with around the same number of commits. Not as many GitHub stars. But that's because GitHub fan boys are not really into books. We want to contribute into intermesos and doesn't matter who you are. We think you're really great and there's a very good chance have you something to contribute. If you failed to comply with what the general people think a real OS developer should be, yeah, you will look silly but that's like a super good thing, I think. So I can operate a system and so can you. Thanks so much.
+<< 07-ashley-williams.md >>
 
 
 
@@ -528,99 +216,7 @@ I also want to centers the fact you don't have to contribute code to contribute 
 
 
 
->> STEPHAN HUGEL: So sorry about this, everyone. (Pause).
-
-Yes, okay. I think it's working. Okay. Hello, everyone. It's lovely to be here. As Ryan said, this is my first-ever talk about programming, and you are my first-ever actual real develop audience and so try to go easy on me.
-
--
-
-[Applause].
-
-
-
->> STEPHAN HUGEL: And so I'm just going to start off with a little bit about me. I'm a fourth-year Ph.D. student. I should not be here. I should be writing somewhere. I mostly work on something called smart cities, which is a terrible concept about making cities better with technology. I'm sort of interesting about write birthday history and policy that shapes them, the future and I'm note a programmer. Programming is not my job. I have an English degree. Do I data analysis and visualization as a kind of productive procrastination because of where I work. I work play lap and everyone I work with is a physics Ph.D. or an architect. So you get sucked into things by virtue of being there. I work on Python, Matplotlib, and I make a lot of maps, and this is the cycle analysis in London and some very basics special analysis. More lovely Data Viz and this is a prom, a colleague, this is building the London as tweets arrive from those buildings. So that problems is the thing that actually, that's kind of the reason I'm here today. And I suppose, before I say anything else, I should say, I planned to transcribe my slides into German, but unfortunately ...
-
-
-
-[Laughter]
-
-
-
-I'm really, really sorry. I know. I probably found that so much funnier than any of you. Okay. So, why Rust? I came to Rust by a series of weird coincidences. I had a friend that worked at Mozilla. And he tweeted about it, and it in a interstated way and this new thing called Rust, it's going to be really great and that was 5 years ago, the day Rust appeared, when it was, you know, unrecognizable to what it is today. I lookedda at it, didn't understand anything about it and I've gone on with my life until last year. So last year I went on holiday, it was also very boring. It was also great. And I thought, I'll have a look at this and see what it looks like. And it looked wonderful, obviously, I don't need to sell you on it. You're here. And so when I came back thirty one. I thought, okay. What is the best way to teach yourself anything pick something you actually want to do and work on it. As I said, one of the things I do is work with maps a lot. We're going to find out about those in a second. And there's really an excellent tool for converting. It's called PROJ.4. And it's been around since the 80's. The first realty + was 90 19New Mexico it's really high quality library, really well-mained and there's a python wrapper which is really fast. It's wonderful. So I decided, can I write something that's as fast because Rust is excellent. Something can you easily achieve. And I was very wrong. But not to worry. Okay. So I'm going to just briefly, talk about coordinate reference systems and so a coordinate reference system is a way of describing location on the planet Earth. They have two components. They have got a datum and the actual coordinate system. The datum describes how the reference is related to the physical Earth. So you've got a position of the recently, a scale factor and a Geoid. Which is this, it's kind of an idealized representation of the Earth. And coordinate system describes how the coordinates are expressed. They can be expressed in Cartesian coordinates. So have you Lambda u and u. And projected coordinates in transes verse -- and so the big reference system that is used everywhere is WGS 84. Everyone uselesses it for everything now. Datum is a point of the center of the Earth want that's where all its coordinates are measured from. And they have reckoned they have got it correct to within one meter. I use the WGS 84Ellipsoid. It's the only reliable way to do T. it's designed to be Globally consis within one meter. It covers the entire Earth. And can give you an accurate position. GPS can't, but the system, mathematically can. There's an off shoot, ETRS 89. It's mostly used for surveying in Europe.
-
-
-
-[Laughter]
-
-
-
-There's a historical reason for this. And so the U.K. uses something called "The National Grid" and use coordinates OSGB36. The 36 comes from the year that someone first invented it, so there was no GBS36.
-
-So the national "Gridiron Gang" is used on UK maps and shaped files what suicided for making maps.
-
-
-
-It's not actually Airy, the ellipseid here. It's called an Airyellipsoid. It's named after this incredible math my metations,.
-
-So WGBS is great. Malicious the sea level more accurately. Which is agreement you have an Ecoordinate and an N coordinate. In order to transform between EG WGBS34 and OSGB36. You need three things. The data can differ in three ways. The position of the origin can differ. The orientation of the coordinate axes can differ and size and shape of the reference ellipsoid can deliver and thus, we're not going to dwell on T. can you avoid the trick iest one. If you convert all of your coordinates to 3D Cartesian coordinates and it's reasonably forward straightforward to do this mathematically. There's a link to the equation at the end you need 3 parameters to describe a 3D translation. Three parameters to describe the 3D rotation between the coordinations of the coordinate axes and you also need a scale factor. The whole thing can be bundled up into a linear formula that looks like this. And so if you imagine that here, A, X1, this is your X can coordinate. This is your Y coordinate and altitude we're not going to worry about that at all. So can you basically plug your 6, your 7 values in here. And do some fairly straightforward. Matrix algebra, and you're done. This is the last one of these, by the way, and that slide is not supposed to go there. And I'm going to give this talk at the flat Earth society next week.
-
-[Laughter]
-
-[Applause].
-
-
-
-It's going to be next week is going to be much, much shorter as can you imagine. Okay. Any way, the thing to note here, essentially, the whole coordinate transforms to one piece of linear algebra, with seven terms, it's quite straightforward and you're kind of done am the problem S when you carry out that conversion, you introduce error into your coordinates and it can be up to three meters a coordinate that you got off your mobile phone will only guarantee to be abrate within 15-meters so it's no big deal. And if you happen to be using differential GPS. You see them on both. It's like a large professional GPS. You can get all the way down to 10-centimeters, which is really good, it's also not good for surveying. In the U.K. usurp vague carried out, using the GBS36 system. So they need aid way to very, very accurately, transform within WGS34 and OSGB36. And they have dreamed up a transform that is accurate between 1.1-millimeters, which is more accuracy than you need B. it's good enough. Up in the last week, there was only one. OST02. And as of last one, they announced a new one, OSTN 15.
-
-
-
-These are so-called, riber sheet transforms which means they can operate in 3 dimensions. Can you have a longitude shift, latitude shift and a height shift. Essentially, what it is. It's a bilinear transformation, using a grid shift. So have you huge amount of the physical measurements of how you correct like, the wrong inaccurate result of your matrix algebra and that gives you the correct coordinate. Last week, [indiscernible] was 15. Which works the same way. But it's accurate due to the measurements. So how does the transform work? You go from W SH to -- have you error in your transformation. You get your grid shift parameters for the kilometer grid you happen to be in. Then you [indiscernible] your turblation, and that give us you your precise card nates and add those on to your [indiscernible] coordinates. And you have accord fates. So on to the actual Rust. I managed to write the initial initial conversion in Rust on my own. It's literally, a set of transformations. Can you do it in any programming language. You can do in paper. But I have no idea how FFI works. Stack over flow. Hello, I want to know how I can transform, you know, an array of point by leads. I want to interface, please. I got this like, incredibly thorough and wonderful succinct answer. I don't remember but they're incredible and thank you if you get the audience to remember this. So essentially, what you got is, you've got a C compatible instruct called array. It's got the data, and it's got the the number of values and then you've got a float -- and we have got something that converts incoming FFI values into a slice. And then, we have also something that converts going factors of transform values back into a void pointer. So that's back and now, we have got a function to drop this. So you've got an incoming transformation ad going, and dropping again. That's how do you FFI in Rust.
-
-
-
-So the implementation of the actual transform was really easy. Nothing Rust-specific about it so I'm not going to dwell on it and there's a coordinates check to make sure you haven't given it a longitude and latitude outside of the transformation. This transformation only works for the U.K. If you use value that is way offshore, it won't work right. So have you to have that in the chain. And the look-up was fairly straightforward at the time. I decided if anything went wrong, rather than trying to deal with T I'd just return a man value. They're easy to check for F. you give the transform like, 10 coordinates and coordinate number 7, it's easy to check for. So I just kind of left it. Another thing I found, while I was doing it. This is like this wonderful crate called terrible lent and for those of us who are not mathematically inclined, obviously when you're doing felting point operations, it's easy to get a little wrong. And multiplying like a tiny value by large value. Suddenly, nothing works anymore. So the University of Washington wrote this, it's a tanned-alone tool and one I rather excellently posted and the quiet version. And it will look at your code, and tell look at any floating point operations in your code that are potentially unstable and it will suggest improvements. And it's really, really useful because it's quick. You have to switch it's okay. It's kind of like a floating [indiscernible]
-
-
-
-So then the next step is integrating the actual accurate adjustments. There are 876,000 and each adjustment is three point float values. [indiscernible] value and other altitude value which we don't care about. It exists. At the time, they're in sequel I.D. so that was not going to be quick enough because you know, if you need convert a million values, you can't be doing a million calls. I mean, you can and it's not super slow. But it's also not as fast as I wanted. After stack over flow. Excellent. So for those I don't know, PHF give ace compile time static maps. It's got a really, really easy example, which I copied word for word, basically. And there is a binding for us. [indiscernible] QLS and I tried to build. It took like two thundershowers build on this thing and took another two hours to compile. Move all that stuff into a crate and never worry about it again. Test once and compile quickly. So the O ST02PF equation is available on caring O. if case anyone need T. it's good to know tait's there. Back to my primary concern here, I want this to be fast. And so this would being like, July or August last year accident, I guess. There was no sign of cross [indiscernible] at this point.
-
-
-
-I managed over a space of days, write this horrendously all of function, which takes in two slices, combines them into a vector thens yes, a vector -- I'm sorry. I'm like, reliving things dilast year and it's really uncomfortable. And it goes on and on and on. And this is the non-scope thread so you've got this thing here. You've got to move and reallocate. You're finally getting to happen your element here so needless to say, this is not great. It worked. Don't get me wrong. This is like, you write the thing, and if the compiler doesn't crash, it's probably working. I was like, extremely proud of myself. But it just is not great. We have hire coded the number of threads. Casting back and forth between floats. And then you're calling to own on the thing and it's allocating again and there's obstruction code in there. I know. I know. It was a long time ago. And someone read T. why are you [indiscernible]. Just like, forego all this. That's good advice. And I put my Rust coat away, and went and tried finish my Ph.D. for okay 6 months. Then I had some time over Christmas. Okay. Let's see if we can do better. In ababstract sort of way, we have a sequence of values. Eastern or northern values the length of sequence isn't going to change, we're just transforming them. And type of values isn't going to change. I read this back, and it says, please carry out all operations until the precision floating point. It's F64N -- 64 end, but that's fine. So the solution, we just use mutable slices and also, some time has past. Threading libraries exist. And also, we can be generic in terms of our threat dysfunction. So we can write a function that exempts, two sequences of mutually barrowed 64 values and we can pass in a function that implements copy traits. Just keeps the compiler happy. I figured this out, by the way, leaving them out then compiling. No, you need to have a could you please. I was like, okay. Cool. But copying. No, you need to have send.
-
-
-
-So you put those two traits in your function definition, use it the sequences together. If you imagine you've got sequence of longitudes and latitudes and really, what you want is kind of one of each to give you a point, and so you've got to zip them together. Split the rut into mute I can't believe chunks so&those chunks retain actual coordinates. For each chunk, apply the conversion funk, and then you're done. This has a nice slide effect. I was able to make the library, much cleaner. So you have a function for each type of conversion. So WGS84, to OSGP36. Come back again. And then you can define an FFI funk for each of the top level and move everything into his own maddual. We have got conversions, which is where all the boring mats are. FFI module and then we have got Lib where the top level generics live. And we have got utilities, other boring stuff. So interlude. It took me a long time to figure out the chunks and chunks trend slices. Tack me days. I know I had to do this. This is what it looked like when I was writing down in my notebook. This is totally wrong. What do you get back when you called churches. Low and behold, it was a slice.
-
-
-
-This predictive clarity and momentum P.R. which altered two words and it got instantly emerged. So thank you, Steve F you're here somewhere. So on to the fancy threat of function. Take 2. Now, we have got a lifetime specifyer. We'll talk about that in a second. We have got our function here. I'm going to give you back the result. And implement copy. And then, I work at how many threads can I spawn, based on how many CPU's there are. There's really quite useful CPU's. And then, I spawn like, an appropriate number of threads apply my conversion funk here F. I get back an okay. And you take the value, and you take it into now. That's pretty much it. There's a little bit of right away drift. But it's not too bad. And then send. This is rayon. It's considerably similar. Instead of spawns and scopes, you've literally, got part of muge. So obviously, because I'm curious. Reneed a lifetime specifyer. I'm talking about as if I know what's going on.
-
-So I started off, using a separate one for each slice. But actually, you can just use one. Reading signatures, so, so -ful. I've got a link to it at the end for those who might want to, you know, feel inspired. Any way, okay. So I then compared the speed of cross beam and rail. So first of all, so the purple D.O.T.s are at this ancient two core here. And on the left, you've got crossing and on the right you've got rayon. So essentially, what happens is, no threads. You know, two threads, which is the number of CPU's. You've got an instant and drop in the time it takes. What's going on. It says I've got 19% battery left. As soon always turn on threading, essentially and get a huge speed increase. And it stays pretty much constant, then starts to get a little quicker as you add loads of threads. This is the fastest one here, which is like, one per CPU. And well, that didn't work. Oh, no. Talk among yourselves all right. Where are we. I'm like, lost on my last talk. This is disastrous. Okay. You have domes like this, sometimes. The reality is so much worse. Measuring speed. When you're using cross beam, what you note is, using the number of CPU's on your system, number of threads is what will give you the quickest run. Here it is on two on a two-CPU system and here, on an 8-CPU system. I don't know what the error bars are so gigantic on the CPU-2 system. Anyway, they're much smaller here much these are the error bars. So adding threads, really does nothing, then it starts to degrade performance ever so slightly as you have loads and loads. It essentially gets it right first time, because it is embarrassing parallel. And it just science equally to everything and does everything. Then if you start tinkering with the way, you start getting ever so slightly worse performs and that's on both systems. So that was interesting. I have no idea why I took those. I decided, which is better and turns out. It makes no difference in the end for this.
-
-
-
-Okay. So next thing I tried tow build python builds, and my python wheel is just this piece of code, which is siphon code. I don't know whether any of you use siphon and I don't want to bad mouth things because we're positive people here. Siphon just assumes you know HedraC. I had like a lot of help in making worth and it works. Converts them to memory views. Sundays them into the FFIfunction. And then copies them back out into URA's, it's pretty compact. And it worked perfectly. So I don't worry about it too much. And in order to actually make this usable on three major platforms. I used the Rust everywhere, which give us you Travis and scrips for everything. So if your approach approach is run some tests. If the condition is true. Publish them F do you want integrate bits of travel car coverage, you can do that.
-
-
-
-I first of ology, built my Rust dynamic libraries on each platform. And push a tag, you end up with artifact if your releases. I've got artifacts for 64OSX and for Linux and then for windows, 62 bit and 32 bit and it works almost out of the box instantly, when Trava is not there. So difficulties. You have to understand what link or arguments. I just spent two days. What is this? And then eventually, it worked. And began, I just forgot about T. I know that's really all of, but you know, sometimes you just, you have to deal deal with the world as you find T. just a note on building Linux on python and there's an agreed-standard called Linux 1. The Linux build for compatible. Can you get it as a docker image. And you will have to build your dynamic libraries inside docker image, if you want them to be Linux compatible and that is definitely something you do want to do. Project for windows another autos not available for python 3.5, it works really well for everything else. Scientific computing community. So they do a lot stuff with num pie and there's a thing called multi build, that will allow to you build for a variety with micro S versions.
-
-
-
-So the real reason for here.
-
-[Laughter]
-
-
-
-Who knows what's going to happen next. Apparent he, I have some juice left in this thing. So in order to bench mark. Convert, I generated 10 million round of points within the boundary. I'm going to convert them to OSGB36. And the way diit was, C4 which is the computerized optimized systems. You were in the same bench mark program for each of three configurations. Now, three configurations are, Rust dynamic library and C-types, which is an easy way of interfacing with dynamic library.
-
-
-
-So this is the X instance so here we're talking about 7 seconds B you only 9 seconds. So we're at 58% slower and 24% slower. But then, the two by X large instance, even using C types, which is the sort of toy version. We're at 6.5% faster and then, we have got a 30% decrease, instantly and on the 16 processing machine, we're down to 30% slow or C-types and 60% slower -- or faster. Oh, my God. Faster, it's so much faster when I do it. 60% speed decrease and finally, on gigantic, processor, you're down do -73%. So it's so much faster, the more processing you have. So I'm basically done. I'm just going to talk very briefly about, special computing and there is an organization, it's in active development. There's a few of us. We're basically aiming to provide geo spatial primitives. We have got like point types. Line stream types. Pole gone types and multiple versions of that, and we have distance algorithms going. We have [indiscernible] algorithms going. There are Rust libraries for reading Jason, WP. Polelip line, they're all stable and very few people working and I know that geo developers are difficult. But if you think you might like to be one or if you're just good at maps if a way that I'm not, definitely find us. . This talk is all true, but it's also mistitled and it's really asking a lot questions and getting incredible answers. As you know, some parts are really, really difficult, especially when you're starting out. And the community is so helpful. I know it's getting better every day. And it's not just helpfulness. That community is so supportive and it's so encouraging. Loads of programming which communities are helpful. But sometimes, there is like, if not contempt, there's an assumption that you will just get on with it on your own and Rust is not like that.
-
-So I watch you helping people and I watch you being patient and I watch you being kind to one another. When people sexual harassment very, very simple, starting out. And it's very, very inspiring and it's what's what keeps me and I should just be writing normal words. So thank you.
+<< 08-stephan-hugel.md >>
 
 [Applause].
 
@@ -640,57 +236,7 @@ RYAN: Martin will be giving next talk. Apparently, he was looking at the gobble 
 
 
 
->> MARTIN HELLSPONG: So I got some water and I accidentally got sparkling water, which isn't a good idea before I talk. But I was so nervous, it's not sparkling anymore. So I think it's good. Oh. I have my password. It's just star, star, star, star. Really, I forgot this one. Oh. it works. Okay. So my name is Martin Hellspong. I work at factor 10. I'm a software initial there and we are based in Sweden and it's awesome to be here at Rustment really? It's there it's not there? I also didn't start the time recording, right? So let's do that. (Pause).
-
-
-
-I'm still not there? Yes. So it's awesome to be at RustFest and I'm here to talk about QuickCheck, which is a test method that is under appreciated, I think. And the reason is that it helps you find bugs that traditional testing often don't find. And there have been case studies, showing that you find more bugs with less effort per bug, using QuickCheck. And that's a nice promise fur. And traditional testing it works by very fine expected behavior and perhaps you poke around some of the expected edge cases. I haven't changed my slide. So I'm where I'm -- both slides. It's just that I have a long intro and setting you up for all kinds of failure. Any way, and now, you lost me. The reason for this is that this isn't optimal because you write your own tests, and you won't surprise yourself. But the randomness will actually surprise you and your code. So that's why QuickCheck uses randomness to generate hundreds of thousands or like, any number of test cases you want, according to a specification, and randomness gives, the power to give varied test cases. As an example, there was a bug file against Google's level DB. They hadn't -- Google hadn't found it with traditional. But that's because it needed a sequence of 17API calls to trigger the consistency part. And quick check found this by someone writing a test for quick check that, explored and looked for inconsistencies and see randomness. We can all agree, no one writes a standard unit test, at least that long. So my ambition with this talk is to get you excited about using this if your problems and I'm not going to be very Rust-specific so most of what I'm saying is applicable to quick check in randomized testing in general. You should be able to take something out of your projects. Okay. QuickCheck. There's variance able from most almosts, now, but it originated in the research community about 1999. Worked from [indiscernible] and John Hughes, and John use Hughes is author of functioning paper.
-
-
-
-You need to make a testable statement about your code. For example, say that they're written in absolutely amazing summation function. And can you make a statement about that, say something like, my summation function makes a list of integers and returns positive integer always. And the traditional test method, it's like you're an intern. You and your co-worker, sounds like it's working. Because I used it in one test and it worked. But QuickCheck is more like your know-it-all co-worker. But he won't take your word for T. we have run hundreds of test cases to see if your statement actually works: So it looks like the significant of your statement a lot of test cases, try to find a counter example. If it does, or if it doesn't, and if it does -- it has a test case used to prove you wrong. And this is how continued look in code. This summation function. Just takes list of integer and it's so awesome I didn't even include the limitation. Then you have your statement, which is something like a function that's posted. Takes the list of numbers and give us you the Boolean.
-
-
-
-Succeeds, returns true all the time. In this case, probably what will happen is it will say something lib was posted, it failed, when given the example, the example is the list of the number minus 1. Negative number, obviously, it wouldn't be positive. So that's QuickCheck helping you find discrepancies between your code and standpoint. Perhaps in this characters summation function should have onsite integers or your assumption how it works, you should find a different statement.
-
-
-
-How does it know how to generate test cases? Well, for primitives these funks are built in. Counter example, QuickCheck does something called shrinking to minimize the test case. You can also provide a custom type. But that's seldom necessary. The possibility is there. QuickCheck now introduces randomness into your builds. And people will say stuff like, we don't want unstable tests. You must know who broke the bill. What change did they do to make it fail. What if it poses QA and fails the release without any changes. I mean, that's valid criticisms. Some processes doesn't handal randomness and on the level of individual developer, I mean, you do a big fix ands in not fixed. Or is it just because of failure case wasn't generated. Or you ad a test failure. Does a failure case happen to be [indiscernible]. However, in practices, often, much more stable than you would think when you heard randomness. It's not like it flips flops. It works because you generate hundreds of test cases. If you have some case that's only generated once in every 200 test cases, 100, perhaps it flops and flips between. But otherwise, it's mostly in my experience, they always at the same time they are programmatic. But we must remember, the correct decisions now we introduce untable tests. An unstable test is something with the same input gets two different ruts. You don't know Y. but the unlikely case, it happens and then you get the counter example. That's when given this, it always return this is failure. So you need to take good care for example, and you can produce a unit test.
-
-
-
-You can also tweak a generator, if you have generator for your type. You can tweak that to generate cases more often. On the process level, we could look at fixing the seat to the random number generator. However, that trades test coverage for stability, which is not perhaps a good trade-off. Depends on if you want to find box or you want your build to always work. You can always give up. You don't run a grid check test. Perhaps you need traditional test and you could do [indiscernible] running, to see if you could flush out some bugs.
-
-
-
-There's a tradeoff you need to make. So now, we can look at how I use grid check. So in my project, it's kind of a micro control. I really like how the previous talks have geared into this. It's very much helpful to have a couple of concepts explained. It's kind of controlled projects. Do I it on my experimental time. So I get paid by but the company doesn't. But think going that, it wasn't that funny to, not that exciting to do. I want to do something more outrageous. I probably need to make a simulated word, with a space shape, with a simulated micro controller, and then I knew what kind I wanted and see if you can guess which one it is. This is the classic version of the Macintosh. And commodore A minga 500. This was the first so for those stack of reasons, I chose the processor, running all these few manslaughter. The Motorola 68,000. And also 40 years old, the computers. Or the processor, rather. So it's possible to emulate it. Something like 18 megahertz.
-
-
-
-So now in reality, we have a simulated micro controller problems. 8,000 CPU which is often called M68K. I took an existing C library, running in the main emulators. And I report that to RustFest and I decided to do this, rather recklessly, as project write up. And it's called R68K. And it's off of GitHub. It isn't fully functional yet, but it's useful. For me. If you look at regulator what you need to test this.
-
-It's only 58 instructions. So possibly, can you just write 56 units. However, this doesn't really work because it's annex plosion ever instructions, data sites, registers, and you can release for one single code and there's 64,000 value of up codes, and about 11,000 I think its has done transition, anyway, so I knew then, I needed quick check. I couldn't possibly write enough tests. So how diuse it? I basically made a statement. There's two CPU's. They should behave Identically. And by identically. Giving random initial states. Execute one instruction ethical. And it's very fine state is shaping the content of registers and memory, as well as old memory access are correct size and alignment and what not.
-
-
-
-Then I thought, QuickCheck, just go ahead and approve me on this. And it did, repeatedly. Remorsesly. Lee and ultimately helpful. I ended up with 1,600 QuickCheck tests. One test is testing combination of register and covers all the possible cases. Hundreds of trials each. Running all the tests, is something like three hours, 45 minutes. So single threaded so I can't run parallel. I've used gnu parallel to run cargo in parallel, the tests. It's one test per instance, I ended up doing 16PR's. Elements like cycle counts. How many cycles it took. And I had a single complex statement about the identical behavior. You don't need to have a perfect comparison. This statement was much simply in the beginning, it was still very, very useful to get something and as soon as you take the statement and improve it. It will improve this test. Now to run a more thorough comparison. I'm very happy to say, verified with QuickCheck. I'm basically, 100% sure. And if you for all the instructions. I still have work to do with exceptions and stuff, still provides me a use value. Let's look at the bigger picture. Not talking about my project anymore. I could talk about this for hours but you'll have to catch me tomorrow. So we could here, take a look at a statement, what is the problem of the statement. It's hard to, when you start using QuickCheck, it's hard to come up with different kind of staples. You normally, write the unit test F. input 42, I should get this back. But saying for any number that hold, it's not that useful. So now, I get to the fact part and fact part is just saying something about your code. There's basically F I back up a little bit, there's three different things about statements. Effectses, inverse functions, and there's compare WGS a known good one. Facts will already -- we have already seen. Summation function. Inverse is something like encode, decode. You encrypt something and then you then decrypt it. It should return the same value. If you compares pare something with a non-good, one thing you can use the verged of your code. If you have an implication, and it had a very nice indication of something, it was slow, but it worked. Then if you need to do a performance, you can have your QuickCheck round against your standard non-optimized case and compare it against the optimized case. With kacheing. -- cacheing.
-
-
-
-The guy drove an idealistic model of the database, with capabilities and ran that together with level, and check that they matched all the time. The model is much simpler. It could be a memory carried. You don't need to make all the guarantees. You can also take existing code. That's the third one. And one of them is third party which I was using. You can have the old verged of your code. If you have version one that does something interesting and you want to do a reimplementation of that and you want it to be as good. You can compare verged 1 and version 2. So I have skipped one thing. What happens if you have irrelevant cases, you want to discard those when you're testing. There's also an example of an inverse assemble. Thank you for mentioning those. Now, have you to return a test result. What you do S you have a function. This assemble, San off code, which is basically, 16 bits. If you disassemble T you should have a -- not all codes are valued. If it is not valued, it'll return an error. Don't bother doing this test now because it's not valued because I can't assemble but if it happens to be valued, I get some successly text. Being be something like are like, [indiscernible] to 3, to 2 points.
-
-
-
-In code we test if you assemble this text, do you get the same code. You started with, and you create the test result from that. And this means that test all the places where disassemble works. Assemble should work.
-
-
-
-I also want to mention, other place where is QuickCheck is used. I think it was 107. They all use QuickCheck. Ether tools, test fact about function u functions. And the wide range, talking about Rust at all, ERICSSON is using to find race conscience in the database. In the 4B based stations. They tested integration. Buy stuff from supplies and put it in their cars. They found box in there communication and also found inconsistencies in there of the source.
-
-
-
-I have one last story. Level DB1. It was even more absurd than the one I said. There's a talk about this. Land of jam, 1013. A guy called John Orfton. Found the 7th instant sequence that failed. Google, provide aid fix. He ran the same QuickCheck test. Now after a cowl of minutes, found a 33 step sequence that reduces the same of inconsistency, and I think you can agree this is almost impossible to write the unitests, that would catch something like that. So the wake away is, you won't surprise yourself. Randomness will. Stop worrying and learn to love the it. Thank you very much.
+<< 09-martin-hellspong.md >>
 
 
 
@@ -716,75 +262,7 @@ All right, welcome back. Has everyone had enough cake and coffee in their system
 
 
 
->> WILLIAM LIGHT: So about two hours ago, hi to patch my presentation software because it wasn't working. We're going to hope everything holding it. My name is will. My background is ins C. Lo level stuff. You probably don't know anything about me but if you do, it's because of this thing right here. This is a monup grid 28. I've been developing and maintaining the drivers for this for the past 5 years. We're talking about drivers today. Normally, when people been drivers, they think about drivers and the driver handles low level details of hardware and it hosts up to a higher level of abstraction. Presenting some sort of protocol by thes from some source. And then translates to into a high level inner face a lot of time keyboard or mouse will send some bites and kernel will interpret it and output it on the input subsystem if we're talking about Linux. The benefit here, of course is that you can abstract away some of the underlying transport. US BS2 track pad. Whatever. But drivers don't have to exist in the cerne. We're going took talking about drivers and unit space. Still doing rough lite same thing, but since we're if user space, we don't have to worry about causing kernel panics. We don't have to worry about breaking the system if we happen to hit a South East g fault which we won't be doing today. The performance is absolutely lower. We can't dip in and do real-time stuff. We need to move a lot of audio, for example, that's kind of my background. That's going to be a little more difficult tow D. but we don't have quite as steep a leadership curve. So we're going to be writation user space driver for this thing right here. A native instruments machine micro mark 2. It has these 16 pressure-sensitive Pats here for like, finger drumming, tough like that.
-
-A bunch of buttons, screen, everything lights up. So this is kind of purpose-built hardware. Service shift solve software, and I don't have any cuter that is do windos or MAC. So I wanted to figure our how to make it work. First we're going to cover the table of contents, materially. We're going to figure out how to reverse fortunately this thing. We're going to write the driver and then we're going to kind of revisit, and see how far we have come and how much we have grown as people. Let's touch on the concept of USB interface devices. USB is a fairly complex protocol. We're just moving bites around. So human interface devices. Vee communicate via reports just a message. I snagged this one from a USB mouse. So the first bite is called the report number, basically, just a message I.D. so in the case of mice, report number 0 is motion. Report number one is left button then it goes from there. And the rest are just bites. So human interface devices class specify what each of these bites are for much so in the caves bite. X displacement, Y displatement and I don't know what the fourth one is for. Linux cerne doesn't seem to know either. So we don't have to care about that. USB HID devices can be raw. So I'm really rushing through this right now. I thought this was going to take longer beautiful okay. We're on a behind California. Get us back on track. So a number of different ways we can reverse engineer T. there's the easy but complete way. We can get slightly Dodgy. Look at way professionals do it and look at kind of a really fun hat I didn't know you could do. So the easy way to do this, is we're going to create a little Rust Bridge program that, just opens the device and dumps data from it and then we're going to fidel around with the device and see what device comes out. We're going on use NIX want this is low level any way. We're going to read bites off the report. The rest of the bites, and then so we're going to have some very bountiful output here because that is the wrong monitor. So here's what our device lookses like when we open tup. This caught me by surprise. You'll notice F we start pressing down whoa get some of these bites that start to change. And you now, as we go down the line. This has a whole bump of lights on on it. The method I use, which I don't necessarily recommend because I don't know how well hardware will deal with it. You throw as much data as you can. When I ran this, all the lights lit up. I was like, all right. Cool. So we're done here. And then, I literally, just put a sleep in, and I had it next to my computer. I would run T. when the lights came Oi'd stop it is there, and restart it and just narrow it down. I found out afterwards, during USB enumeration, HID devices are required to specify what respects they receive and how long the report S. that's note as much fun. So let's just do it this way. But if you remember, there's a screen here and we're not likely to figure out how to run that, just by throwing bites at it. So let's move on.
-
-By citing more proper methods of reversing. Proper translates to expensive. This is USB1. This is USB2. And this is USB3. From what I understand, total phase, which makes the eagle. These are top of the line products and they're fantastic. But that, I'm not going to drop, you know, we only need this one. So we only need to drop 1400. I don't have that for a weekend project. This is like, 300. So, really what we need, we need a computer that communicates with a device, using the official software and we need some way of sniffing T. since we live in the future. We can run a computer inside of our computer, and man in the middle USB connection from there. So that's exactly what we're going to do. We're going to open up a windows VM virtual box and then we're anything to do this move. Linux is a Colonel interface that lets you tap each individual USB bus, using wire shark.
-
-[Laughter]
-
-I'm serious. I'm serious. I took these screen shots on Thursday. I just made a filter, I guess protection so we can make sure we have goat the right one. And let's go back and take a look at this. So this is what the button many looks like. Every time you press a button, it Sundays you a bit map with each button being one bit then it just communicates the whole state at one time. We can go and locate that. So here's USB if. Wire shark doesn't decode the HID pay load itself. But as you can see, 01, BOO6. It's ate a little different. O1B80 womp we have got the 84 there. I wassing to lipping a button on and off want we get the same one here. And then what we need is we need the response to this, lights up the button from the official software, and here, we have it. Then we have okay one and unfortunately, the light I want is obscured by this seam in the screen. But can you see, we have got that on and off. So let's just pretend that we have gone throughout rest of these steps and we have reconstructed the messages we need to know to the device and let's get on to the actual driver.
-
-The inputs and outputs, we're going to be listening to a UDP socket. There's this open sound control protocol that's used for like, be spoke interfaces between multiI media software and hardware. Then the outputs are, we're going to send MIDI. Super old school communication between sequenceers and synthesizers, and then it just got used on computers because it was there. And we've been stuck with it every since. Output MIDIand output C. Quick not on OSC, it is absolutely resty looking but the serial formation is, it's really cool, it just kind of sucks as interprocess communication, which seems to be all that but anybody ever uses it for. You use what you have.
-
-
-
-So let's start building the driver. Let's revisit, opening the devices. So we're hoping our HID device and using stock standard net UDP socket. And then we're going to dip into 96 and construct a pole loop. So this is one of my first things about doing this on Linux. In the beginning, I said shift a driver are f are that blinky box thing. That runs on MAC OS and Linux, it's so natural to wait on multiple types of file descripters, in the same pole call. So here, we're going to be pole polling over a raw HID device and raw UDCP socket. We're also going to construct a timer here, because we don't want to send LED responses to the device quite so fast. We end up kind of overloading it and things start to lag and it's not as much fun. Pretty straightforward. Pole-type loop here so can I leave it here and everything else is protocol-specific. But I thought that was going to take 5 minutes longer so I'll get into talking about buttons. There are a couple of alrhythms I stumbled on upon here. Since we have a bit map of buttons and we just need to know what's set and what's not in each button report. I have kind a look up array here trailing zeros, can I use that to skip through a bit field and find all of the 1's. If there are no 1's, if guff just got 0's in the bit field it becomes a no-opF. you ever need to cache the dirty state of a set, if you can stuff it into a bit field, you can trail 0's, find the 1, trailing 0 after the accident find the 1, trailing 0's, find the 1.
-
-
-
-The pads are a little bit more complicated. We just get raw pressure value from the device. And even worse than that it's not debounced very L. I'm just going to start up the actual program I used here. Cool. So now, we have got the actual program. Can you kind of see it lighting up a little bit. If I shake it around a lot. And it's difficult to see if this light. If you shake it around. Can you see, these are very sense tive pads so we have to do some sort of filtering of the data, in order to work with it. When you think about this from a pliability perspective. As a finger programmer, trying to program beats. You're going to want to set a threshold. You obviously, don't want a step to trigger if you press it too lightly. And then you want a pretty decent pressure gradient, up to the maxxum that you're going to touch. And linear exponential. That's usually, configurable. So what I ended up doing and reason I've implemented it the way that I did. I wanted to make it so that if you pressed two faintly, you couldn't trigger a note by pressing layer. Even if you press too faintly, and you press harder, it still tracks that. So we end up with the threshold state and otherwise, we end up in the press the above threshold state and we send a mini-after touch, which is kind of inside of a note, can you vary the pressure up and down.
-
-
-
-Let's see. That's just about that there. So future work. There's this screen on it and I figured out how to make it worth I ended up Dutching protocol. This picture is a die issue the program that's put on there is written in C. So yeah, bring it. Come on. Come on.
-
-I'm good. I wanted to do this in Rust. But I wanted to have like a nice graphics APIfor doing that.
-
-I looked at GFRX. So I couldn't find one that had a backing store. I could draw lines and accomplice stuff O. so I gave up and put it on the back burner. So I'll pick that up at some point. So some parting thoughts. There's actually, so, besides the low-level binding to the Linux mini-sequenceer interface. There's one block of unsafe code in this entire user space driver. Because I was too lazy, I just wanted to take this. If you remember when we saw that huge block of pressure values, they're little Indian U-16's so I'll treat 'em like T. too lazy. I know they're slice Friday all parts but Wyatt the time. So I kind of left this in. So something originally, I was using Amayo for this, I figured it would Abe good chance to get a feel for the Rust Bridge asynch landscape. When I upgrated and rewrote the API, I got an additional 15 to 25 seconds of latency, this could be a problem for these type of applications. 10 millisecond citizen maximum you can have for a person to consider the response to be action as being the same action. Beyond 10 milliseconds, you can perceive the delay. And really, you want close tore 5-7 milliseconds. I haven't measured how quickly the pad reports come in, but I've ballparked T but you know, one, to two, to three milliseconds. So having an additional 15 to 25 seconds of latency is kind of unacceptable. I reported the bug, they thought it was because of TCP node alay. I don't know, something to continue investigating I'm sure.
-
-
-
-So I wanted to come back it this. Can I do a retrospent specksive of the code. The driver is called serial osque. It's actually a USB serial device, and outputs open sound control, kind of bidirectionally, and you write application that is consume and produce open sound control. So when I originally wrote this I used the low level, loop primitives for all the operative systems. I was using pole on Linux, collect on OS10. Wondering why didn't I just use poll on both. On Linux, you can't select on a USB serial device and on OS10, you can't pole on one. Welcome to cross platform low-level programming.
-
-
-
-About a year and a half ago, I tried to factor this. And it worked fine on Linux and broke entirely on windows and OS10. And if you're going to be writing code at this level. I think that it pace off to actually know it is API's that you're sitting on top of. I went and took a look. Serial osqu is code -- most of the platform is windows, of course, the most special of all of the platforms. And then there's not actually a whole a lot code for Darwin and Linux. It just comes down to if the code breaks on an OS update or in somebody's special case, it's one thing to be able to go to MIOand, you you know, file a report and drill down. But if you're shipping production software, that kind of, that bug has to stop with you. Basically, I think much the hard part is not writing the code. The hard part is understanding the underlying API's and documentation can be sparse sometimes. I believe that is all that I have prepared want for ya'll.
-
-[Applause].
-
-So yeah, first talk. I think we may have time for questions for once. Do we if.
-
->> This is the first, I wasn't prepared for this.
-
-Yes, we do have time for questions.
-
-[Laughter]
-
-[Applause].
-
-I am recently on the job market. So looking for cool projects. Come see pee, I'll be around. Also, while I have you all here, there's a particular RFC, allows field and traits and values can we please have this? Can we please have this. Police. I bolted single inheritance on to C and don't want to olt Bolton it on to Rust as well.
-
-Okay am cool. Questions now?
-
->> RYAN: We have time.
-
->> WILLIAM LIGHT: We have time.
-
->> AUDIENCE MEMBER: User space, except for easier development?
-
-
-
->> WILLIAM LIGHT: Well, so two reasons.  A, there was no real reason to do it in kernel space. There's a previous generation of this device, was not just -- so it was vepdor-specific entirely. It wasn't like a human interface device. It was vendor specific and I would have had to use lib USB. And that's his own special brand of hatred. That's in the Linux Colonel now, which is cool. But yeah. A, there was no real reason to do that and B, one of the things it is create a network socket so program consist communicate with it. I don't feel like loading a Colonel module should open up some user, and then have you to deal with, how do you set the port. For me, Colonel module shouldn't be opening up network ports. That speaks to their not being the right Colonel interface for that, I suppose. In the case of the mononly stuff. The reason yet user space is so we can standardize on one API across platforms. There's a port running. You you communicate with it that way. Can you run the same application on windows mac or Linux. So that's why user space. If that makes sense. Does that make sense? Okay . cool. Any other questions? are we set if 'sup, Tim? I'm chillin'. You know.
-
-
-
->> AUDIENCE MEMBER: Do you think Rust is a good language or environment for writing future sinsizeer drivers or pad drivers, and do you think it would be easy for someone to pick up a different brand of pad and start trying to write a driver for T. are we going to see a renaissance in Rust of these drivers?
-
-
-
->> WILLIAM LIGHT: L here's the thing.  It's been a while in the consumer interface, since I've seen a piece of input hardware, that's really vendor-specific and kind of locked down. Usually F you go out and buy a mouse or keyboard. You plug it in with your machine and it's going to work. As you get to more niche areas like production, they'll have these custom controller type things or 3D modeling, there's all of these really specific pieces of hardware and I think that people should be able to crack those open and do whatever they want to with them. Things really important. And that's why I had so much content dedicated to find a USB device and here's how can you figure out what it's doing. I would like for more people to do it in Rust, and that's why I'm giving talk here. While lib UV and MIO, Crone if this is necessarily their foreat a and if they should be dealing with this low-level thing. I know there's a Lib UV, Dev type of handle. But I think there's an Avenue here to maybe start building libraries, crates to, do this on a more cross platform base. I think there's an opportunity to open up some hardware. If that makes sense. Thank you. Pleasure to be here.
+<< 10-william-light.md >>
 
 [Applause].
 
@@ -802,76 +280,7 @@ Sharon Steed here. So give her a round of applause.
 
 
 
->> SHARON STEED: I'm sorry. It might take a couple seconds to connect.
-
-(Pause).
-
-So exciting when things work, eventually. Hi, everyone. This talks about communication, so the first thing that I'm going to tell you is that I stutter. Now, I stuttered for gosh, I think I was about three years old. So around this age. I know, I'm painfully adorable. It's okay. You can tell me.
-
-
-
-[Laughter]
-
-
-
-And stuttering has pretty much shaped the way they communicate ever since I was that person right there. Like I said, I began stuttering when I was around three years old I was talking to my parents about it and they said they weren't all that concerned because you know, tons of kids who are around three years old, stutter and they kind of grow out television by the time they're 5 or 6. And then I also had like, cousins who stuttered, my brother did, my parents did, and they all just kind of grew out of theirs, by the time they were around 17. And so you know, people just thought yeah, you know, this is a thing that is kind of happening right now, but it'll go away on its own and that will be the end of that. Well, I'm 32, and it's still here. So, I guess it's just kind of, you know, here to stay. So as a person who stutters, you kind of develop coping tools. So I did pretty much so many things, that I did. That were kind of odd work because of my stuttering. So I would try to conceal it I'd say things kind of I would try to just stay away from situations where I knew that I was going to have to talk to people. Because I was so terrified of stuttering I would change words because when you stutter, you are keenly aware of of the words that are going to give you some trouble. So before I would have to say the word, I would quickly think about a different word to say so I wouldn't stutter. And so I came to a point where I knew that stuttering and the ways I was coping it was pretty much taking over my personal life A well as my professional life and so I decided that I was going to try to face this fear of talking by pursuing, you know, just smaller opportunities, to speak in front of people. And I know that sounds insane, but I'm the type of person who, like if I'm afraid to swim, I'm just going to jump in the deepened and see what happens. Hopefully, I don't drown and see.
-
-
-
-[Laughter]
-
-
-
-And so when I begin pursuing public speaking, the views that I had, had of communication came pretty much drastically. So McKeown 6:12-01639 occasions supposed to be an act of incredible empathy. The problem is, it definitely isn't. To talk about communication, we have to kind of talk about conversations. So the way that we approach conversations is typically, pretty bad. That's you, and you come up with this cool, you know, thing that you want to tell people. So you have an idea. That's you. That's the thing you want to tell people, and you get really, like, pumped about this idea, right?
-
-
-
-But you don't want to drag anything am but you think that this thing that you want to tell people it could have legs, right? So you're pretty excited about the thing that you want to share. So you think about the thing. You think about the words that you want to use. You think about the way that you want the other person to feel. You think about the way that you want to feel as your explaining the thing that you want to share, right? And you expect them to be wow, I think that's the best idea I will probably ever hear in my entire life and they don't act like that. They're like, okay. Great. I have to go to lunch now. And so you're confused as to why this person isn't as excited as you are about this thing that you think is so, you know, great. Well, the problem is, is that you don't care about them. You don't want to have like a two-way conversation you want them to love your idea, the way that Kanye loves can yeah.
-
-
-
-[Laughter]
-
-
-
-And this self-focused approach to communication is a breeding ground for lack luster conversations and it can even cause problems on teams. So what do you need to do and how do you fix the problem? You need to think about the other person. You had to be empathetic much the reason why is because, you know, is because empathy fuels connection if this is true, empathetic communication is going to drive collaboration and when it comes to building teams, to building products, one of the most important things that has to be positive is the way that you guys collaborate, as a collective. This presents us with a problem. In 2016, the way that we collaborate is almost exclusively Vee A you know, flowing screens, software and text. Which is fine, because there are benefits to communicating in this way. Teams have said because being able to talk to each other. Via twitter, you know, it helps sharing. It helps people feel connected and it also helps to build a common ground.
-
-
-
-When you are communicating exclusive via text, you know, being the empathy that you have to have in in order to connect is oftentimes, lost. So technology is extremely helpful. But it can't replace the social aspect of face-to-face communication. Failure of communication can't just be automated away. You have to confront things face-to-face. If you take away the technology, take away your cellphones, take away computers, take away software, then what do you have left? You have people. So we are presented with a second problem. And it's that people hate talking to each other because talking is hard, and conversations are difficult and collaboration is extremely hard. And that's why collaboration, it does fail because it's so hard to talk to people. Sometimes. So let's figure out a couple of reasons why collaboration does fail. And the biggest reasons are, because people are afraid of being wrong, and people are concern they aren't going to be able to communicate their thoughts and their opinions in a clear way.
-
-
-
-The fear of being wrong is the fear of being judged, right? I can't tell you the time when is I have had an idea, and I wanted to share it, but I was so consumed with the thought of of being judged, but I just remained silent. And being misunderstood, you know, this happens pretty much every day. You know, you guys are all highly technical people, and you work with people who are probably, you know, nontechnical people. And so having to explain things can often end up in just, you know, frustration and irritation and so, it's just a lot easier to, you know, just not collaborate. So how do we fix this? The first thing is, that you have to speak up and encourage people around you to do the same. Because silence kills collaboration. You know, hearing what another person has to say, it didn't make your thoughts and your opinions any less valid. All it does is enhance conversations.
-
-Next thing you have to do is think about the person that you were talking to all of us are on didn't plains, and intellectually, emotionally, and that's okay. Speaking to people on their level, doesn't do anything to compromise your level. Next thing you have to do is think about the speaker. Now, you know, when you do come to a place of having a conversation, where the speaker is beginning to struggle in explaining something, just kind of think back to hearing me speak now, right? I know that it can be incredibly difficult to completely understand the things that I'm trying to communicate and you have to, you know, be patient. You have to, you know, really pay attention. So when you discuss your ideas from a place of great empathy, and you pay attention to, others' ideas from that same place, you are going to create something that is bigger and better than the things you could have created, you you know, by yourself. That takes vulnerability. It's the it is the vulnerability to embrace silence or to discuss the things that going to be, you know, an uncomfortable conversation. And that also takes courage. It takes the courage to listen to people when they are struggling to communicate. The things that they're trying to say. And the courage to, you know, kind of embrace them being vulnerable to you. So to be empathetic communicator, you need to be courage, you need to be courageous. You need to be vulnerable and you need to be patient. And that's going to be the foundation of a positive and effective team collaboration. Thank you.
-
-
-
-[Applause].
-
-
-
-RYAN: Thank you for sharing your story with us. We do have time for questions as well.
-
-So if anybody have any questions they would like to pose.
-
-
-
->> AUDIENCE MEMBER: So I was really struck early on, you made the point about how people are often afraid to speak up because of either a fear of being wrong or they fear being misunderstood. I wondered, which one of those two things Do I fear most. I'm still wondering about that. But when I was reflecting on that further, I realized, some of the biggest jerks that I've known, we're talking about geniuses, but quite often, jerks, who do feel of being wrong, but they don't care at all. They deliberately choose their words to ensure they can't be wrong they have representations and they don't care about being misunderstood, they're leaving it up to the audience to misunderstand them. Maybe they have legitimate reasons for behaving that way, but I'm source of curious. I don't know what you think about this in terms of the kind of personalities that stops caring about whether their audience misunderstands them or not.
-
-
-
->> SHARON STEED: I'm pretty sure we call those people sociopaths. Like, they don't feel. They just don't care so they can live their lives in a way that doesn't like, yeah, like it doesn't matter if I hurt your feelings because I don't have feelings any way. So, I mean, in terms of the personalities for, you know, people who do have feelings, I think those people are a lot more thoughtful, like, they think about the things that they are going to say. And then they make sure the way they communicate them is going to both be positive, effective and it's probably not going to harm, you know, the other person. Because it's that's also really important, too. The way that we talk about things, and the way that we say things, has, you know, has a very large impact on the way that things are perceived. And so yeah, I think those people that care, talk to people in the way that the person has to be spoken to. Everybody else who's on the ends, you know, you probably don't really want to be talking to them any way, because they just don't care about your feelings. Unless you have to go to work with them. And then, you know, yeah. I don't know.
-
-
-
->> RYANN.  Anyone have anymore questions? Thank you very much.
-
-
-
->> SHARON STEED: Thank you.
-
+<< 11-sharon-steed.md >>
 
 
 [Applause].
@@ -888,103 +297,7 @@ But I think you should talk to him about the other stuff. That's really interest
 
 
 
->> MATTHEW WIPLIEZ: So the remember title of the talk was supposed to be, Techniques for Writing concurrent applications with A synchronous. I had all the contents of the talk, for reasons, that hopefully, will be apparent later. So first, I'd like ton about you. Who has already used A synchronous I/0 in Rust. And who has used it in something other than Rust, maybe not JS. Okay. Cool. And so this talk is about I/Oin the context of networking. So I want to talk about file operations. If we do have time for questions maybe we can talk about it. I'm the author of the web framework. Called edge, and that's how I came to learn about a sequence. I help because I use the framework called hyper. Which you might be familiar W. and it actually switch Friday synchronous I/Oto Asynchronous I/O. So before we start talking about Asynchronous I/or, I think it's important to start talking about synchronous I/O. That's what you do, that's what do you in Rust, you know, out of the box. You have to trace when to read, when to write, and the typical use is you are going to revise from a stream, create response and Sundays these responses back to a writing industry. So by default, all of these are blocking. So when you want to handle multiple connections, obviously, you cannot use just one. You have to create like one connection. So the architecture of Asynchronous I/O application, one or more processes and each process will have like 1/3 the connection, right? So if you have end connections, then you're going to have end threats. So how does that look in Rust?
-
-Plaintiff.
-
-It looks like pretty much the way that the architecture was presented. So you have a listener, and then for each incoming connection, on the current thread, you're going to spawn a new thread and handle the connection there. What's the difference between Asynchronous I/O. You have a fix it thread and its thread, actually hands out a set of connections. So you have like, instead of sockets in the context of networking, and it is going to pull to see each socket, whether it needs to be and then tell execute these operations, using non-blocking calls. Okay. So what are the advantages of the Asynchronous I/O? So there are three main advantages in terps of reboot, the number of request for significant executes, in terps of agency, so you can respond faster and in terms of memory consumption. And it turns out, that's especially the case in web servers so some folks at dream post, actually made these bench marks to see what the difference would be and apache is traditional synchronous architecture, and despite being a point slower not that other two. It consumes much more memory. So earlier, William selects and tile, it's interesting to look a bit about the history of the synchronous. So it didn't start with JS and it's actually much, much more than I originally thought. This is one of the good things of doing the talk. So you can actually, dive deep in history. And actually, I'm not sure I was born when select, when it was implemented and later on, the system came to Linux in 1987, and something interesting that happens in 2002 for Linux, we started to get it's implementation. So for Linux, the main difference is scalability. So this is a figure so the difference is the performance of Epole will remain constant, using Asynchronous style, because we know it sounds like magic, and there's always something behind magic.
-
-
-
-Since you're using one thread to manage many connections, and you have to enter the connection in a timely manner. So from the left you have the Asynchronous approach. You receive connections and the time it takes you to handle those connections, for instance, your handler is going to from the other side, it's going to take one second, 200 connection. But then, it's okay. Have you multiple threads,.
-
-
-
-In Asynchronous mode, caps is that instead, the first connection is handled, the thread will like, do its thing and then only when it is processing this request, will process the second one and so on with that being said, let's see how you do Asynchronous I/O. So the good news S there's blocking with libraries. Rust is 1.9. So the deference is instead of having a block, instead, the call would return an error saying, you know, I cannot perform this operation and you told me not to plug. And the problem is that there's no pulling API. So but luckily, we saw that earlier. This is MIO, that stands for metal I/O. The way it supports is by using the underlying libraries so Epoll in Linux and windows, I/O. And it's 0 allocation and it is scrolled back.
-
-
-
-Now when, you use it directly, this is actually, from the examples when they get the repository and that's just for an equal server and that's just handling the connection for an echo server. You get that data back. And this is only the part of care and the structure and to write data so maybe there are some spectacular cases where it's interesting to use my directly, but in practice, what I would recommend is that you use another crate on top of it that would actually take some of the pain away. Or even most of the pain away. I mentioned a few here. These two are using a cogene approach to do their arcsynchronous I/Oand last crate quite recently, this is the library I will talk about.
-
-
-
-So why tokio? You don't need to say, hey, look, I'm interested in read events or write events or any of those. Tokio will just infer this for you. It will know you want to read later on and you want to write later O. also, it's a futures' based, Asynchronous IO Oli /O library.
-
-The idea is it's a different computation. Means it's a piece of code that will get executed at some point, later in time. This is, I'm not sure it's in the latest branch so this one is the hyper solution, maybe, how you should define a hand ler so you would need to implement the straight and get called back when there was a request coming in and you say, okay. Now, based on, you know, if this request is a pose, I want to read from the France port. And then it will go on request. So to say, maybe I want to write a response, and it kind of, you know, gets not very natural or it's a bit clumsy. So the author didn't really have a choice because at the time, he was just wrotor and is now in with Tokiyo. So moving back to futures, like I said, this helps you go back from serving, instead of having nested coals, you have this nice, beautiful, flat structure and it kind of, it maps quite L I think to the way Rust already does, you know the [indiscernible] and stuff like that.
-
-
-
-So the wave of the future is defined -- okay. So this method returns a result so either is an error and okay . if it's fine, you have two choices. If dataa is not ready yet. Maybe it depends on another call. Waiting from some data to arrive. Waiting from another computation to complete. Then you say, okay. I'm note ready yet. Or you can actually return results and then you return Asynch ready with a value. So there's also the [indiscernible] set for stream. A non-blocking, and the idea is that so you return either some value when you're ready to do so or known and known means it's the end of it.
-
-
-
-So what's the relation between futures just a quick note about futures and not blocking. So futures should not block when facing I/O in general. There's a wait future, you should not call when you're inside ray future, otherwise, it will just wait and not advance in the current thread. So actually, I made that mistake once. If your program needs to do computer intensive work. Things like, maybe resulting -- then you should use a thread pool. Every time you do a blocking function, which can be a bit heavy-handed, you just submit a job as a closure, and this job will get picked up and executed by one of the threads that's available. So the notion of thread pool is outside of futures. It just turns out there's an implementtation of road pools for futures which is called future [indiscernible] poll.
-
-
-
-The way that Tokia I want greats, you get all this low-level stuff. All the call-backs am then Tokio core takes care of registering the interest and exposing the future base. On top of that, you also have a higher level of services. Tokio proto.
-
-It actually started in August 2014 that's a bit over two years ago. And the author MIOis also the author of tokio.
-
-And we see in March this year, the futures are straight and then N August of this year, a number of interesting things happened. August 3, Tokio is announced. And about a week later, there's this crate called future officially is announced and yes, non-blocking calls and for computation and it actually turns out there's a crate called futures MIO talooks good for Asynchronous I/Oalso. So you know, I was in holidays at this time, and I was thinking what I'm going to say during this talk, and I was thinking about talking about all the stuff, as I had to do in my framework. And I say taactually, you know, it's changing things. It starts to look, you know, very interesting to do Asynchronous I/O.
-
-
-
-Luckily, two weeks after future is announced, then the three authors announced together, the emerging parts of the project. So that's futures might actually become tokio core.
-
-All right. So we go to what's called the core of the react O. I don't know if that is intended. Probably yes. To the core of the reactor is really like the heart of this.
-
-So it creates the loop. You start listening on the IP address and port, so what's next, the incoming returns the treatment of connection. That's ray none blocking stream. For each stream, you run and the first return ace future and that future is execute on the loop. So to do actual handling of the connection, you need to put that in the call for each method and that looks like this so you get a stream. That's inIng connection. And what you're going to do, you're going to spawn the future on the loop. The loop will actually run, the future that's running a code. One of the incoming connection rides and it will also run every closure, every future that you create to handle the connection. And so, let's see, maybe let's take some action. So I've chosen in this case, just for this. The identification protocol. Which I think is I don't know if it's still used outside of IRC. So the idea is that it was originally, I think in the context of FTP or something like this. And the idea is that the clients that you connected to, want to know who you are. So they will send you a request and you will reply, the operating system and user. It's a line-base protocol, which is nice enough to, you know, maybe make some experimentation. So I think at this point, I have you can see this. So so zero. If you say okay. 1, 1, then there's no user because there's no connection from port 1 to port 1 and if you point to a connection, like this one then it returns the user IT and the breaking system. Yeah.
-
-
-
-So how do we do this with tokio? So first, solution I'm using only tokio core. It was like higher level layers. What I want to do is just realign, you know, try. So I realign and I would process that request and get reply, and then write all the replay to the stream. And I'm not ready yet to finish because there might till be some bites available. This function returns, and tokio will see, depending F it D we'll come here again and it just looks like this, until there are no more [indiscernible] read. Asink, I'm ready with unit results. So there are just a few problems with this implementation. So the first one is that I use the perfect reader because it was the easiest solution. But it actually turns out that the reader will try to will try to fill a buffer in the fist eight kilo bites. It is not enough to fill the buffer. So Republican error, saying it will block. Also, that's probably less of an issue here, biin theory, it could also block. So right would not block. Once you use that, if you want all the response to get sent back. There are possible solutions to improve the implementation such as using buffers, so you feel the buffer. Whenever there's a line separator then you will process the request and using the same thing for the right side and you can do that perfectly. Or you can use streams so you transform the incoming bites into a stream of strings and handle this with the future.
-
-
-
-There's another solution that uses tokio service, which is kind of higher level than this and actually, it looks like what you might want to do so the idea of the tokio service architecture Uyou no longer have data bites comeIng in. Bites coming out. You will actually parse those bites into whatever you want to do like a request, and this is transport layer and then request gets given to the service layer while you do the actual handling of data.
-
-
-
-And the handle, turns into a response, and thence response gets sent down to the trance port layer and timely, it gets sterilized. And sent on the stream. So it's just a matter of implementing two traits. One is called parse. The other is called sterilized. You can return or not or not that structure and it is the inverse separation where it gets, where you get the structure and you get to describe how you're going to send it all right. So now, all that's left to do is do the actual service implementation. So far that, I'm using a little help or function for tokio called simple service. So the service traits I don't know if some of you use the service trait directly. And the service trait has, I think four types. Input, output, the future type, the arrow type and it's just a lot to implement like, four lines of code. So simple service what it does, it will create an instance of simple service from a closure that returns a future. It's slightly simplified, otherwise it would not fit on the screen. Implementation, the idea is like this.
-
-To define a service as a simple service from a closure, you associate the strands port and finally, you create the service, the server, using the service and transport. Every time you get a connection, you will create a transport for that connection, create a service for that and pass it to this server, which is done by tokio itself. To conclude this talk, as we have seen at the beginning, it leads to high performance. At least it does for web servers, probably like, with low-level, time constraints, A parentally, it's a bit different using higho or high-level stuff. That is for networking. It's very interesting. And there's a rapidly evolving ecosystem, especially as I said, what happens in just in August, and so things are moving quickly. But I think that this morning, Rust is at a turning point, in the sense that look great to you and tokio. Try to play with it. You know, use a simple example, maybe use futures blocking implementations and crates. And yeah, that's T. thank you for listening and if we have time for questions yeah, feel free. Thank you.
-
-
-
-[Applause].
-
-
-
->> RYAN: It is my great pleasure to announce that we have time for one question.
-
-[speaking away from microphone]
-
-I'm wondering can you use the same event for different acts of [indiscernible] safely. For example, can I have the same event with a couple connections and [indiscernible] connection?
-
-
-
->> MATTHEW WIPLIEZ: I'm not sure I understand the question.
-
-
-
->> AUDIENCE MEMBER: So the event,.
-
-[speaking away from microphone]
-
-The connection. In the same event, kind of like a different side, not just a metal connection but [indiscernible]
-
-
-
->> MATTHEW WIPLIEZ: I don't know, actually, you mean different protocols if the same loop?
-
-
-
->> AUDIENCE MEMBER: There's different type.
-
-
-
->> MATTHEW WIPLIEZ: So I think in theory, it's entirely possible because you know, I know that's the crate n allows you to maybe have http and htps in the same thread. I'm not sure how to do that in tokio, actually. So maybe it's possible. I really have no idea. Thank you.
+<< 12-matthieu-wipliez.md >>
 
 
 
