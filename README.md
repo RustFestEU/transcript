@@ -6,6 +6,17 @@ You are welcome to submit pull requests to correct any and all mistakes.
 
 Thank you!
 
+## Contributing
+
+If you'd like to correct the transcription for a whole talk, please take a look at the issue tracker.
+
+Then
+
+* either assign yourself to the corresponding issue (only works for RustFest orga members), or
+* leave us a short note at the issue in question, indicating that you are doing the talk, and submit a pull request once you are finished.
+
+Thanks!
+
 ## List of talks
 
 ### Saturday
