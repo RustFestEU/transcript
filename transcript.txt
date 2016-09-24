@@ -4,49 +4,127 @@
 
 [PLEASE STAND BY]
 
-Is good morning. Testing the mic. If it works, if it's clear. If everything I say you receive.
+Is good morning.
+Testing the mic.
+If it works, if it's clear.
+If everything I say you receive.
 
->> CAPTIONER: Yes.  Welcome twoRustFest. We're happy you're here and we're also happy to introduce tout MC.
+>> CAPTIONER: Yes.
+ Welcome twoRustFest.
+We're happy you're here and we're also happy to introduce tout MC.
 
 [PLEASE STAND BY]
 
->> Welcome everyone. It's good to be here at the first RustFest. I've been programming at rust now for a few years on and off and it's been a really crazy journey. To be here at a conference to talk about it in sort of an official capacity is very, very exciting and I'm sure it's exciting for all of you out there as well.
+>> Welcome everyone.
+It's good to be here at the first RustFest.
+I've been programming at rust now for a few years on and off and it's been a really crazy journey.
+To be here at a conference to talk about it in sort of an official capacity is very, very exciting and I'm sure it's exciting for all of you out there as well.
 
 
 
-I want to talk a little bit about what RustFest is all about, at least, according to me. A lot of people think that a conference about programming and things like that. And a lot people have brought up this meme at RustFest that happened at portland, about Rust being fast, concurrent and great. And I think that's true and I think there's a fourth one and that's community. Can you have community with a really awesome language for me, RustFest is really about that community. Sure, we're going going to be talking about code and look at really interesting technology. At the end of the day, the reason we're all here is to meet one another to talk about something that we really love and to talk about a language that allows us to do new and awesome things.
+I want to talk a little bit about what RustFest is all about, at least, according to me.
+A lot of people think that a conference about programming and things like that.
+And a lot people have brought up this meme at RustFest that happened at portland, about Rust being fast, concurrent and great.
+And I think that's true and I think there's a fourth one and that's community.
+Can you have community with a really awesome language for me, RustFest is really about that community.
+Sure, we're going going to be talking about code and look at really interesting technology.
+At the end of the day, the reason we're all here is to meet one another to talk about something that we really love and to talk about a language that allows us to do new and awesome things.
 
 
 
-One of the really cool things about RustFest and Rust in general is that Rust really represents a lot of communities coming together. I didn't program in Rust until a few years ago, only, because it didn't exist until a few years ago, at least in a forum that was sort of usable by the general public. I came from a background doing Ruby, Rubion Rails. Scala, functional program and I know there's a lot of people that also come from that sort of background and different backgrounds. I'm kind of curious who here comes from sort of maybe a systems level programming, C, C++. We have quite a few of those and that makes sense for where RustFest is all about. Who comes from maybe some diNam being languages like Ruby, Java script? Also a lot people, which is great. And a lot those people raised their hands multiple times, which is totally cool. Anybody coming from sort of the dot-net Java enterprise world? That's really great. Anybody who's new to programming the last few years in we also have some beginning programmers, which is really awesome. To pee, that's really what Rust is all about. All these people from diverse backgrounds, diverse technical backgrounds, diverse places, different backgrounds and place coming all together. And we're here to talk about something really, really great, which is the Rust programming language. With that being said, we're going to dive into the nitty-gritty, technical details of the conference itself and we'll start off about the venue itself. The venue you can see around here. The first thing to notice, is it's not the biggest thing in the world. With that being said. Before I get into that, photography. If you have a black lanyer around you, you are okay be being photographed. Red means you are not okay with being photographed. If you think have the wrong L customer, tell one of the organizers. We do have a quiet right over here, back to the right and that quiet room is really if you're feeling stressed because of the small size or the amount of people or for whatever reason. You can go in there and have some quiet time for yourself. We please ask you that you respect the quiet room the quiet room isn't go in the quiet room for a phone call. Once you feel better, let someone else go in there to get away from the crowd.
+One of the really cool things about RustFest and Rust in general is that Rust really represents a lot of communities coming together.
+I didn't program in Rust until a few years ago, only, because it didn't exist until a few years ago, at least in a forum that was sort of usable by the general public.
+I came from a background doing Ruby, Rubion Rails.
+Scala, functional program and I know there's a lot of people that also come from that sort of background and different backgrounds.
+I'm kind of curious who here comes from sort of maybe a systems level programming, C, C++.
+We have quite a few of those and that makes sense for where RustFest is all about.
+Who comes from maybe some diNam being languages like Ruby, Java script?
+Also a lot people, which is great.
+And a lot those people raised their hands multiple times, which is totally cool.
+Anybody coming from sort of the dot-net Java enterprise world?
+That's really great.
+Anybody who's new to programming the last few years in we also have some beginning programmers, which is really awesome.
+To pee, that's really what Rust is all about.
+All these people from diverse backgrounds, diverse technical backgrounds, diverse places, different backgrounds and place coming all together.
+And we're here to talk about something really, really great, which is the Rust programming language.
+With that being said, we're going to dive into the nitty-gritty, technical details of the conference itself and we'll start off about the venue itself.
+The venue you can see around here.
+The first thing to notice, is it's not the biggest thing in the world.
+With that being said.
+Before I get into that, photography.
+If you have a black lanyer around you, you are okay be being photographed.
+Red means you are not okay with being photographed.
+If you think have the wrong L customer, tell one of the organizers.
+We do have a quiet right over here, back to the right and that quiet room is really if you're feeling stressed because of the small size or the amount of people or for whatever reason.
+You can go in there and have some quiet time for yourself.
+We please ask you that you respect the quiet room the quiet room isn't go in the quiet room for a phone call.
+Once you feel better, let someone else go in there to get away from the crowd.
 
 
 
-We have a code of conduct you can find at Berlincodeofconduct.org. Really, the gist of it is be nice to each other. We're all here to have a good time and there's no need to be a jerk. We have an emergency number to call if you have any trouble what so ever. That includes, if you get lost here in Berlin, tomorrow we're going to be walking around in the city. Berlin is a bit of a big place. So if you get lost, feel free to use this number:
+We have a code of conduct you can find at Berlincodeofconduct.org.
+Really, the gist of it is be nice to each other.
+We're all here to have a good time and there's no need to be a jerk.
+We have an emergency number to call if you have any trouble what so ever.
+That includes, if you get lost here in Berlin, tomorrow we're going to be walking around in the city.
+Berlin is a bit of a big place.
+So if you get lost, feel free to use this number:
 
 
 
-You it take a photograph of it, write it down. Don't take it down now, but if you feel you should have later, come talk to one of the organizers and they can get you the number later. Tomorrow, we have a bunch of workshops. Workshops, in the world means different things to different people. People imagine someone up front, giving a lecture. That is not the way the workshops work tomorrow. They are free and open and for people to come together with shared interests, about different topics to come and learn together, meet together, explore ideas together, whatever you want to D. so we have very topics, including the web, low-level programming, maybe operating systems, something around that. Embedded program. We have cryptog graphy. Block nature. Start think going what you're interested in and we'll have an opportunity to bounce around some of those as well.
+You it take a photograph of it, write it down.
+Don't take it down now, but if you feel you should have later, come talk to one of the organizers and they can get you the number later.
+Tomorrow, we have a bunch of workshops.
+Workshops, in the world means different things to different people.
+People imagine someone up front, giving a lecture.
+That is not the way the workshops work tomorrow.
+They are free and open and for people to come together with shared interests, about different topics to come and learn together, meet together, explore ideas together, whatever you want to D.
+so we have very topics, including the web, low-level programming, maybe operating systems, something around that.
+Embedded program.
+We have cryptog graphy.
+Block nature.
+Start think going what you're interested in and we'll have an opportunity to bounce around some of those as well.
 
 
 
-These workshops are going to be spread throughout Berlin and we'll give you more specific information where those are as well tomorrow. We're going to be meeting at the venue tomorrow. We'll have a talk in the morning. Meet here and then we'll be able to spread out to the workshops and come back in the even for the final talk. Finally air, word about one of our workshops that we have, which is the Rust Bridge workshop, a new workshop geared towards beginning programmers. So maybe you have some experience with programming before, but not really much experience with Rust and would like to learn about it then can you participate in that.
+These workshops are going to be spread throughout Berlin and we'll give you more specific information where those are as well tomorrow.
+We're going to be meeting at the venue tomorrow.
+We'll have a talk in the morning.
+Meet here and then we'll be able to spread out to the workshops and come back in the even for the final talk.
+Finally air, word about one of our workshops that we have, which is the Rust Bridge workshop, a new workshop geared towards beginning programmers.
+So maybe you have some experience with programming before, but not really much experience with Rust and would like to learn about it then can you participate in that.
 
 We ask that the Rust Bridge mentors be at the venue at 9:30 a.m., which is earlier than the other workshops and other workshop itself starts at 11:00.
 
 
 
-You can find information on the RustFest website. And activities as well.
+You can find information on the RustFest website.
+And activities as well.
 
-This is for any kind of activity. To the just the workshops. If you feel you have a good idea of something where you want to get a couple people together. Can you go ahead and post on this website and people can sign up and things like that. We have one event tonight that's not directly affiliated or sponsored by the event. But it's the one aim even party tonight. I believe it's their one-year birthday party. So you can find information about that at this URL here. If you want tonight to go there, there will be drinks and can you go with a bunch of people some words about politics. Tomorrow is an election day here in Berlin. So there will be some election things happening around town and also, the organizers will be out voting early in the morning. So we may start a little late. That being said, there's also a demonstration happening here, that's a right-wing demonstration. So just be aware, that there could be things cause by the that.
+This is for any kind of activity.
+To the just the workshops.
+If you feel you have a good idea of something where you want to get a couple people together.
+Can you go ahead and post on this website and people can sign up and things like that.
+We have one event tonight that's not directly affiliated or sponsored by the event.
+But it's the one aim even party tonight.
+I believe it's their one-year birthday party.
+So you can find information about that at this URL here.
+If you want tonight to go there, there will be drinks and can you go with a bunch of people some words about politics.
+Tomorrow is an election day here in Berlin.
+So there will be some election things happening around town and also, the organizers will be out voting early in the morning.
+So we may start a little late.
+That being said, there's also a demonstration happening here, that's a right-wing demonstration.
+So just be aware, that there could be things cause by the that.
 
 That's happening 1-5:00 p.m.
 
-We'll probably be in here the entire time, so that's not a problem. But just be aware.
+We'll probably be in here the entire time, so that's not a problem.
+But just be aware.
 
 
 
-I forgot to bring up the Origami, but we have some Origami you should have received and you can make nice Origami things here. You can find out how to make your Origami at the URL you see on the Origami paper.
+I forgot to bring up the Origami, but we have some Origami you should have received and you can make nice Origami things here.
+You can find out how to make your Origami at the URL you see on the Origami paper.
 
 
 
@@ -56,15 +134,48 @@ We have some very lovely sponsors that have helped us put on this event and the 
 
 
 
->> So this is maybe my 12th conference, and the more and more I run conferences, the more grateful I am for sponsors. It's absolutely a good thing. We have two organizing sponsors. One is my company, and the other one is honey part, who's C.E.O. Tracy has been helping us with technology and all these kinds of things and design. So I'm really grateful to them, they approached us at the beginning of the year. Actually, by coincidence, they contacted the community team that they wanted to run a conference in Berlin and contacted the RustFest community in the U.S. and they said, there's also, people that want to run a conference and this is how it happened.
+>> So this is maybe my 12th conference, and the more and more I run conferences, the more grateful I am for sponsors.
+It's absolutely a good thing.
+We have two organizing sponsors.
+One is my company, and the other one is honey part, who's C.E.O.
+Tracy has been helping us with technology and all these kinds of things and design.
+So I'm really grateful to them, they approached us at the beginning of the year.
+Actually, by coincidence, they contacted the community team that they wanted to run a conference in Berlin and contacted the RustFest community in the U.S.
+and they said, there's also, people that want to run a conference and this is how it happened.
 
 
 
-We have got a venue sponsored thatted us early O. gave us a call and said, let's talk F. don't have a venue, and no funding, and presumably, no budget, come here, we'll make sure it happens. And I'm really grateful for being so flexible. It's a great team here. And I was really surprised. We have two gold sponsors that are going to introduce themselves right after this. One is One Aim, building door locks. That is a very interesting topic and they're also sponsoring this even party, which is not affiliated with the conference. We have our own even party as well that's going to happen at this venue. If you want to go to the party, it's rather small. You need to get a budget banal to get in, which can you get at their table here want so if you want to go, get a badge. Just take one. Modern cryptic technologies, Robert's going to introduce to you in a second. And [indiscernible] has been happen negligent week before this, from Monday through Wednesday and the larger tech school. And programming languages, at the Rust meetup community is also organized within the open tech school.
+We have got a venue sponsored thatted us early O.
+gave us a call and said, let's talk F.
+don't have a venue, and no funding, and presumably, no budget, come here, we'll make sure it happens.
+And I'm really grateful for being so flexible.
+It's a great team here.
+And I was really surprised.
+We have two gold sponsors that are going to introduce themselves right after this.
+One is One Aim, building door locks.
+That is a very interesting topic and they're also sponsoring this even party, which is not affiliated with the conference.
+We have our own even party as well that's going to happen at this venue.
+If you want to go to the party, it's rather small.
+You need to get a budget banal to get in, which can you get at their table here want so if you want to go, get a badge.
+Just take one.
+Modern cryptic technologies, Robert's going to introduce to you in a second.
+And [indiscernible] has been happen negligent week before this, from Monday through Wednesday and the larger tech school.
+And programming languages, at the Rust meetup community is also organized within the open tech school.
 
 
 
-We have two sponsors, one is key task and the other is Thought Works we have venue appearance. Thought Works has a venue over here and other one, I want to say a couple words about, too. it's the cohop. Many people that are not from Berlin don't know the co-op. It's the working space that's a few years old and they have a concept that when the co working space closes down, it's available for free for community events. So a lot of met-ups here in Berlin, started out. Because they said F need a room, just come in and get a key and can you have us for the night. They have events almost every even, and of course running that, without any money involve for many years now. Finally, we have technology appearance. Wiring microphones. They're doing all the networking, and audio stuff and the people from [indiscernible] Records, doing the video recording. So let's continue on.
+We have two sponsors, one is key task and the other is Thought Works we have venue appearance.
+Thought Works has a venue over here and other one, I want to say a couple words about, too.
+it's the cohop.
+Many people that are not from Berlin don't know the co-op.
+It's the working space that's a few years old and they have a concept that when the co working space closes down, it's available for free for community events.
+So a lot of met-ups here in Berlin, started out.
+Because they said F need a room, just come in and get a key and can you have us for the night.
+They have events almost every even, and of course running that, without any money involve for many years now.
+Finally, we have technology appearance.
+Wiring microphones.
+They're doing all the networking, and audio stuff and the people from [indiscernible] Records, doing the video recording.
+So let's continue on.
 
 [Applause].
 
@@ -82,15 +193,23 @@ We have two sponsors, one is key task and the other is Thought Works we have ven
 
 
 
-Ryan: So is everybody ready? Oh. Come on.
+Ryan: So is everybody ready?
+Oh.
+Come on.
 
 [Applause].
 
-It's a programming conference. What's there not to be excited about?
+It's a programming conference.
+What's there not to be excited about?
 
 [Applause].
 
-So next, we have our first keynote, our speaker is somebody to get very excited about. He works from his own research, work on the compilers and language team for Rust. And the one thing I'm most excited about for Felix's talk is that it really combines something very unique about Rust. The ability to really have your head in the clouds in thinking of things like category here and he advance type systems but at the same time, having your toes rustle around inside the bits. So I think everybody here is going to enjoy what Felix Klock has to say. So welcome, Felix, to the stage.
+So next, we have our first keynote, our speaker is somebody to get very excited about.
+He works from his own research, work on the compilers and language team for Rust.
+And the one thing I'm most excited about for Felix's talk is that it really combines something very unique about Rust.
+The ability to really have your head in the clouds in thinking of things like category here and he advance type systems but at the same time, having your toes rustle around inside the bits.
+So I think everybody here is going to enjoy what Felix Klock has to say.
+So welcome, Felix, to the stage.
 
 [Applause].
 
@@ -98,7 +217,10 @@ So next, we have our first keynote, our speaker is somebody to get very excited 
 
 [Applause].
 
->> Ryan: Unfortunately, we don't have time for questions right announcement we're going to take a 10 minute break. And I'm sure Felix will be available at the break for questions. And we'll be back at a little bit after 11:00. Thank you very much
+>> Ryan: Unfortunately, we don't have time for questions right announcement we're going to take a 10 minute break.
+And I'm sure Felix will be available at the break for questions.
+And we'll be back at a little bit after 11:00.
+Thank you very much
 
 
 
@@ -112,11 +234,20 @@ So next, we have our first keynote, our speaker is somebody to get very excited 
 
 
 
->> Ryan: Excuse me, if people can start making their way back to their seats. Thank you.
+>> Ryan: Excuse me, if people can start making their way back to their seats.
+Thank you.
 
 
 
-Hello, hello. Welcome back from the break. We're going to get started once again. Is everybody feeling good? Everybody's minds really warmed up? So our next speaker is coming all the way from Vancouver. Made his way over here to talk to us about a topic that's a bit on the other end of the speck rum from our last talk. Maybe you're not so familiar with Rust and this is one of your first times being exposed to language. Brian Pearce will talk about getting to know Rusts and things to love.
+Hello, hello.
+Welcome back from the break.
+We're going to get started once again.
+Is everybody feeling good?
+Everybody's minds really warmed up?
+So our next speaker is coming all the way from Vancouver.
+Made his way over here to talk to us about a topic that's a bit on the other end of the speck rum from our last talk.
+Maybe you're not so familiar with Rust and this is one of your first times being exposed to language.
+Brian Pearce will talk about getting to know Rusts and things to love.
 
 [Applause].
 
@@ -127,7 +258,14 @@ Hello, hello. Welcome back from the break. We're going to get started once again
 
 
 
->> Ryan:  All right.  Thank you, Brian, that's great. We don't have time for questions. We'll be moving on to our next talk. Our next speaker comes from a far away land, Germany. And he is very interested in security topics. Today, he'll be talking about a library he wrote in Rust for just simply binaries. Everybody welcome Kai Michaelis to the stage.
+>> Ryan:  All right.
+ Thank you, Brian, that's great.
+We don't have time for questions.
+We'll be moving on to our next talk.
+Our next speaker comes from a far away land, Germany.
+And he is very interested in security topics.
+Today, he'll be talking about a library he wrote in Rust for just simply binaries.
+Everybody welcome Kai Michaelis to the stage.
 
 
 
@@ -142,9 +280,13 @@ Hello, hello. Welcome back from the break. We're going to get started once again
 
 
 
->> Ryan: So we do not have time for questions but we will have a lunch break after the next talk. So our fixture speaker coming up told me a really funny story about his Zuck into open source. He Sundays a couple of thousand lines of code to the maintainer when he was about 14 years old and never heard a reply back from that.
+>> Ryan: So we do not have time for questions but we will have a lunch break after the next talk.
+So our fixture speaker coming up told me a really funny story about his Zuck into open source.
+He Sundays a couple of thousand lines of code to the maintainer when he was about 14 years old and never heard a reply back from that.
 
-So E-mail, it was not formatted. So hopefully, things are going much better since then, but Tim Ryan will be talking to us about the Internet of things, and the systems with Rusts. So welcome to the stage.
+So E-mail, it was not formatted.
+So hopefully, things are going much better since then, but Tim Ryan will be talking to us about the Internet of things, and the systems with Rusts.
+So welcome to the stage.
 
 
 
@@ -160,7 +302,15 @@ So E-mail, it was not formatted. So hopefully, things are going much better sinc
 
 
 
-Ryan: Thank you very much. Unfortunately two have time for questions. We do have time for lunch. Take your seats real quick. Lunch works in ways that you may not be used T. at a conference, there's no getting up that's necessary. We bring out lurch to you, since we want to make sure that everybody has space here. If you want to eat your plump inside, that's fine. If it's not raining tooad badly, you can get it outside, as well.
+Ryan: Thank you very much.
+Unfortunately two have time for questions.
+We do have time for lunch.
+Take your seats real quick.
+Lunch works in ways that you may not be used T.
+at a conference, there's no getting up that's necessary.
+We bring out lurch to you, since we want to make sure that everybody has space here.
+If you want to eat your plump inside, that's fine.
+If it's not raining tooad badly, you can get it outside, as well.
 
 With that accident said, we will now bring out the lunches to you.
 
@@ -174,7 +324,9 @@ Thank you.
 
 
 
-[lunch] the sit down part is just until I finished announcements. If you want to stand up, can you stand up. Can you remain seated as well.
+[lunch] the sit down part is just until I finished announcements.
+If you want to stand up, can you stand up.
+Can you remain seated as well.
 
 But we will bring out lunch to you.
 
@@ -182,7 +334,19 @@ But we will bring out lunch to you.
 
 [lunch]
 
-Ryan: Attention, everywhere, we're going to be getting started soon. So make your way back. We'll be starting soon. All right, welcome back. Did everywhere have a great lurch. Yay! . You may want to take this opportunity. To like, shake yourself up a little bit. You know, get over the big bowl of food. We have a great talk up next. But first a couple announcements. I want to tell everybody, this is a community conference, and a big shot out to our organizers who have done a really awesome job organizing this thing. Can we have a round of applause for the organizers?
+Ryan: Attention, everywhere, we're going to be getting started soon.
+So make your way back.
+We'll be starting soon.
+All right, welcome back.
+Did everywhere have a great lurch.
+Yay! .
+You may want to take this opportunity.
+To like, shake yourself up a little bit.
+You know, get over the big bowl of food.
+We have a great talk up next.
+But first a couple announcements.
+I want to tell everybody, this is a community conference, and a big shot out to our organizers who have done a really awesome job organizing this thing.
+Can we have a round of applause for the organizers?
 
 
 
@@ -190,13 +354,25 @@ Ryan: Attention, everywhere, we're going to be getting started soon. So make you
 
 
 
-There was a special gift given out M socks. And we have something very special prepared for you as well. Unfortunately another not socks. I apologize. But wait. You can't take that piece of Origami paper we gave you earlier. If you follow this URL, I will teach you how to fold your paper into sox. So that's good. So yes, we do have socks at . It's great.
+There was a special gift given out M socks.
+And we have something very special prepared for you as well.
+Unfortunately another not socks.
+I apologize.
+But wait.
+You can't take that piece of Origami paper we gave you earlier.
+If you follow this URL, I will teach you how to fold your paper into sox.
+So that's good.
+So yes, we do have socks at .
+It's great.
 
-I believe there was something called self-y stick fencing happening, so if anybody wants to participate in that or post your own ideas for events and get people excited about other things, then that is there for you and there's the URL again. All right. And I think that is the end of the post lunch announcements.
+I believe there was something called self-y stick fencing happening, so if anybody wants to participate in that or post your own ideas for events and get people excited about other things, then that is there for you and there's the URL again.
+All right.
+And I think that is the end of the post lunch announcements.
 
 
 
-Next, we have a talk, near and dear to my heart, a project I've contributed. And Ashley will give a talk, so everybody give a warm welcome to Ashley Williams.
+Next, we have a talk, near and dear to my heart, a project I've contributed.
+And Ashley will give a talk, so everybody give a warm welcome to Ashley Williams.
 
 
 
@@ -212,7 +388,12 @@ Next, we have a talk, near and dear to my heart, a project I've contributed. And
 
 
 
->> RYANN: Thank you very much, Ashley. So we have another talk coming up. This is by Stephan Hugel, who will tackets about coordinate system transforms and FFIin Rust. This is his first talk about programming so I think it's going to be a good one. What do you think all right. We're going to get started.
+>> RYANN: Thank you very much, Ashley.
+So we have another talk coming up.
+This is by Stephan Hugel, who will tackets about coordinate system transforms and FFIin Rust.
+This is his first talk about programming so I think it's going to be a good one.
+What do you think all right.
+We're going to get started.
 
 
 
@@ -224,11 +405,16 @@ Next, we have a talk, near and dear to my heart, a project I've contributed. And
 
 
 
-RYAN: Martin will be giving next talk. Apparently, he was looking at the gobble maps URL and sought coordinate he is got from that, and it was tow a so specific of numbers, something like, 10, 15 decimal places. 13 decimal places. It would of course so accurate to the nanometer.
+RYAN: Martin will be giving next talk.
+Apparently, he was looking at the gobble maps URL and sought coordinate he is got from that, and it was tow a so specific of numbers, something like, 10, 15 decimal places.
+13 decimal places.
+It would of course so accurate to the nanometer.
 
 >> MARTIN HELLSPONG: 10 nanometers close enough.
 
->> RYAN:  I don't think we need talevel of accuracy, but it's go g to know we have it. Just in case. And without further ado, here's Martin.
+>> RYAN:  I don't think we need talevel of accuracy, but it's go g to know we have it.
+Just in case.
+And without further ado, here's Martin.
 
 
 
@@ -244,7 +430,11 @@ RYAN: Martin will be giving next talk. Apparently, he was looking at the gobble 
 
 
 
-RYAN: Thank you, Martin. Next, we have a tradition of cake and coffee, that will last for roughly, between minutes, I believe Soros. Maybe a little bit longer. And then we will come back with more talks. So enjoy your break.
+RYAN: Thank you, Martin.
+Next, we have a tradition of cake and coffee, that will last for roughly, between minutes, I believe Soros.
+Maybe a little bit longer.
+And then we will come back with more talks.
+So enjoy your break.
 
 
 
@@ -252,9 +442,14 @@ RYAN: Thank you, Martin. Next, we have a tradition of cake and coffee, that will
 
 
 
-RYAN: Attention, everyone, we will be starting shortly, finish up your coffee and finish up your cakes and your conversations. We will be starting in just one machine, so please, make your way back to your seats. Thank you very much.
+RYAN: Attention, everyone, we will be starting shortly, finish up your coffee and finish up your cakes and your conversations.
+We will be starting in just one machine, so please, make your way back to your seats.
+Thank you very much.
 
-All right, welcome back. Has everyone had enough cake and coffee in their system now? Next up, someone that hails from Dayton, Ohio, and now, here in Berlin. William Light will be talking and let's give him a very warm welcome.
+All right, welcome back.
+Has everyone had enough cake and coffee in their system now?
+Next up, someone that hails from Dayton, Ohio, and now, here in Berlin.
+William Light will be talking and let's give him a very warm welcome.
 
 
 
@@ -268,11 +463,15 @@ All right, welcome back. Has everyone had enough cake and coffee in their system
 
 
 
-RYAN: Our next talk is about a topic that sometimes isn't talked about enough. We have had some deep diving in code. And that's agreement but there's something else we do a lot in our day-to-day life as programmers, and that's communicate. So our next talk by
+RYAN: Our next talk is about a topic that sometimes isn't talked about enough.
+We have had some deep diving in code.
+And that's agreement but there's something else we do a lot in our day-to-day life as programmers, and that's communicate.
+So our next talk by
 
 
 
-Sharon Steed here. So give her a round of applause.
+Sharon Steed here.
+So give her a round of applause.
 
 
 
@@ -287,9 +486,15 @@ Sharon Steed here. So give her a round of applause.
 
 
 
->> RYAN: So our next speaker was telling me last night, about his experience working on chip design. But he's not giving a talk related to that at all. It's going to be about wood frameworks which is also really cool. So I'm excited about that.
+>> RYAN: So our next speaker was telling me last night, about his experience working on chip design.
+But he's not giving a talk related to that at all.
+It's going to be about wood frameworks which is also really cool.
+So I'm excited about that.
 
-But I think you should talk to him about the other stuff. That's really interesting, too and so, gettings things set up here. So we're anything to have Matthieu Wipliez talk talk. So round of applause, please.
+But I think you should talk to him about the other stuff.
+That's really interesting, too and so, gettings things set up here.
+So we're anything to have Matthieu Wipliez talk talk.
+So round of applause, please.
 
 
 
@@ -305,7 +510,8 @@ But I think you should talk to him about the other stuff. That's really interest
 
 Push.
 
->> RYAN:  We're going to take a 15 minute break and our final keynote and the wrap up for the day. So we'll be back in 15 minutes.
+>> RYAN:  We're going to take a 15 minute break and our final keynote and the wrap up for the day.
+So we'll be back in 15 minutes.
 
 
 
@@ -317,9 +523,14 @@ Push.
 
 >> RYAN:  Can we get seated again.
 
-So I'm going to introduce the last two sponsor Zucks. So I'll make it quick. I already gave my talk this morning.
+So I'm going to introduce the last two sponsor Zucks.
+So I'll make it quick.
+I already gave my talk this morning.
 
->> Thank you to all the sponsors, Microsoft, as the menu pops or here, I think they made a really great day and made a really nice conference out of this venue. Our corporated partners. You might have seen Ben runs around. As tomorrow, we will have the venue and I'm leadership looking forward to that.
+>> Thank you to all the sponsors, Microsoft, as the menu pops or here, I think they made a really great day and made a really nice conference out of this venue.
+Our corporated partners.
+You might have seen Ben runs around.
+As tomorrow, we will have the venue and I'm leadership looking forward to that.
 
 That makes me introduce our first even sponsor introduction, Microsoft employee, Ryan Levic.
 
@@ -335,7 +546,12 @@ That makes me introduce our first even sponsor introduction, Microsoft employee,
 
 [Applause].
 
-We have our last speaker, do you want to come up? Our last keynote for the day. Is a speaker that comes all the way from Brazil. She runs the SAO Paulo Rust meetup and she's going to be talking about science and Rust. Which is very exciting. So breeze, a warm applause for Hanneli Tavante.
+We have our last speaker, do you want to come up?
+Our last keynote for the day.
+Is a speaker that comes all the way from Brazil.
+She runs the SAO Paulo Rust meetup and she's going to be talking about science and Rust.
+Which is very exciting.
+So breeze, a warm applause for Hanneli Tavante.
 
 
 
@@ -353,13 +569,33 @@ We have our last speaker, do you want to come up? Our last keynote for the day. 
 
 Is.
 
-RYAN: We do have time to wrap up the day and that's what we'll be doing next. How's everybody feel something you know it's a good conference at the end of the day, you're just so incredibly tired because you've been spending the entire day thinking, but at the same time, incredibly inspired so do you want keep going. And your body's like, urgh. Doesn't know which way to go.
+RYAN: We do have time to wrap up the day and that's what we'll be doing next.
+How's everybody feel something you know it's a good conference at the end of the day, you're just so incredibly tired because you've been spending the entire day thinking, but at the same time, incredibly inspired so do you want keep going.
+And your body's like, urgh.
+Doesn't know which way to go.
 
 
 
-So good evening. We have an advertisement. Oh, yes.
+So good evening.
+We have an advertisement.
+Oh, yes.
 
->> I'm Andrew.  And I've been at a great advent our. I have to take a break because I'm going to Pittsburgh lastmonth for the last Rust conference of the career. So I invite you all to come, and can you bring your friends because you probably have American friends that are very dependable. It's going to be very great. Can you see our friend, an organizer of this conference, he's speaking there. Ashley and Steve will be there. You're more than welcome to Much we have a coupon go if you go to Rust build Rust.com. And code is RustFest. You'll get 20% off. Definitely share it on twitter and everything. And we really want you to come and have fun and learn more. It's going to be kind of like this conference. There's a day of workshops and a day of talks and it's community run and run by people like carol, on the community team. It'll be awesome. So please come.
+>> I'm Andrew.
+ And I've been at a great advent our.
+I have to take a break because I'm going to Pittsburgh lastmonth for the last Rust conference of the career.
+So I invite you all to come, and can you bring your friends because you probably have American friends that are very dependable.
+It's going to be very great.
+Can you see our friend, an organizer of this conference, he's speaking there.
+Ashley and Steve will be there.
+You're more than welcome to Much we have a coupon go if you go to Rust build Rust.com.
+And code is RustFest.
+You'll get 20% off.
+Definitely share it on twitter and everything.
+And we really want you to come and have fun and learn more.
+It's going to be kind of like this conference.
+There's a day of workshops and a day of talks and it's community run and run by people like carol, on the community team.
+It'll be awesome.
+So please come.
 
 
 
@@ -367,25 +603,79 @@ So good evening. We have an advertisement. Oh, yes.
 
 
 
->> RYANN:  Here's the information if you want to take that down. If you need T. RustFest day 1 is almost over want you have to listen to me one last time. Some news about tomorrow what's going to be happening the first thing to do is to look at activities,.eu. We have information about the workshops, information about Selfie stick fencing, and more. And feel free to add your activity ideas as well we have submit workshops happening here. The embedded one is happening here. Sorry. Embedded one is happening here. If you have any ideas that are not part of an official workshop, feel free to stay here and can you work together. Try and find people with similar interests. There's also places to just chat and hang out. And we have work shops, those are going to be low stack. Then we're going to have web and crypt Crypto. They're all going to happen at the same time. You can all bounce around. We have the Rustbridge work shop happening and that happens at 9:30. So there's information about where these places actually error. You will probably already be here, but as we have talked in the morning, and we can go over to these places together in big groups. Make sure you have a metro ticket with you. The important reason for that is we don't all want to go down to the subway station and try and buy ticks all at once and have 80 people buying ticket it's once. Buy yourself a day ticket or a multi day ticket if you're going to stay longer in Berlin. And come back in the even. We have a talk and a prize and I won't tell you what the surprise S. it's a surprise. So what's left over for today? What do we have to look forward to? Dinner. We have dinner here. It's going to work very similarly to lurch, so if you want to not stay in your seats, sorry about that earlier. But we will have people walking around serving dinner. One thing to mention about dinner that's different from return. If you get a meal, try and let the waiters pass by you a second time. So other people can get their food first. Once people have eaten, then go ahead and have seconds. There's plenty of food. We want to make sure people get food. We have parties that are happening and eatery party. One party is pretty easy to reach. If you don't already have a wrist band, and you want to go. Get those, I still believe those are available. Make sure you head on over there want it's just taking the subway down to the stations and I'm sure as there's going to be a group going that will be easy to find. You can always find more information, exactly about where it is. And more stuff about it on the on the activities RustFest.eu. Then we also have some a party happening here, at the Microsoft eatery, just in front of here. It's an open space with X-Boxes and surfaces, and you can hang out and stuff like that. They serve drinks, beer, coffee, things of that nature. We have food and drink that will be served here as well.
+>> RYANN:  Here's the information if you want to take that down.
+If you need T.
+RustFest day 1 is almost over want you have to listen to me one last time.
+Some news about tomorrow what's going to be happening the first thing to do is to look at activities,.eu.
+We have information about the workshops, information about Selfie stick fencing, and more.
+And feel free to add your activity ideas as well we have submit workshops happening here.
+The embedded one is happening here.
+Sorry.
+Embedded one is happening here.
+If you have any ideas that are not part of an official workshop, feel free to stay here and can you work together.
+Try and find people with similar interests.
+There's also places to just chat and hang out.
+And we have work shops, those are going to be low stack.
+Then we're going to have web and crypt Crypto.
+They're all going to happen at the same time.
+You can all bounce around.
+We have the Rustbridge work shop happening and that happens at 9:30.
+So there's information about where these places actually error.
+You will probably already be here, but as we have talked in the morning, and we can go over to these places together in big groups.
+Make sure you have a metro ticket with you.
+The important reason for that is we don't all want to go down to the subway station and try and buy ticks all at once and have 80 people buying ticket it's once.
+Buy yourself a day ticket or a multi day ticket if you're going to stay longer in Berlin.
+And come back in the even.
+We have a talk and a prize and I won't tell you what the surprise S.
+it's a surprise.
+So what's left over for today?
+What do we have to look forward to?
+Dinner.
+We have dinner here.
+It's going to work very similarly to lurch, so if you want to not stay in your seats, sorry about that earlier.
+But we will have people walking around serving dinner.
+One thing to mention about dinner that's different from return.
+If you get a meal, try and let the waiters pass by you a second time.
+So other people can get their food first.
+Once people have eaten, then go ahead and have seconds.
+There's plenty of food.
+We want to make sure people get food.
+We have parties that are happening and eatery party.
+One party is pretty easy to reach.
+If you don't already have a wrist band, and you want to go.
+Get those, I still believe those are available.
+Make sure you head on over there want it's just taking the subway down to the stations and I'm sure as there's going to be a group going that will be easy to find.
+You can always find more information, exactly about where it is.
+And more stuff about it on the on the activities RustFest.eu.
+Then we also have some a party happening here, at the Microsoft eatery, just in front of here.
+It's an open space with X-Boxes and surfaces, and you can hang out and stuff like that.
+They serve drinks, beer, coffee, things of that nature.
+We have food and drink that will be served here as well.
 
 And that stuff is for free.
 
 Push.
 
-So you can do both. That's totally possible. The one aim party is probably going to last longer and will start later than the other party.
+So you can do both.
+That's totally possible.
+The one aim party is probably going to last longer and will start later than the other party.
 
 
 
 
 
-And is that it? I think that's it. So once again, thank you very much, everything, for the first day, it was a real success. Let's give a big round of applause to our speakers.
+And is that it?
+I think that's it.
+So once again, thank you very much, everything, for the first day, it was a real success.
+Let's give a big round of applause to our speakers.
 
 [Applause].
 
 And a big rounds of applause to our organizers for putting on as well.
 
-Thank you, organizers if you have any questions, feel free to ask the organizers. Anything you want. You can find information on the website as well.
+Thank you, organizers if you have any questions, feel free to ask the organizers.
+Anything you want.
+You can find information on the website as well.
 
 Without further ado want let's commence the even activities.
 
@@ -409,15 +699,24 @@ Without further ado want let's commence the even activities.
 
 
 
-hello, hello, good morning, we're going to get started soon so please head to your seats. Thank you.
+hello, hello, good morning, we're going to get started soon so please head to your seats.
+Thank you.
 
->> So many people. Cool.
+>> So many people.
+Cool.
 
->> Good morning again. How is everybody feeling.
+>> Good morning again.
+How is everybody feeling.
 
 >> Good.
 
->> Yeah it's day two. You've made it through day one, now you're onto day two. That's great. So we have one talk in the morning and then we'll have, after that, information about afternoon sessions and such. But our first speaker today is world famous and renowned for inventing the great sport that you all know and love of sell fee stick fencing. So I know keep your photograph reto a minimum. But Sonja will be talking about hobby oriented programming which is great because today we're going to be participating in programming as a hobby I guess which is kind of cool so everybody give a warm welcome to Sonj
+>> Yeah it's day two.
+You've made it through day one, now you're onto day two.
+That's great.
+So we have one talk in the morning and then we'll have, after that, information about afternoon sessions and such.
+But our first speaker today is world famous and renowned for inventing the great sport that you all know and love of sell fee stick fencing.
+So I know keep your photograph reto a minimum.
+But Sonja will be talking about hobby oriented programming which is great because today we're going to be participating in programming as a hobby I guess which is kind of cool so everybody give a warm welcome to Sonj
 
 .
 
@@ -427,21 +726,52 @@ hello, hello, good morning, we're going to get started soon so please head to yo
 
 ...(APPLAUSE)...
 
->> Thank you Sonia. Are there any questions? We do have time for questions. All right. If there are no questions we'll move onto information about the day.
+>> Thank you Sonia.
+Are there any questions?
+We do have time for questions.
+All right.
+If there are no questions we'll move onto information about the day.
 
-So we have workshops today. That's awesomement it's going to be fun. When making your way to the workshops which are maybe not in this building, please follow the people in front. So all right. Let's give that another try. So make sure you're following the people with signs on your way there. We have some of the workshops at coop and those workshops are the low stack web and Crypto workshops. So to get there exit the venue to the left walk up the street, take the SBAHN, then go it's a short walk from there if you're not from Berlin and that sounds challenging don't worry there are guides to take you there and if you are from Berlin hopefully that's not too bad.
+So we have workshops today.
+That's awesomement it's going to be fun.
+When making your way to the workshops which are maybe not in this building, please follow the people in front.
+So all right.
+Let's give that another try.
+So make sure you're following the people with signs on your way there.
+We have some of the workshops at coop and those workshops are the low stack web and Crypto workshops.
+So to get there exit the venue to the left walk up the street, take the SBAHN, then go it's a short walk from there if you're not from Berlin and that sounds challenging don't worry there are guides to take you there and if you are from Berlin hopefully that's not too bad.
 
-Here is a map and I think this information will be tweeted out and things like that so you can read it there. One thing to mention is to if you're from Berlin you may be thinking why don't I just take the U6, and go down turns out you can not switch to the U1 they're doing construction and it drives right on through so don't do that, that's the wrong way to go. Any other weekend it would be an awesome way to go but not this weekend.
+Here is a map and I think this information will be tweeted out and things like that so you can read it there.
+One thing to mention is to if you're from Berlin you may be thinking why don't I just take the U6, and go down turns out you can not switch to the U1 they're doing construction and it drives right on through so don't do that, that's the wrong way to go.
+Any other weekend it would be an awesome way to go but not this weekend.
 
-So here's a link that you can find more information. I'll leave that up there for a second if anybody wants to take a picture. I see lots of phones. All right. Oh, you have to be quicker than that, no, that's okay, go ahead. Oh, yes, sorry, I already mentioned that. Yeah. Awesome.
+So here's a link that you can find more information.
+I'll leave that up there for a second if anybody wants to take a picture.
+I see lots of phones.
+All right.
+Oh, you have to be quicker than that, no, that's okay, go ahead.
+Oh, yes, sorry, I already mentioned that.
+Yeah.
+Awesome.
 
-So then we have the Rust bridge workshop. To get there you're going to go this way, here's the map. Everybody understands that, right? We're done. You're going to exit the venue to the right, walk to the U2 and then it's a short walk from there and again there are people with signs that will lead you.
+So then we have the Rust bridge workshop.
+To get there you're going to go this way, here's the map.
+Everybody understands that, right?
+We're done.
+You're going to exit the venue to the right, walk to the U2 and then it's a short walk from there and again there are people with signs that will lead you.
 
 Here is the URL for that if you want to take a picture.
 
-The embedded workshop and others small groups if you want to meet you can meet in here so you don't have to go anywhere, that's great. Like I said, it's it's an open space if none of the topics interested you, but you do have a topic that you find very interesting and want to try to get people together then this is the place to do it. We're going to sort of hopefully we don't need this many seats, so we're going to grab the seats so wait for that to happen before you set up shop.
+The embedded workshop and others small groups if you want to meet you can meet in here so you don't have to go anywhere, that's great.
+Like I said, it's it's an open space if none of the topics interested you, but you do have a topic that you find very interesting and want to try to get people together then this is the place to do it.
+We're going to sort of hopefully we don't need this many seats, so we're going to grab the seats so wait for that to happen before you set up shop.
 
-And it's important to note that there's organizers and staff at all the venues, so if you have questions when you're there about anything then you can find them, they have nice T shirts and stuff. And we're coming back here in the evening, so make sure to meet back here before 5:00 in the evening. And there's a super secret announcement, so secret I don't even know what it is. So that's exciting. And have a great time. That's it.
+And it's important to note that there's organizers and staff at all the venues, so if you have questions when you're there about anything then you can find them, they have nice T shirts and stuff.
+And we're coming back here in the evening, so make sure to meet back here before 5:00 in the evening.
+And there's a super secret announcement, so secret I don't even know what it is.
+So that's exciting.
+And have a great time.
+That's it.
 
 ...(APPLAUSE)...
 
@@ -461,7 +791,11 @@ And it's important to note that there's organizers and staff at all the venues, 
 
 
 
-HELLO, WELCOME BACK. How is everyone doing? It's the one last WOO of the day. All right, we have one more talk for RustFest 2016. Our next speaker Marijn Haverbeke is someone you may know from the JavaScript DMUNT and he's also worked extensively with rust on the compiler and he's here to tell us a little bit about the rust that could have been.
+HELLO, WELCOME BACK.
+How is everyone doing?
+It's the one last WOO of the day.
+All right, we have one more talk for RustFest 2016.
+Our next speaker Marijn Haverbeke is someone you may know from the JavaScript DMUNT and he's also worked extensively with rust on the compiler and he's here to tell us a little bit about the rust that could have been.
 
 ...(APPLAUSE)...
 
@@ -491,7 +825,9 @@ So did everybody have a good time.
 
 ...(APPLAUSE)...
 
->> That power is sort of infectious, it's kind of weird. Any way so to recap what we had this weekend was 185 attendees here, and we had 13 speakers, if the speakers are still here can everybody come up on stage for a picture? And while they're coming up everybody give them a big round of applause.
+>> That power is sort of infectious, it's kind of weird.
+Any way so to recap what we had this weekend was 185 attendees here, and we had 13 speakers, if the speakers are still here can everybody come up on stage for a picture?
+And while they're coming up everybody give them a big round of applause.
 
 ...(APPLAUSE)...
 
@@ -499,7 +835,8 @@ So did everybody have a good time.
 
 ...(APPLAUSE)...
 
->> We also had our first Rust bridge workshop. I know I'm looking forward to talking to everybody that was there, how it was, it sounded like it went really well, here's the picture of the Rust bridge, first Rust bridge.
+>> We also had our first Rust bridge workshop.
+I know I'm looking forward to talking to everybody that was there, how it was, it sounded like it went really well, here's the picture of the Rust bridge, first Rust bridge.
 
 ...(APPLAUSE)...
 
@@ -533,7 +870,8 @@ So first of all, it's me doing all the talking, but this is a team event and the
 
 
 
->> General is a little bit accessible he moved over to Germany to be here today. A month ago.
+>> General is a little bit accessible he moved over to Germany to be here today.
+A month ago.
 
 ...(APPLAUSE)...
 
@@ -553,7 +891,10 @@ So first of all, it's me doing all the talking, but this is a team event and the
 
 ...(APPLAUSE)...
 
->> Florian: Sorry I think I cut the ATMI cable, sorry. So I've got a couple of other words to say. This is still a thing and for us it doesn't fix it, so a word about what is RustFest, so RustFest, et al was a bit of the idea what could a Rust conference be, you're rarely in the position to say we're running the first conference at someplace, and so we had a couple ideases of things we wanted to do and put trade bounds on that, first of all, we wanted to be as open as possible as a conference, so we wanted to be approachable, we wanted to have be open for ideas and try things out, for example how does it work if we send everyone around town to run workshops instead of another set of talks. We would like to have feedback on that, maybe there's little things we can improve, did you like it, did you like in general, did you like it not, please approach us.
+>> Florian: Sorry I think I cut the ATMI cable, sorry.
+So I've got a couple of other words to say.
+This is still a thing and for us it doesn't fix it, so a word about what is RustFest, so RustFest, et al was a bit of the idea what could a Rust conference be, you're rarely in the position to say we're running the first conference at someplace, and so we had a couple ideases of things we wanted to do and put trade bounds on that, first of all, we wanted to be as open as possible as a conference, so we wanted to be approachable, we wanted to have be open for ideas and try things out, for example how does it work if we send everyone around town to run workshops instead of another set of talks.
+We would like to have feedback on that, maybe there's little things we can improve, did you like it, did you like in general, did you like it not, please approach us.
 
 We wanted RustFest as inclusive as possible, it's at the core of the Rust communities it's one of the only one that is had a code of conduct from the start and they say if we didn't have it I wouldn't have given you Rust we have that to but we wanted to put out an accessibility statement out so that people with accessibility needs could attend and we wanted to do our best to do this and we wanted to make the conference affordable so even at the price the conference cost we still had a discussion were the prices too high, we would really like to have this conference at least cap out on that level when it comes to other additions or if there should be any.
 
@@ -569,7 +910,10 @@ So which brings me to the question, next RustFest.
 
 (Inaudible).
 
->> It's going to happen next spring and it's going to be amazing and it's going to be affordable and it's going to be for everyone. We can't wait to see you all. We can't wait to see you all coming over, see the city, see each other, and just enjoy Rust, enjoy the conference. YAY.
+>> It's going to happen next spring and it's going to be amazing and it's going to be affordable and it's going to be for everyone.
+We can't wait to see you all.
+We can't wait to see you all coming over, see the city, see each other, and just enjoy Rust, enjoy the conference.
+YAY.
 
 ...(APPLAUSE)...
 
@@ -581,7 +925,9 @@ Thank you.
 
 >> Florian: Also having never managed to be to KIEV I'm looking forward to this, we have one final thing the organizers are going to spend the evening together you're invited we're going to be at the beer garden you can take the U6 because you don't have to switch.
 
-Oh, thanks, one of our team members is sick today, I'm very sorry and I forgot it in the rush of the announcements so AMAR who has been running the registration desk yesterday and also organizing a lot of communication with the venue and hotel and everything is sadly sick today. She has a twitter account so tweet a thank you to her if you want to. I'm going to tweet the twitter account around later, thank you.
+Oh, thanks, one of our team members is sick today, I'm very sorry and I forgot it in the rush of the announcements so AMAR who has been running the registration desk yesterday and also organizing a lot of communication with the venue and hotel and everything is sadly sick today.
+She has a twitter account so tweet a thank you to her if you want to.
+I'm going to tweet the twitter account around later, thank you.
 
 ...(APPLAUSE)...
 
@@ -591,11 +937,22 @@ Which brings me to FLAKE who wants to take a family photo.
 
 >> No, no, it wasn't actually his idea, so yes, yes, more, please, more bottles, so yes, we are going to make a family photo and we want it to be awesome and we need your help for that so we're going to line up along those walls, take a photo from the right to the left, for that obviously there is some obstructions in the way and namely these chairs, so please let me ask you to help us stack these chairs up and bring them over so we can make the family photo and we can all look cool and set a precedent for next year's conference.
 
-Next year we're going to crowd source awful our logistics. Thank you so much. I hope somebody was run ago stop watch because I cannot believe this was so fast. So if you don't have a chair in your hand please start lining up not right next to the wall but look up, look up, stand one meter after the wall, so if you're standing behind next to the wall step forward, three steps, that's at least two steps, one more step forward, one more step forward, people. That should do.
+Next year we're going to crowd source awful our logistics.
+Thank you so much.
+I hope somebody was run ago stop watch because I cannot believe this was so fast.
+So if you don't have a chair in your hand please start lining up not right next to the wall but look up, look up, stand one meter after the wall, so if you're standing behind next to the wall step forward, three steps, that's at least two steps, one more step forward, one more step forward, people.
+That should do.
 
 Yes, make sure -- make sure you're not obscured by Rust stations, cruise stations, crabs and other sea and animal life Get closer together, people, we still have too many people.
 
-From the right-hand side there's too many also a bit dark, please try from the sides try to move over, try to snuggle a bit more. Kick them in the shins. No, no, we are still having a code of conduct. Can we have this light a bit brighter? I guess that's a no. My German's a bit rusty. Oh, perfect. Thank you so much.
+From the right-hand side there's too many also a bit dark, please try from the sides try to move over, try to snuggle a bit more.
+Kick them in the shins.
+No, no, we are still having a code of conduct.
+Can we have this light a bit brighter?
+I guess that's a no.
+My German's a bit rusty.
+Oh, perfect.
+Thank you so much.
 
 DANKESHE
 
