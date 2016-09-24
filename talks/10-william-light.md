@@ -256,7 +256,8 @@ Yes, we do have time for questions.
 I am recently on the job market.
 So looking for cool projects.
 Come see pee, I'll be around.
-Also, while I have you all here, there's a particular RFC, allows field and traits and values can we please have this? Can we please have this.
+Also, while I have you all here, there's a particular RFC, allows field and traits and values can we please have this?
+Can we please have this.
 Police.
 I bolted single inheritance on to C and don't want to olt Bolton it on to Rust as well.
 
@@ -290,9 +291,11 @@ You you communicate with it that way.
 Can you run the same application on windows mac or Linux.
 So that's why user space.
 If that makes sense.
-Does that make sense? Okay .
+Does that make sense?
+Okay .
 cool.
-Any other questions? are we set if 'sup, Tim? I'm chillin'.
+Any other questions?
+are we set if 'sup, Tim? I'm chillin'.
 You know.
 
 

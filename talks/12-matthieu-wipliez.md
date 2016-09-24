@@ -19,7 +19,8 @@ You have to trace when to read, when to write, and the typical use is you are go
 So by default, all of these are blocking.
 So when you want to handle multiple connections, obviously, you cannot use just one.
 You have to create like one connection.
-So the architecture of Asynchronous I/O application, one or more processes and each process will have like 1/3 the connection, right? So if you have end connections, then you're going to have end threats.
+So the architecture of Asynchronous I/O application, one or more processes and each process will have like 1/3 the connection, right?
+So if you have end connections, then you're going to have end threats.
 So how does that look in Rust?
 
 Plaintiff.
@@ -30,7 +31,8 @@ What's the difference between Asynchronous I/O.
 You have a fix it thread and its thread, actually hands out a set of connections.
 So you have like, instead of sockets in the context of networking, and it is going to pull to see each socket, whether it needs to be and then tell execute these operations, using non-blocking calls.
 Okay.
-So what are the advantages of the Asynchronous I/O? So there are three main advantages in terps of reboot, the number of request for significant executes, in terps of agency, so you can respond faster and in terms of memory consumption.
+So what are the advantages of the Asynchronous I/O?
+So there are three main advantages in terps of reboot, the number of request for significant executes, in terps of agency, so you can respond faster and in terms of memory consumption.
 And it turns out, that's especially the case in web servers so some folks at dream post, actually made these bench marks to see what the difference would be and apache is traditional synchronous architecture, and despite being a point slower not that other two.
 It consumes much more memory.
 So earlier, William selects and tile, it's interesting to look a bit about the history of the synchronous.
@@ -72,7 +74,8 @@ These two are using a cogene approach to do their arcsynchronous I/Oand last cra
 
 
 
-So why tokio? You don't need to say, hey, look, I'm interested in read events or write events or any of those.
+So why tokio?
+You don't need to say, hey, look, I'm interested in read events or write events or any of those.
 Tokio will just infer this for you.
 It will know you want to read later on and you want to write later O.
 also, it's a futures' based, Asynchronous IO Oli /O library.
@@ -166,7 +169,8 @@ Yeah.
 
 
 
-So how do we do this with tokio? So first, solution I'm using only tokio core.
+So how do we do this with tokio?
+So first, solution I'm using only tokio core.
 It was like higher level layers.
 What I want to do is just realign, you know, try.
 So I realign and I would process that request and get reply, and then write all the replay to the stream.

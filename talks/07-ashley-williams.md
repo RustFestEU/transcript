@@ -23,7 +23,8 @@ We anticipate that you have probably programmed in something.
 But it really doesn't matter away.
 
 And in particular, the program of intermesos is for people whom system program suggest terribly not friendly.
-Probably the best way to say it is, do you know Java script? Why don't we write an operating system together?
+Probably the best way to say it is, do you know Java script?
+Why don't we write an operating system together?
 
 
 
@@ -43,7 +44,8 @@ Like can I write an operating system and should I write an operating system.
 A question we don't often ask ourselves.
 And part of the reason I had this feeling is best tembest demonstrate by the this amazing website.
 OSDev.org.
-Has anyone been to this website? Full disclosure.
+Has anyone been to this website?
+Full disclosure.
 Thing website is horrible horrible.
 This is the worse website.
 One of the worse pieces of Internet I've seep and there are terrible things remember and the reason I'm so mad, this is the required knowledge page for OSDev.
@@ -132,7 +134,8 @@ so the definition I'm going to use for now is Colonel, is just the core componen
 And we can show that forever, but again, it is outside the scope of this talk.
 As I said, there is this question.
 Let's write an operating system.
-What kind of operating system? There's tons.
+What kind of operating system?
+There's tons.
 I know if I mentiond to my parents, Oh, I'm running an operating system.
 They'd be like, windows or Mac.
 And I'd be like, noo.
@@ -193,7 +196,8 @@ All right.
 So one of the things I found the most tricky when think going develop ang operating system is like, I don't really, really know where to start.
 I need to ask myself the question.
 Okay.
-What are the tasks that the operating system needs to do? So it turns out, I really needed to answer this question .
+What are the tasks that the operating system needs to do?
+So it turns out, I really needed to answer this question .
 what happen when you say turn on your computer.
 And so I'm a huge fan of having a generalized journey, like, description.
 To understand what's going on.
@@ -218,7 +222,9 @@ I'm ready and excited for that.
 
 So let's pop this open.
 So I already have this.
-How are we doing on slides for that? Can everybody see? Pretty good.
+How are we doing on slides for that?
+Can everybody see?
+Pretty good.
 Okay.
 Fantastic.
 So right now, I'm here in vagrant and we have mellow -- oh.
@@ -231,7 +237,8 @@ It's going to say, hey, I am something you can load with multi food.
 So this is the thing that Grub needs to see to see it knows how to note T.
 second thing that's important is this boot.asm.
 This is going to say, okay, grub, you know I'm the best thing can you use with multi boot.
-What are you going to do once I get booted? And here, we have the linker.LD file.
+What are you going to do once I get booted?
+And here, we have the linker.LD file.
 That's saying in there just make surety header comes first.
 If Grub doesn't know what I am.
 We're already in trouble.
@@ -259,7 +266,8 @@ Yay! This is really cool.
 
 Now, let's go to where we can get it to say, hello RustFest.
 
-Does anyone know off the top of their head what capital R is? An ASCII.
+Does anyone know off the top of their head what capital R is?
+An ASCII.
 Oh, want that's Borg.
 Wow.
 Tough crowd.
@@ -343,7 +351,8 @@ Hop in here.
 And oh.
 the demo gods are not a fan of me.
 Let's take a look what the heck happened.
-Didn't I actual about the errors you get in doing this? It's very fun.
+Didn't I actual about the errors you get in doing this?
+It's very fun.
 All right.
 Oh.
 right.

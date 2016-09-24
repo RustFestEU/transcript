@@ -52,11 +52,13 @@ That's the thing you want to tell people, and you get really, like, pumped about
 
 
 
-But you don't want to drag anything am but you think that this thing that you want to tell people it could have legs, right? So you're pretty excited about the thing that you want to share.
+But you don't want to drag anything am but you think that this thing that you want to tell people it could have legs, right?
+So you're pretty excited about the thing that you want to share.
 So you think about the thing.
 You think about the words that you want to use.
 You think about the way that you want the other person to feel.
-You think about the way that you want to feel as your explaining the thing that you want to share, right? And you expect them to be wow, I think that's the best idea I will probably ever hear in my entire life and they don't act like that.
+You think about the way that you want to feel as your explaining the thing that you want to share, right?
+And you expect them to be wow, I think that's the best idea I will probably ever hear in my entire life and they don't act like that.
 They're like, okay.
 Great.
 I have to go to lunch now.
@@ -71,7 +73,8 @@ You don't want to have like a two-way conversation you want them to love your id
 
 
 And this self-focused approach to communication is a breeding ground for lack luster conversations and it can even cause problems on teams.
-So what do you need to do and how do you fix the problem? You need to think about the other person.
+So what do you need to do and how do you fix the problem?
+You need to think about the other person.
 You had to be empathetic much the reason why is because, you know, is because empathy fuels connection if this is true, empathetic communication is going to drive collaboration and when it comes to building teams, to building products, one of the most important things that has to be positive is the way that you guys collaborate, as a collective.
 This presents us with a problem.
 In 2016, the way that we collaborate is almost exclusively Vee A you know, flowing screens, software and text.
@@ -87,7 +90,8 @@ So technology is extremely helpful.
 But it can't replace the social aspect of face-to-face communication.
 Failure of communication can't just be automated away.
 You have to confront things face-to-face.
-If you take away the technology, take away your cellphones, take away computers, take away software, then what do you have left? You have people.
+If you take away the technology, take away your cellphones, take away computers, take away software, then what do you have left?
+You have people.
 So we are presented with a second problem.
 And it's that people hate talking to each other because talking is hard, and conversations are difficult and collaboration is extremely hard.
 And that's why collaboration, it does fail because it's so hard to talk to people.
@@ -97,11 +101,13 @@ And the biggest reasons are, because people are afraid of being wrong, and peopl
 
 
 
-The fear of being wrong is the fear of being judged, right? I can't tell you the time when is I have had an idea, and I wanted to share it, but I was so consumed with the thought of of being judged, but I just remained silent.
+The fear of being wrong is the fear of being judged, right?
+I can't tell you the time when is I have had an idea, and I wanted to share it, but I was so consumed with the thought of of being judged, but I just remained silent.
 And being misunderstood, you know, this happens pretty much every day.
 You know, you guys are all highly technical people, and you work with people who are probably, you know, nontechnical people.
 And so having to explain things can often end up in just, you know, frustration and irritation and so, it's just a lot easier to, you know, just not collaborate.
-So how do we fix this? The first thing is, that you have to speak up and encourage people around you to do the same.
+So how do we fix this?
+The first thing is, that you have to speak up and encourage people around you to do the same.
 Because silence kills collaboration.
 You know, hearing what another person has to say, it didn't make your thoughts and your opinions any less valid.
 All it does is enhance conversations.
@@ -109,7 +115,8 @@ All it does is enhance conversations.
 Next thing you have to do is think about the person that you were talking to all of us are on didn't plains, and intellectually, emotionally, and that's okay.
 Speaking to people on their level, doesn't do anything to compromise your level.
 Next thing you have to do is think about the speaker.
-Now, you know, when you do come to a place of having a conversation, where the speaker is beginning to struggle in explaining something, just kind of think back to hearing me speak now, right? I know that it can be incredibly difficult to completely understand the things that I'm trying to communicate and you have to, you know, be patient.
+Now, you know, when you do come to a place of having a conversation, where the speaker is beginning to struggle in explaining something, just kind of think back to hearing me speak now, right?
+I know that it can be incredibly difficult to completely understand the things that I'm trying to communicate and you have to, you know, be patient.
 You have to, you know, really pay attention.
 So when you discuss your ideas from a place of great empathy, and you pay attention to, others' ideas from that same place, you are going to create something that is bigger and better than the things you could have created, you you know, by yourself.
 That takes vulnerability.
@@ -162,7 +169,8 @@ I don't know.
 
 
 >> RYANN.
- Anyone have anymore questions? Thank you very much.
+ Anyone have anymore questions?
+Thank you very much.
 
 
 

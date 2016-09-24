@@ -89,7 +89,8 @@ So yeah, let's hear --
 
 ...(APPLAUSE)...
 
->> We have two minutes for questions, so does anybody have a question? I saw your hand in the back, first.
+>> We have two minutes for questions, so does anybody have a question?
+I saw your hand in the back, first.
 
 >> Audience member: Not that I would encourage someone to do that, but wouldn't the structural type kind of thing work like a template or like a generic would work that you could like generate a specific implementation for a certain type and then work without a V table?
 
@@ -97,7 +98,8 @@ MARIJN: Yes, you can, actually.
 And I think LOV somebody is clever enough to do this for us where they can see it was always the same V table and in line it but you're still paying a conceptual cost for it and I think it's easier to have a model where you don't generate this complex code and optimize it back where you rely on these clever opt Tim Ms.
 SGLAGS contribution.
 
->> One more question?  I saw you.
+>> One more question?
+I saw you.
 
 >> Audience member: Hi so recently I saw either an RFC or Rust internal red where someone was proposing these anonymous struts like you had in your --
 

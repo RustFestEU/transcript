@@ -1,7 +1,8 @@
 >> RYAN: Hello.
 I'm a Microsoft employee.
 Crazy.
-Wasn't that guy the M.C.? Yeah, I wanted to talk about Microsoft in general, a little bit about Microsoft here in Berlin, for the people that are in the German area and throughout Europe that maybe would want to come work here and talk about open source at Microsoft, which is still something that a lot people, including myself are getting used to and touch on those topics, and if you want to talk to me later about any specifics about Microsoft, then feel free T.
+Wasn't that guy the M.C.?
+Yeah, I wanted to talk about Microsoft in general, a little bit about Microsoft here in Berlin, for the people that are in the German area and throughout Europe that maybe would want to come work here and talk about open source at Microsoft, which is still something that a lot people, including myself are getting used to and touch on those topics, and if you want to talk to me later about any specifics about Microsoft, then feel free T.
 I would be happy to talk to you about it.
 My personal story is that I work for a small Berlin company and made an app called wonders and it was purchased by Microsoft so I'm new as well.
 

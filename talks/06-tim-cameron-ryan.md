@@ -19,11 +19,13 @@ Hopefully, in the future, I'll make it up to you and talk about Servo talk to th
 
 
 
-How does Rusts interact with hardware and circuits? So the biggest problem in hardware, I have information or there's something I want to accomplish.
+How does Rusts interact with hardware and circuits?
+So the biggest problem in hardware, I have information or there's something I want to accomplish.
 How Do I want to talk to it.
 Million you have a laptop and temperature sensor, which could look like this or you just have the idea that I want to go ahead and see what the temporary in the room is essentially, some of these can you plug into your laptop via USB.
 But most likely they can talking some embedded protocol.
-You need to build a circuit on the other hand them and what is the standard in Rusts in order to want to circuits, is it just like reading to a file system, talking to a web server? A lot of software developes probably don't van an log for what this looks like, evening if they go and develop the circuits.
+You need to build a circuit on the other hand them and what is the standard in Rusts in order to want to circuits, is it just like reading to a file system, talking to a web server?
+A lot of software developes probably don't van an log for what this looks like, evening if they go and develop the circuits.
 Especially because Rusts is built around developing laptops right now.
 Let's say I even solve this problem.
 I have Rust code and I'm talking to a sensor and this is happening at my home and I am now, 3,000 miles away.
@@ -99,7 +101,8 @@ That is out of the way.
 
 Let's go back to basics Q.
 you're talking about signal says and sevos we're talking about circuits.
-How many of you have circuit experience? About 50% of the room.
+How many of you have circuit experience?
+About 50% of the room.
 Maybe a little lower.
 We're talking mostly about digital logic.
 Means there are high and low values and they're being interpreted in some way.
@@ -178,7 +181,8 @@ It's going to be handled by something at a lower level.
 They exist with your USB controllers, the way the lap talk talks to your screen.
 We're going to tell the what to do.
 Do some black magic and then give us a result, whether it's the input that we wantd to read over the output.
-So what do we do when we have a low level protocol that we want to wrap in a high-level system? We write an A.P.I.
+So what do we do when we have a low level protocol that we want to wrap in a high-level system?
+We write an A.P.I.
 for T.
 here's the came example.
 This is using all the lower level primitives we want.
@@ -263,7 +267,8 @@ Entirely Rusts code, that is doing things, with sensors, in Servas, that is very
 Connecticut septs.
 Buying new products around.
 So in true Rusts fashion we have been to ask ourselves is, are we I.O.T.
-yet? I don't want to give a definitive answer yes.
+yet?
+I don't want to give a definitive answer yes.
 I'm just one developer in a full of you.
 I want you to borrow.
 

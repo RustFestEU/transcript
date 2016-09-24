@@ -10,12 +10,16 @@ it works.
 Okay.
 So my name is Martin Hellspong.
 I work at factor 10.
-I'm a software initial there and we are based in Sweden and it's awesome to be here at Rustment really? It's there it's not there? I also didn't start the time recording, right? So let's do that.
+I'm a software initial there and we are based in Sweden and it's awesome to be here at Rustment really?
+It's there it's not there?
+I also didn't start the time recording, right?
+So let's do that.
 (Pause).
 
 
 
-I'm still not there? Yes.
+I'm still not there?
+Yes.
 So it's awesome to be at RustFest and I'm here to talk about QuickCheck, which is a test method that is under appreciated, I think.
 And the reason is that it helps you find bugs that traditional testing often don't find.
 And there have been case studies, showing that you find more bugs with less effort per bug, using QuickCheck.
@@ -68,7 +72,8 @@ Perhaps in this characters summation function should have onsite integers or you
 
 
 
-How does it know how to generate test cases? Well, for primitives these funks are built in.
+How does it know how to generate test cases?
+Well, for primitives these funks are built in.
 Counter example, QuickCheck does something called shrinking to minimize the test case.
 You can also provide a custom type.
 But that's seldom necessary.
@@ -144,7 +149,8 @@ It's only 58 instructions.
 So possibly, can you just write 56 units.
 However, this doesn't really work because it's annex plosion ever instructions, data sites, registers, and you can release for one single code and there's 64,000 value of up codes, and about 11,000 I think its has done transition, anyway, so I knew then, I needed quick check.
 I couldn't possibly write enough tests.
-So how diuse it? I basically made a statement.
+So how diuse it?
+I basically made a statement.
 There's two CPU's.
 They should behave Identically.
 And by identically.

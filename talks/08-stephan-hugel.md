@@ -42,7 +42,8 @@ I'm really, really sorry.
 I know.
 I probably found that so much funnier than any of you.
 Okay.
-So, why Rust? I came to Rust by a series of weird coincidences.
+So, why Rust?
+I came to Rust by a series of weird coincidences.
 I had a friend that worked at Mozilla.
 And he tweeted about it, and it in a interstated way and this new thing called Rust, it's going to be really great and that was 5 years ago, the day Rust appeared, when it was, you know, unrecognizable to what it is today.
 I lookedda at it, didn't understand anything about it and I've gone on with my life until last year.
@@ -160,7 +161,8 @@ So have you huge amount of the physical measurements of how you correct like, th
 Last week, [indiscernible] was 15.
 Which works the same way.
 But it's accurate due to the measurements.
-So how does the transform work? You go from W SH to -- have you error in your transformation.
+So how does the transform work?
+You go from W SH to -- have you error in your transformation.
 You get your grid shift parameters for the kilometer grid you happen to be in.
 Then you [indiscernible] your turblation, and that give us you your precise card nates and add those on to your [indiscernible] coordinates.
 And you have accord fates.
@@ -392,7 +394,8 @@ I've got artifacts for 64OSX and for Linux and then for windows, 62 bit and 32 b
 So difficulties.
 You have to understand what link or arguments.
 I just spent two days.
-What is this? And then eventually, it worked.
+What is this?
+And then eventually, it worked.
 And began, I just forgot about T.
 I know that's really all of, but you know, sometimes you just, you have to deal deal with the world as you find T.
 just a note on building Linux on python and there's an agreed-standard called Linux 1.

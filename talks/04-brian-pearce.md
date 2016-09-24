@@ -64,7 +64,8 @@ I knew the compiler told them, they had to get the values that I wanted to get.
 I didn't know if it was boilerplate.
 I didn't know what was going on.
 
-And I'd look at this time a file after a couple hours work and be like what, is this? I don't understand understand it.
+And I'd look at this time a file after a couple hours work and be like what, is this?
+I don't understand understand it.
 My code would have looked a lot nicer if these were inn here and that was frustrated.
 
 
@@ -88,19 +89,24 @@ The string contains the character 7 and we're going to convert to do an integer 
 We get a 7.
 Pretty much way expect.
 What happens if we do it within Emoji.
-If I call 2Ion an Emoji in Ruby, does anyone have any clue what's going to happen? A nil in anyone else? 0 zero.
+If I call 2Ion an Emoji in Ruby, does anyone have any clue what's going to happen?
+A nil in anyone else?
+0 zero.
 Exception.
 You get 0.
 Which is not what I was expecting.
 Looked like a credit card number 2I.
 You would get what is represented as a credit card number.
-A malformed what, do you think you're going to get this time? 4,520, which again, is just not what I was expecting.
+A malformed what, do you think you're going to get this time?
+4,520, which again, is just not what I was expecting.
 So now, let's look at that in Rust.
 So we have a character, 7.
 Again, the room has a lot people who have been doing Rusts for a long time.
-What are we going to get here? We're going to get a sum of seven.
+What are we going to get here?
+We're going to get a sum of seven.
 If we do it with know Emoji.
-What do you think we're going to get here? Perfect.
+What do you think we're going to get here?
+Perfect.
 So we're going to get a none.
 Same thing with credit card number.
 Get a whole number.
@@ -148,7 +154,8 @@ But now, we know that's bad and wean why that's bad.
 And wean what we actually get is a maybe request we call a two digit.
 I can begin changing this to something that looks a little more like this.
 
-I can take the maybe and now, I can check to see if that maybe is some, did I get the conversion or is the maybe none? That's nice.
+I can take the maybe and now, I can check to see if that maybe is some, did I get the conversion or is the maybe none?
+That's nice.
 The maybe is guaranteeing values for us.
 One thing I want to point out here, this kind of if else condition really isn'tityio mattic Rusts, in a case like this we would use pattern matching.
 So I'm going to change that over to pattern matching really quick.
@@ -183,7 +190,8 @@ Python's very similar.
 So the next session S what do we have in Rusts.
 I I'm writing code.
 I want to try and catch an exception so I'm going to hit Google and look at stack over flow.
-What am I anything to find? I'm going to find the try macro.
+What am I anything to find?
+I'm going to find the try macro.
 Now, this looks kind of nice.
 It's small, simple, but approximately 50% of what every, language had.
 Where Do I catch the errors in I don't understand what tow do with this.
@@ -331,8 +339,11 @@ Once you have a better understanding of why those things were frustrating and yo
 Can you learn to appreciate those things that were frustrate being for you, initially want so now, even if you're writing more Ruby code and your Ruby code runs linearly, you're going to think about that problem you ran into, when you were writing Rust.
 I'm going to think about writation better test to make sure those things couldn't go possibly wrong.
 Next time I write a function of python I'm going to think, what were the possible result types.
-Like, what things can go wrong? Am I going to get responses that are just like, I'm not expecting? Is the conversion going to come out properly.
-Can I verify that before I work with that data? A quote from Henry Ford.
+Like, what things can go wrong?
+Am I going to get responses that are just like, I'm not expecting?
+Is the conversion going to come out properly.
+Can I verify that before I work with that data?
+A quote from Henry Ford.
 For the world was built to develop character.
 We must learn that the setback which is we endure, help us in our marching onward.
 That said, the unfamiliar can be challenging.

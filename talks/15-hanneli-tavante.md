@@ -1,5 +1,7 @@
 >> HANNELI TAVANTE: Fun time.
-Is the connector safe? Should we borrow another one? Don't panic.
+Is the connector safe?
+Should we borrow another one?
+Don't panic.
 (Pause).
 
 Okay .
@@ -25,7 +27,8 @@ In the last slide I'll leave you with reference so can you get the code from Git
 I think nobody is requesting to be scared about the math that there is this presentation and to help us to keep firm until the dinner time.
 Let's start taking about some training tools and science.
 Training tool in science are becoming very popular probably has consequence, some of these tools, based on Corcera.
-Everybody here didn't know what scorecera? Doesn't.
+Everybody here didn't know what scorecera?
+Doesn't.
 It's very popular.
 EDX is another popular, too.
 people who are develop developers, people who do not have a background, it's pretty exciting.
@@ -68,7 +71,8 @@ A very famous data structure is this one.
 It's very likely that's one date.
 At any point of your life, you receive this spreadsheet.
 And a spreadsheet is a table.
-So we have to handle tables or better, matrices, in several scenarios, several distinct scenarios, right? Why matrices are so important.
+So we have to handle tables or better, matrices, in several scenarios, several distinct scenarios, right?
+Why matrices are so important.
 Everybody Sundays me spreadsheets.
 No.
 Not only because of that.
@@ -76,7 +80,8 @@ Matrices, they can represent us in several different areas, and sometimes you're
 But you actually can.
 So, I guess one of the first context taw had with matrices, was in high school.
 But not sometimes, not even in mathematics, math classes, was something else.
-To remember this law here? Ohm's law.
+To remember this law here?
+Ohm's law.
 You have this, you have the voltage and then have you this relation, other resistance in the voltage.
 And then, you can make this even more sophisticated.
 I'm happy because it talks about [indiscernible] today.
@@ -103,8 +108,10 @@ And it's pretty much plate coderation.
 
 So those students that were talking last year, I asked them what, is the most frequent structure that you use in octave.
 
-How would you build a matrix in Rust? Vector.
-But a vector, how would you build your own? Come on.
+How would you build a matrix in Rust?
+Vector.
+But a vector, how would you build your own?
+Come on.
 You know that truck.
 Let's build this truck called matrix.
 Makes sense.
@@ -125,7 +132,8 @@ Makes a lot of sense.
 We started discussing something else.
 So for example, you can remember your math classes, when you multiply matrixes, can you multiply any matrix with any other matrix if no, there's a rule.
 So on the right side, you have a matrix with two rows and on the left side, a matrix, with three rows and 4 columns.
-Can we multiply this matrix tricks? Yes.
+Can we multiply this matrix tricks?
+Yes.
 The number of column equals the number of row in the second matrix.
 So yes, we can multiply this.
 What's going to be the dimension of the output matrix we have some rules, based on the matrix.
@@ -134,7 +142,8 @@ We have to keep checking.
 Did I mention, every time but this is what you do in C++ because of the template.
 You have to keep checking all the time.
 This is not very convenient.
-How can we prove this code? We want to add some behavior.
+How can we prove this code?
+We want to add some behavior.
 Structure.
 So this is a bad representation.
 Don't do that.
@@ -149,7 +158,8 @@ This is pretty interesting.
 I was reading something on the Internet.
 So there is a link, at the bottom of the page.
 And he suggested that we should use phantom data, when we were presenting a matrix and that makes sense.
-Can you picture in your head, a matrix without any element? Doesn't make much sense.
+Can you picture in your head, a matrix without any element?
+Doesn't make much sense.
 Is this kind of thing doesn't exist.
 And this author was saying something like, you should have elements representation.
 Which you can do by using phantom data or you can create your own type of matrix elements.
@@ -162,7 +172,8 @@ Any kind of array has been mentioned, as elements.
 
 
 Next challenge.
-Can you think of codes to represent clear matrices? Does it make sense to have a code for matrices, in terps of the common and most used mathematical properties that have for matrices in yes, makes sense to utilize squared matrix.
+Can you think of codes to represent clear matrices?
+Does it make sense to have a code for matrices, in terps of the common and most used mathematical properties that have for matrices in yes, makes sense to utilize squared matrix.
 Base on the matrix itself.
 You can fix the dimensions.
 So the dimensions are always equal want and then you can derive a bunch of code from this initial code.
@@ -176,7 +187,8 @@ Another important structure that students research this a lot.
 Complex numbers.
 If you come from an initialing backgrounds, you're very likely to have seen a lot complex numbers.
 Do you know why there is a reason for people to keep using complex numbers.
-Do you know why? I mean, a good explanation, because they like T.
+Do you know why?
+I mean, a good explanation, because they like T.
 there's there's an imaginary part that's a school.
 This is not a good good, you know, this is not a good point.
 For example, computer, which is a very nice subject.
@@ -190,7 +202,8 @@ Let's talk about this.
 This is kind of the off-topic moment of this lecture.
 But I hope that after it session, you share with everybody why you use those numbers.
 There's a single mathematical reason for this eqivalence.
-Why doesn't it exist? This is true.
+Why doesn't it exist?
+This is true.
 This is true that makes everything much more simple.
 Let's talk about this.
 
@@ -200,13 +213,15 @@ Let's start from the beginning.
 Integers.
 I'm happy because of the very fist keynote of this morning, we were talking about integers, and real numbers.
 But we didn't reach the complex numbers, which are so important.
-So when you add an integer to another, what is the output? Anent jer.
+So when you add an integer to another, what is the output?
+Anent jer.
 Glad glad it's an integer.
 So when you're talking about the operation, the output equals input.
 To the type.
 But that's not true.
 When you're talking about division.
-If you divide an integer by an integer, what happens? You may not have an integer as a result.
+If you divide an integer by an integer, what happens?
+You may not have an integer as a result.
 May not.
 There is a chance it is, but there's a chance it's not.
 I added the letters that correspond to each set by hand.
@@ -230,7 +245,8 @@ So this is sad.
 So the thing here is like, complex numbers we say they are closed for the most common operations.
 So if somebody says that this operation is closed, you can be sure that staying put is going to be as the same type of the output.
 And this is convenient for functional programming if you're talking about types you weren't sure of the output, the type of the output, and you can, you know, dereef lots of things about that.
-Can we express this property with code? Yes.
+Can we express this property with code?
+Yes.
 It's not difficult.
 For example, you can have this structure here, called complex number, that has the real and imaginary parts and all the mathematical operations are going to result in a complex.
 Something like this.
@@ -260,7 +276,8 @@ Besides math lab and compiler, for example, we have VHDL.
 It's the language that describes harbor.
 If you think about VH -- couldn't we be using Rust to strike hardware.
 Based on the sessions to date, yes.
-But could Rust become a substitute for VHDL? Maybe, yes.
+But could Rust become a substitute for VHDL?
+Maybe, yes.
 I had a very hard time with trouble that I couldn't, I simply could not represent that and maybe with Rust, we could improve over the system in general.
 For me, it was pretty sad to change my focus.
 I was trying to solve a problem.

@@ -2,7 +2,8 @@
 And today, I'm here to talk about my first project I did.
 A cross platform.
 Written in Rust.
-So what's a disassembler? When you program in languages like Rust or C++ you write your code, in your compiler language, that's a compile tore transform this high representation into a lower representation that's executable by the CPU this transformation is combination and get out [indiscernible] language.
+So what's a disassembler?
+When you program in languages like Rust or C++ you write your code, in your compiler language, that's a compile tore transform this high representation into a lower representation that's executable by the CPU this transformation is combination and get out [indiscernible] language.
 It has not much of the features you have in your high level presentation.
 You can see how this looks like.
 It always starts with shorthand for struck.
@@ -69,7 +70,8 @@ I have 980 Rusts points on the computer.
 
 
 
-So what is the current state of the project? You can open up, you can open the standard format for binary systems, and instructions -- but again, a list of functions.
+So what is the current state of the project?
+You can open up, you can open the standard format for binary systems, and instructions -- but again, a list of functions.
 And the functions, you get pictured here, a control for graphs so you have these, each box represents one sequence of the cord that's executed, always.
 So you know there are no jumps inside this box and no one coming out from the end.
 This really add to the flow throughout this program and analyzes.
@@ -80,7 +82,8 @@ For example, proprietary application.
 Can you read the functions of a matching number.
 M.O.S.6502, which is the [indiscernible].
 That's pretty much it for now.
-So how did this conversion go? It was really fun.
+So how did this conversion go?
+It was really fun.
 I have experience with C++ and comparing to them, this was really fun watching Rust and learning Rust.
 What I really liked in the beginning, for example.
 I open the book and 50%.

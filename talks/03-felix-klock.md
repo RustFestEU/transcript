@@ -46,10 +46,12 @@ A quick poll so I can understand what the audience is like.
 Raise your hand if you know what the playground is.
 So how about if you know the difference between a slice and a Vec of T.
 Raise your hand for that.
-And finally, do you know what phantom data of T is? Oh.
+And finally, do you know what phantom data of T is?
+Oh.
 wow.
 More than I expected.
-What is subtyping any way? The important thing about subtyping another meant to be this thing where if you don't have subtyping, if your compiler insists your expected type, matches the exact of type of expression you're giving you, the required things always match, compiler will reject programs that seem obviously well-behaved.
+What is subtyping any way?
+The important thing about subtyping another meant to be this thing where if you don't have subtyping, if your compiler insists your expected type, matches the exact of type of expression you're giving you, the required things always match, compiler will reject programs that seem obviously well-behaved.
 
 
 
@@ -169,7 +171,9 @@ It seems like can you go from an immutable reference, to a mutable one.
 That's disallowed, but for some reason, going from a value to a mutable reference is allowed and perhaps even more strangely, going from a reference to a value is allowed and so on.
 
 All those other cases are allowed.
-You might ask yourself, wait, how is that happening here? What is going on? Are these things subtyping at all.
+You might ask yourself, wait, how is that happening here?
+What is going on?
+Are these things subtyping at all.
 What are we talking about in so a person with experience, doing the job of runtime hacking or hacking for other kinds of dynamic languages, you might say look.
 The representation of these two types a vec is represented by the three words, directly inline, embedded in your stack frame and slice is represent by the two words, and the layouts aren't even compatible with each other.
 So how can these things possibly be subtypes of each other.
@@ -182,13 +186,15 @@ No.
 There's other semantics, where you talk about coercion and that's considered subtyping.
 It's coercion based semantics.
 Let's wonder for a second here.
-Is this subtyping? I just spent a little while, talking about those samples and I'm going to put them aside.
+Is this subtyping?
+I just spent a little while, talking about those samples and I'm going to put them aside.
 We'll come back to them.
 To first explore this text book notion of subtyping.
 So a classic example of subtype negligent text book.
 They'll talk about anonymous records and say, if I've got 17 fields and I want to pass it somewhere to a place that expects just two fields but they have the right name and it is right types.
 They are compatible.
-If I had three elements and passed it to a place that has the first two does that work? The answer is no, it doesn't.
+If I had three elements and passed it to a place that has the first two does that work?
+The answer is no, it doesn't.
 This does not compile.
 There's something questions as to why that might not compile.
 
@@ -205,14 +211,16 @@ Is or a function that takes int to int.
 
 
 If I have a function that takes integers to integers, and I want to pass it to a place that takes reals to real estate.
-Is that going to work? It won't work because the integer-to-integer function, it assumes it's input type is always integer.
+Is that going to work?
+It won't work because the integer-to-integer function, it assumes it's input type is always integer.
 So you're going to break things you pass to clients, that want a real function because they might pass in a real number.
 So here, I have an example where we have a twice function that applies its first argument twice to some input.
 And there's a none devisers function want it's going to givity number of devisers for tainteger.
 I can give you some example inputs and results for that function.
 The point is, if you try to point to deviceers, you get non-devisers to to.3 and there doesn't make sense.
 I can't talk about the number of wise nears a sensible way so the point here, definitely, no matter what, there's another example.
-If I have an example of real to int and I want one that takes reals to real, does that not work? So in this case, this works out.
+If I have an example of real to int and I want one that takes reals to real, does that not work?
+So in this case, this works out.
 Something where you can have a function and pass it to something that wants reals to reals.
 I give an example of passation ceiling function.
 This modified ceiling function and it all works out, you plug the types together.
@@ -224,7 +232,8 @@ So if you give me something I'll give a real number and a.m.v I'm going to handl
 The client is able to handle integers.
 I can handle a real they get out.
 It's obviously fine to narrow that to just integers, in terms of the function I hand to it.
-So how about this example? I had a function in my hand that takes real integers, and I want one that takes real to reals.
+So how about this example?
+I had a function in my hand that takes real integers, and I want one that takes real to reals.
 I wanted to show you what this looks like in Java.
 You can encode this by vague class real, and method.
 You then have a subclass int.
@@ -268,7 +277,8 @@ This is what the type theorists will write down.
 Co Senator and contra eventer, with respect to archetype.
 And again, this is me repeating myself.
 The idea is the caller can feed in a specific day and get out more general X and it's more liberal N providing a function that request accept any at all, generalizing the potential inputs and narrowing the potential outputs as to why if you want to have Y arrow C and X arrow -- think about that for a little bit.
-Now, we might ask the question, does Rust have thesis properties and it kind of variance property I've been describing? We can try plugging in those types I just showed at the very beginning.
+Now, we might ask the question, does Rust have thesis properties and it kind of variance property I've been describing?
+We can try plugging in those types I just showed at the very beginning.
 Here, I have a reference to a vector and integer, and I showed how on the left-hand side of this picture, how these things are compatible.
 But if I try to generalize that to this Senator type stuff N terms of functions, and make a function type that rather than vector and pass it to a thing that want ace function that returns an integer slice T turns out this doesn't compile.
 Rust compiler rejects this there's something funny going on here.
@@ -306,7 +316,9 @@ You get and copy out value within the cell itself and makes a copy of it.
 The interesting thing is the set method.
 And what the set method does, is use a little bit of unsafe code strike let's grab the reference to the embedded value, and use the Corner to write in the new value.
 This is some code that seems to behave the way that cells should.
-And a fundamental question right now is, is this sound? Is this use of unsafe sound? And the answer is that this is actually completely and totally broken.
+And a fundamental question right now is, is this sound?
+Is this use of unsafe sound?
+And the answer is that this is actually completely and totally broken.
 Please do not do this and take this code and use it in your own projects.
 It does not work.
 It is bad, bad, bad.
@@ -350,14 +362,16 @@ So now, we have another stack frame that points to the val.
 And another reference to the cell.
 RC2.
 Then we call set with our Val so we move the pointer so the cell points to Val on the stack frame.
-We pop the stack once and we ask hey, RC1, what do you hold? Oh.
+We pop the stack once and we ask hey, RC1, what do you hold?
+Oh.
 I told 13 much that's the first line and we have a pointer.
 This is the kind of bug that Rust is supposed to stop.
 We're not supposed to have daily pointers anymore.
 Either my cell is broken or the Rusts compiler or Rusts language is broken.
 You know where my belief is here.
 So the question here is then okay.
-Is cell also broken? And the easy way to test this is plug in cell into that same code again.
+Is cell also broken?
+And the easy way to test this is plug in cell into that same code again.
 We plug in cell into the same code, the exact same code I showed you, the compiler rejects it.
 Tell you no, no.
 We're not allowed to take into account reference to Val.
@@ -365,7 +379,8 @@ When you take step one.
 Doesn't live long enough.
 It has to live as long as lifetime A and value of borrowing doesn't live that long.
 Compiler smart enough to reject this when you use cell.
-Why is this happen something what is the difference between my cell and cell? I can't to the source code found outlook.
+Why is this happen something what is the difference between my cell and cell?
+I can't to the source code found outlook.
 My cell says it has a value.
 And cell says it has an unsafe cell and unsafe cell says it has a value.
 What's the difference here isn't difference is that there's some special unsafe cell, the compilerness about why are we accepting the my cell code.
@@ -414,7 +429,9 @@ More generally, we can not talk about static at all and say, if you have two lif
 Then there's a subtyping relationship between the two references, the one where the reference of lifetime B is a subtype of the reference of subtype A.
 We have already established the static lifetime, a reference of static lifetime say subtype of lifetime A.
 What if we go a little further.
-What if we have a reference to a reference? Should a reference of lifetime A that points to static data be a subtype of a reference of two references of lifetime A? I don't know.
+What if we have a reference to a reference?
+Should a reference of lifetime A that points to static data be a subtype of a reference of two references of lifetime A?
+I don't know.
 But intuitively, all you can do, when you have an immunable reference is read the data by that intuition, by the same logic, all can you do is call them and read the return types.
 So you're getting something out.
 Same intuition applies here.
@@ -423,7 +440,9 @@ I can't store new things in, in principal, and thus, that's what leads to an arg
 Then in fact, yes air, reference to Y say subtext of X, which allows us to include this question mark up here above is the reference to static data, reference to a reference of static lifetime, a subtype a reference to a reference and they are.
 A way of saying this is a reference to X is a covariant.
 Okay much that's immutable references.
-What about mutable once? Should a mutable reference to a static reference be a subtype? You can take that same example from before.
+What about mutable once?
+Should a mutable reference to a static reference be a subtype?
+You can take that same example from before.
 Except now, we don't have my cell.
 We take that same example and use static data and make a reference to a reference.
 One of static lifetime and one with nonstatic lifetime and the compilery rejects this.
@@ -443,7 +462,8 @@ Who thinks this code compiles in this is an array of numbers and I'm storing in 
 
 
 
-Who thinks this compiles? Interesting.
+Who thinks this compiles?
+Interesting.
 Okay.
 It does compile.Y and also, Java race are covariant.
 With respect to T.
@@ -469,7 +489,8 @@ That's kind of interesting.
 The reason that this one, for Rusts and Rusts can support this, we don't have method overloading.
 So the same conflict that comes up for languages like Java where it conflicts two have that language feature so there's no conflict here.
 I want to dive in and explain this variance thing.
-Where does it come from? The compiler deduces by traversing the structure of your types.
+Where does it come from?
+The compiler deduces by traversing the structure of your types.
 Here, I van example of this outer in-line data.
 It has two fields, it infers, ah, these are both covariant, with respect to T.
 And it is sound to do this.
@@ -518,8 +539,10 @@ There's duck typing where if it walks like a duck and quacks like a duck, it mus
 Here, I'm saying, yeah, those walks and quacks like subtyping relationship.
 They're not because they Miss That would crucial variance thing how functions are handled.
 What are they if they're not subtyping.
-What's going on? So here is where I show you the secret behind the magic and what's going on behind the scenes.
-There's a whole collection of different technologies that are interacting to get those effects I showed you earlier this is a reason -- who here has programmed in C++ or C for that matter? Okay.
+What's going on?
+So here is where I show you the secret behind the magic and what's going on behind the scenes.
+There's a whole collection of different technologies that are interacting to get those effects I showed you earlier this is a reason -- who here has programmed in C++ or C for that matter?
+Okay.
 Good so there's a distinction between the dot operator and err operator.
 Other times you do Y arrow F and that always bugged the heck out of me, before I understand the difference in what they were expressing.
 Rust doesn't need the two syntaxes.
@@ -599,9 +622,11 @@ Here you have to add it like an add slice call.
 In order to get that effect.
 Okay.
 I'll take questions in a moment.
-What's the relationship between these references here? 81s.
+What's the relationship between these references here?
+81s.
 Is the static reference of a subtype of lifetime A.
-What about a reference to a reference, and what about a mutable tortious a static? Well, one answer is that how often do you actually ask this question?
+What about a reference to a reference, and what about a mutable tortious a static?
+Well, one answer is that how often do you actually ask this question?
 
 [Laughter]
 
@@ -614,7 +639,8 @@ Okay.
 
 
 
-And what about this variance thing? Get being covariance and variance right matters a lot I showed you the example of a dangling pointer.
+And what about this variance thing?
+Get being covariance and variance right matters a lot I showed you the example of a dangling pointer.
 But you don't need to think about it, unless you're writing unsafe code.
 So if you don't have any unsafe code.
 It's the compiler's job to get this.
