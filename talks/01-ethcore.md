@@ -1,11 +1,13 @@
 Hi, my name is Robert from Ethcore.
-It's not so often that an event like this comes around and we are really glad hello.
+It's not so often that an event like this comes around and we are really glad.
+Hello.
 Ah.
 Perfect.
-First, I want to give you an idea of what w're all about.
+First, I want to give you an idea of what we're all about.
 
 So, we are a team of mathematicians, computer scientists, and experts.
-We're working on building a future our pure Rust implementation of Etherium so if you're not familiar -- this is much more than a payments platform.
+We're working on building a future: Our pure Rust implementation of Etherium.
+So if you're not familiar -- this is much more than a payments platform.
 It allows you to deploy arbitrary programs, which could be executed by the transaction, and correct and predictable execution is part of the state transition.
 So this is immensely more power than the blockchains you may be familiar with.
 While Ethcore come up with the theorem, Rust has enabled us to come up with the easy implementation of this.
