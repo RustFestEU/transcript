@@ -42,43 +42,40 @@ So my ambition with this talk is to get you excited about using this in your pro
 You should be able to take something back to your projects.
 Okay.
 QuickCheck.
-There's variance able from most almosts, now, but it originated in the research community about 1999.
-Worked from [indiscernible] and John Hughes, and John use Hughes is author of functioning paper.
-
+There's variants available for almost all languages, now, but it originated in the Haskell research community about 1999.
+Work from Koen Claessen and John Hughes, and John Hughes is the author of the classic paper "Why Functional Programming Matters".
 
 
 You need to make a testable statement about your code.
-For example, say that they're written in absolutely amazing summation function.
-And can you make a statement about that, say something like, my summation function makes a list of integers and returns positive integer always.
-And the traditional test method, it's like you're an intern.
-You and your co-worker, sounds like it's working.
-Because I used it in one test and it worked.
+For example, say that you've written an absolutely amazing summation function.
+And can you make a statement about that, say something like, my summation function takes a list of integers and returns positive integer always.
+And the traditional test method, it's like your intern,
+Your co-worker, "sounds like it's working.
+Because I used it in one test and it worked"
 But QuickCheck is more like your know-it-all co-worker.
-But he won't take your word for T.
-we have run hundreds of test cases to see if your statement actually works: So it looks like the significant of your statement a lot of test cases, try to find a counter example.
+But he won't take your word for it.
+We have run hundreds of test cases to see if your statement actually works: So it looks at the signature of your statement, and generates a lot of test cases, trying to find a counter example.
 If it does, or if it doesn't, and if it does -- it has a test case used to prove you wrong.
-And this is how continued look in code.
+And this is how this could look in code.
 This summation function.
-Just takes list of integer and it's so awesome I didn't even include the limitation.
-Then you have your statement, which is something like a function that's posted.
+It takes a list of integers and it's so awesome I didn't even include the implementation.
+Then you have your statement, which is something like a function that's positive.
 Takes the list of numbers and give us you the Boolean.
-
 
 
 Succeeds, returns true all the time.
 In this case, probably what will happen is it will say something lib was posted, it failed, when given the example, the example is the list of the number minus 1.
 Negative number, obviously, it wouldn't be positive.
-So that's QuickCheck helping you find discrepancies between your code and standpoint.
-Perhaps in this characters summation function should have onsite integers or your assumption how it works, you should find a different statement.
-
-
+So that's QuickCheck helping you find discrepancies between your code and statement.
+Perhaps in this case the summation function should have unsigned integers or your assumption how it works, you should find a different statement.
 
 How does it know how to generate test cases?
-Well, for primitives these funks are built in.
+Well, for primitives these functions are built in.
 Counter example, QuickCheck does something called shrinking to minimize the test case.
-You can also provide a custom type.
+You can also provide a custom shrinker for your types.
 But that's seldom necessary.
 The possibility is there.
+
 QuickCheck now introduces randomness into your builds.
 And people will say stuff like, we don't want unstable tests.
 You must know who broke the bill.
