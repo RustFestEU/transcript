@@ -181,68 +181,63 @@ I still have work to do with exceptions and stuff, still provides me a use value
 Let's look at the bigger picture.
 Not talking about my project anymore.
 I could talk about this for hours but you'll have to catch me tomorrow.
-So we could here, take a look at a statement, what is the problem of the statement.
-It's hard to, when you start using QuickCheck, it's hard to come up with different kind of staples.
-You normally, write the unit test F.
-input 42, I should get this back.
+So we could here, take a look at a statement, what is the problem of coming up with a statement?
+It's hard to, when you start using QuickCheck, it's hard to come up with different kind of statements.
+You normally, write the unit test "If input 42, I should get this back".
 But saying for any number that hold, it's not that useful.
+
 So now, I get to the fact part and fact part is just saying something about your code.
-There's basically F I back up a little bit, there's three different things about statements.
-Effectses, inverse functions, and there's compare WGS a known good one.
+There's basically - if I back up a little bit, there's three different things about statements.
+Facts, inverse functions, and there's comparison with a known good one.
 Facts will already -- we have already seen.
 Summation function.
 Inverse is something like encode, decode.
 You encrypt something and then you then decrypt it.
 It should return the same value.
-If you compares pare something with a non-good, one thing you can use the verged of your code.
-If you have an implication, and it had a very nice indication of something, it was slow, but it worked.
-Then if you need to do a performance, you can have your QuickCheck round against your standard non-optimized case and compare it against the optimized case.
-With kacheing.
--- cacheing.
+If you compare something with a known-good, one thing you can use is the unoptimized version of your code.
+If you have an implementation, and it had a very nice implementation of something, it was slow, but it worked.
+Then if you need to do a performance hack, you can have your QuickCheck run against your standard non-optimized case and compare it against the optimized case.
+With caching - Without caching.
 
-
-
-The guy drove an idealistic model of the database, with capabilities and ran that together with level, and check that they matched all the time.
+The guy wrote an idealistic model of the database, with capabilities and ran that together with LevelDB, and check that they matched all the time.
 The model is much simpler.
-It could be a memory carried.
+It could be in-memory storage.
 You don't need to make all the guarantees.
 You can also take existing code.
 That's the third one.
 And one of them is third party which I was using.
-You can have the old verged of your code.
+You can have the old version of your code.
 If you have version one that does something interesting and you want to do a reimplementation of that and you want it to be as good.
-You can compare verged 1 and version 2.
+You can compare version 1 and version 2.
+
 So I have skipped one thing.
-What happens if you have irrelevant cases, you want to discard those when you're testing.
-There's also an example of an inverse assemble.
-Thank you for mentioning those.
-Now, have you to return a test result.
-What you do S you have a function.
-This assemble, San off code, which is basically, 16 bits.
-If you disassemble T you should have a -- not all codes are valued.
-If it is not valued, it'll return an error.
-Don't bother doing this test now because it's not valued because I can't assemble but if it happens to be valued, I get some successly text.
-Being be something like are like, [indiscernible] to 3, to 2 points.
+What happens if you have irrelevant cases, and you want to discard those when you're testing?
+There's also an example of an inverse - assemble is the inverse of disassemble.
+Thank you for mentioning that.
+Now, have you to return a TestResult.
+What you do is you have a function.
+Disassemble an opcode, which is basically, 16 bits.
+If you disassemble it you should have a -- not all codes are valid.
+If it is not valid, it'll return an error.
+Don't bother doing this test now because it's not valid because I can't assemble, but if it happens to be valid, I get some assembly text.
+It's something like, word-sized ADD of data register 3, to where address register 2 points.
 
+In code we test if you assemble this text, do you get the same opcode you started with?
+And you create the test result from that.
+And this means that this tests that all the places where disassemble works,
+assemble should work.
 
-
-In code we test if you assemble this text, do you get the same code.
-You started with, and you create the test result from that.
-And this means that test all the places where disassemble works.
-Assemble should work.
-
-
-
-I also want to mention, other place where is QuickCheck is used.
-I think it was 107.
+I also want to mention, other places where is QuickCheck is used.
+I looked at crates.io, and I think it was 107.
 They all use QuickCheck.
-Ether tools, test fact about function u functions.
-And the wide range, talking about Rust at all, ERICSSON is using to find race conscience in the database.
-In the 4B based stations.
-They tested integration.
-Buy stuff from supplies and put it in their cars.
-They found box in there communication and also found inconsistencies in there of the source.
+Regex tests utf8 encode/decode.
+Byteorder tests buffer read/write.
+Itertools, test facts about its functions.
 
+And the wider industry, not talking about Rust at all, Basho uses it for Riak, ERICSSON is using to find race conditions in the Mnesia database, in 4G base stations.
+Volvo Cards - they tested integration.
+They buy stuff from suppliers and put it in their cars.
+They found bugs in their communication and also found inconsistencies in the AUTOSAR standard.
 
 
 I have one last story.
