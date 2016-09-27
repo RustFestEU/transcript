@@ -239,18 +239,17 @@ Volvo Cards - they tested integration.
 They buy stuff from suppliers and put it in their cars.
 They found bugs in their communication and also found inconsistencies in the AUTOSAR standard.
 
-
-I have one last story.
-Level DB1.
-It was even more absurd than the one I said.
+I have one last story, the LevelDB one.
+It was even more absurd than the one I started with.
 There's a talk about this.
-Land of jam, 1013.
-A guy called John Orfton.
-Found the 7th instant sequence that failed.
-Google, provide aid fix.
+LambdaJam, 2013.
+A guy called Joe Norton.
+Found the 17th step sequence that failed.
+Google provided a fix.
 He ran the same QuickCheck test.
-Now after a cowl of minutes, found a 33 step sequence that reduces the same of inconsistency, and I think you can agree this is almost impossible to write the unitests, that would catch something like that.
-So the wake away is, you won't surprise yourself.
+Now after a couple of minutes, it found a 33 step sequence that resulted in the same inconsistency, and I think you can agree this is almost impossible to write the unit tests, that would catch something like that!
+So the take away is: You won't surprise yourself.
 Randomness will.
-Stop worrying and learn to love the it.
-Thank you very much.
+Stop worrying and learn to love the nondeterminism!
+
+Thank you very much!
