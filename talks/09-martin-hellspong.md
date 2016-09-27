@@ -9,36 +9,37 @@ Oh.
 it works.
 Okay.
 So my name is Martin Hellspong.
-I work at factor 10.
-I'm a software initial there and we are based in Sweden and it's awesome to be here at Rustment really?
-It's there it's not there?
-I also didn't start the time recording, right?
+I work at factor10.
+I'm a Software Engineer there and we are based in Sweden and it's awesome to be here at RustFest.
+(Audience interruption, pointing out that main screen is blank)
+Really?
+It's there, and there, but it's not there?
+I also didn't start the Quicktime recording, right?
 So let's do that.
 (Pause).
 
-
-
 I'm still not there?
 Yes.
-So it's awesome to be at RustFest and I'm here to talk about QuickCheck, which is a test method that is under appreciated, I think.
+So it's awesome to be at RustFest and I'm here to talk about QuickCheck, which is a test method that is under-appreciated, I think.
 And the reason is that it helps you find bugs that traditional testing often don't find.
 And there have been case studies, showing that you find more bugs with less effort per bug, using QuickCheck.
-And that's a nice promise fur.
-And traditional testing it works by very fine expected behavior and perhaps you poke around some of the expected edge cases.
+And that's a nice promise for.
+And traditional testing it works by verifying expected behavior and perhaps you poke around some of the expected edge cases.
+(Audience interruption, asking if the correct slide is shown)
 I haven't changed my slide.
-So I'm where I'm -- both slides.
+So I am where I am -- both slides.
 It's just that I have a long intro and setting you up for all kinds of failure.
-Any way, and now, you lost me.
+Anyway... and now, you lost me.
 The reason for this is that this isn't optimal because you write your own tests, and you won't surprise yourself.
 But the randomness will actually surprise you and your code.
-So that's why QuickCheck uses randomness to generate hundreds of thousands or like, any number of test cases you want, according to a specification, and randomness gives, the power to give varied test cases.
-As an example, there was a bug file against Google's level DB.
-They hadn't -- Google hadn't found it with traditional.
-But that's because it needed a sequence of 17API calls to trigger the consistency part.
-And quick check found this by someone writing a test for quick check that, explored and looked for inconsistencies and see randomness.
-We can all agree, no one writes a standard unit test, at least that long.
-So my ambition with this talk is to get you excited about using this if your problems and I'm not going to be very Rust-specific so most of what I'm saying is applicable to quick check in randomized testing in general.
-You should be able to take something out of your projects.
+So that's why QuickCheck uses randomness to generate hundreds, or thousands or like, any number of test cases you want, according to your specification, and randomness gives QuickCheck the power to generate very varied test cases.
+As an example, there was a bug file against Google's LevelDB.
+They hadn't -- Google hadn't found it with their traditional tests.
+But that's because it needed a sequence of 17API calls to trigger the consistency problem.
+And QuickCheck found this by someone writing a test for QuickCheck that explored the API and looked for inconsistencies using randomness.
+We can all agree, no one writes a standard unit test for that, at least not that long.
+So my ambition with this talk is to get you excited about using this in your projects - and I'm not going to be very Rust-specific so most of what I'm saying is applicable to QuickCheck and randomized testing in general.
+You should be able to take something back to your projects.
 Okay.
 QuickCheck.
 There's variance able from most almosts, now, but it originated in the research community about 1999.
