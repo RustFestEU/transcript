@@ -108,74 +108,76 @@ You can always give up.
 You don't run the QuickCheck tests in your build.
 Perhaps you then need traditional test and you could do a nightly bug-hunt running for 3 hours, to see if you could flush out some bugs.
 There's a tradeoff you need to make.
-So now, we can look at how I use grid check.
-So in my project, it's kind of a micro control.
+
+So now, we can look at how I use QuickCheck.
+So in my project, it's kind of a microcontroller project.
 I really like how the previous talks have geared into this.
 It's very much helpful to have a couple of concepts explained.
-It's kind of controlled projects.
+It's kind of microcontroller projects.
 Do I it on my experimental time.
-So I get paid by but the company doesn't.
-But think going that, it wasn't that funny to, not that exciting to do.
+So I get paid, but the company doesn't.
+But think about that, it wasn't that funny to, not that exciting to do.
 I want to do something more outrageous.
-I probably need to make a simulated word, with a space shape, with a simulated micro controller, and then I knew what kind I wanted and see if you can guess which one it is.
-This is the classic version of the Macintosh.
-And commodore A minga 500.
-This was the first so for those stack of reasons, I chose the processor, running all these few manslaughter.
+I probably need to make a simulated world, with a space ship, with a simulated microcontroller, and then I knew what kind I wanted and see if you can guess which one it is.
+This is the classic version of the Macintosh. The Atari ST, and the Commodore Amiga 500.
+This was the first computer for me, so for nostalgic reasons, I chose the processor, running in all these machines.
 The Motorola 68,000.
 And also 40 years old, the computers.
 Or the processor, rather.
-So it's possible to emulate it.
-Something like 18 megahertz.
+So it's possible to emulate it at the original speed.
+Something like 8 megahertz.
 
-
-
-So now in reality, we have a simulated micro controller problems.
-8,000 CPU which is often called M68K.
-I took an existing C library, running in the main emulators.
-And I report that to RustFest and I decided to do this, rather recklessly, as project write up.
+So now in reality, we have a simulated micro controller project.
+The Motorola 68,000 CPU, which is often called M68K.
+I took an existing C library, running in the MAME emulators.
+And I had become excited about Rust and I decided to do this, rather recklessly, as the project right after Hello World.
 And it's called R68K.
 And it's off of GitHub.
 It isn't fully functional yet, but it's useful.
 For me.
-If you look at regulator what you need to test this.
+If you look at a CPU emulator, what do you need to test this.
 
-It's only 58 instructions.
-So possibly, can you just write 56 units.
-However, this doesn't really work because it's annex plosion ever instructions, data sites, registers, and you can release for one single code and there's 64,000 value of up codes, and about 11,000 I think its has done transition, anyway, so I knew then, I needed quick check.
+It's only 56 instructions.
+So possibly, can you just write 56 unit test?
+However, this doesn't really work because it's a combinatoric explosion of instructions, data size, registers, and you can easily come up with 10 tests for one single opcode and there's 65,000 opcodes, 54000 of them valid, and about 11,000 invalid ones.
+
+I think its has done transition. Anyway.
+
+So I knew then, I needed QuickCheck!
 I couldn't possibly write enough tests.
-So how diuse it?
+So how did I use it?
 I basically made a statement.
 There's two CPU's.
 They should behave Identically.
-And by identically.
-Giving random initial states.
+And by identically I mean.
+Given random initial states.
 Execute one instruction ethical.
-And it's very fine state is shaping the content of registers and memory, as well as old memory access are correct size and alignment and what not.
+And verifying state is checking the contents of registers and memory, as well as all memory accesses are correct size and alignment and what not.
 
-
-
-Then I thought, QuickCheck, just go ahead and approve me on this.
+Then I thought, QuickCheck, just go ahead and disprove me on this.
 And it did, repeatedly.
-Remorsesly.
-Lee and ultimately helpful.
+Remorselessly.
+Annoying but ultimately helpful.
+
 I ended up with 1,600 QuickCheck tests.
 One test is testing combination of register and covers all the possible cases.
 Hundreds of trials each.
 Running all the tests, is something like three hours, 45 minutes.
-So single threaded so I can't run parallel.
+So Musashi is single threaded so I can't run parallel.
 I've used gnu parallel to run cargo in parallel, the tests.
 It's one test per instance, I ended up doing 16PR's.
 Elements like cycle counts.
 How many cycles it took.
 And I had a single complex statement about the identical behavior.
 You don't need to have a perfect comparison.
-This statement was much simply in the beginning, it was still very, very useful to get something and as soon as you take the statement and improve it.
+This statement was much simpler in the beginning, it was still very, very useful to get something and as soon as you take the statement and improve it.
 It will improve this test.
-Now to run a more thorough comparison.
+Now runs a more thorough comparison.
 I'm very happy to say, verified with QuickCheck.
 I'm basically, 100% sure.
-And if you for all the instructions.
+And identical for all the instructions.
 I still have work to do with exceptions and stuff, still provides me a use value.
+
 Let's look at the bigger picture.
 Not talking about my project anymore.
 I could talk about this for hours but you'll have to catch me tomorrow.
