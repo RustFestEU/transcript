@@ -78,39 +78,35 @@ The possibility is there.
 
 QuickCheck now introduces randomness into your builds.
 And people will say stuff like, we don't want unstable tests.
-You must know who broke the bill.
-What change did they do to make it fail.
-What if it poses QA and fails the release without any changes.
+We must know who broke the build!
+What change did they do to make it fail?
+What if it passes QA and then fails the release build without any changes.
 I mean, that's valid criticisms.
-Some processes doesn't handal randomness and on the level of individual developer, I mean, you do a big fix ands in not fixed.
-Or is it just because of failure case wasn't generated.
-Or you ad a test failure.
-Does a failure case happen to be [indiscernible].
+Some processes doesn't handle randomness well.
+And on the level of individual developer, I mean, you do a bug fix and the tests pass, is it fixed?
+Or is it just because a failure case wasn't generated?
+Or you add a feature, and the tests fail.
+Did a failure case just happen to be generated?
+
 However, in practices, often, much more stable than you would think when you heard randomness.
 It's not like it flips flops.
 It works because you generate hundreds of test cases.
-If you have some case that's only generated once in every 200 test cases, 100, perhaps it flops and flips between.
+If you have some case that's only generated once in every 200 test cases, and you run 100 tests, perhaps it flops and flips between.
 But otherwise, it's mostly in my experience, they always at the same time they are programmatic.
 But we must remember, the correct decisions now we introduce untable tests.
-An unstable test is something with the same input gets two different ruts.
-You don't know Y.
-but the unlikely case, it happens and then you get the counter example.
-That's when given this, it always return this is failure.
-So you need to take good care for example, and you can produce a unit test.
-
-
-
+An unstable test is something with the same input gets two different results, and you don't know why.
+But the unlikely case, it happens and then you get the counter example.
+That's when given this, it always results in this failure.
+So you need to take good care of the counter-example, and you can produce a unit test.
 You can also tweak a generator, if you have generator for your type.
-You can tweak that to generate cases more often.
-On the process level, we could look at fixing the seat to the random number generator.
+You can tweak that to generate edge cases more often.
+
+On the process level, we could look at fixing the seed to the random number generator.
 However, that trades test coverage for stability, which is not perhaps a good trade-off.
-Depends on if you want to find box or you want your build to always work.
+Depends on if you want to find bugs or you want your build to always work.
 You can always give up.
-You don't run a grid check test.
-Perhaps you need traditional test and you could do [indiscernible] running, to see if you could flush out some bugs.
-
-
-
+You don't run the QuickCheck tests in your build.
+Perhaps you then need traditional test and you could do a nightly bug-hunt running for 3 hours, to see if you could flush out some bugs.
 There's a tradeoff you need to make.
 So now, we can look at how I use grid check.
 So in my project, it's kind of a micro control.
