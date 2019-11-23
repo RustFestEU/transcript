@@ -12,20 +12,20 @@ Thanks!
 
 ### Saturday
 
-0. **Keynote**: [R-Evolution: A Story of Rust Adoption](talks/01-Sebastian-Fernandez-Ryan-Levick.md) - Sebastian Fernandez & Ryan Levick
-0. [zbus: Yet another D-Bus library](talks/02-Zeeshan-Ali.md) - Zeeshan Ali
-0. [Rust in China](talks/03-Brian-Anderson-Aimee-Zhu.md) - Brian Anderson & Aimee Zhu
-0. [66 hours of Rust](talks/04-Claudia-Saxer.md) - Claudia Saxer
-0. [Right inside the Database](talks/05-David-Bach-Malte-Sandstede.md) - David Bach & Malte Sandstede
+1. **Keynote**: [R-Evolution: A Story of Rust Adoption](talks/01-Sebastian-Fernandez-Ryan-Levick.md) - Sebastian Fernandez & Ryan Levick
+1. [zbus: Yet another D-Bus library](talks/02-Zeeshan-Ali.md) - Zeeshan Ali
+1. [Rust in China](talks/03-Brian-Anderson-Aimee-Zhu.md) - Brian Anderson & Aimee Zhu
+1. [66 hours of Rust](talks/04-Claudia-Saxer.md) - Claudia Saxer
+1. [Right inside the Database](talks/05-David-Bach-Malte-Sandstede.md) - David Bach & Malte Sandstede
 
 ### Sunday
 
-0. [Powering Crowd-sourcing of Public Transit Delays with Rust](talks/06-Neville-Dipale.md) - Neville Dipale
-0. [Amp Up Web Audio Applications with Rust and WebAssembly](talks/07-Niklas-Reppel.md) - Niklas Reppel
-0. [async/await with async-std](talks/08-Florian-Gilcher.md) - Florian Gilcher
-0. [Life of an async fn](talks/09-Tyler-Mandry.md) - Tyler Mandry
-0. [Shipping a stable compiler every six weeks](talks/10-Pietro-Albini.md) - Pietro Albini
-0. [The human cost of development](talks/11-Katharina-Fey-md) - Katharina Fey
+1. [Powering Crowd-sourcing of Public Transit Delays with Rust](talks/06-Neville-Dipale.md) - Neville Dipale
+1. [Amp Up Web Audio Applications with Rust and WebAssembly](talks/07-Niklas-Reppel.md) - Niklas Reppel
+1. [async/await with async-std](talks/08-Florian-Gilcher.md) - Florian Gilcher
+1. [Life of an async fn](talks/09-Tyler-Mandry.md) - Tyler Mandry
+1. [Shipping a stable compiler every six weeks](talks/10-Pietro-Albini.md) - Pietro Albini
+1. [The human cost of development](talks/11-Katharina-Fey-md) - Katharina Fey
 
 ## License
 

@@ -7,5 +7,5 @@ After the conference we provide the transcripts.
 
 ## Available transcripts
 
-0. [RustFest Berlin 2016](https://2016.rustfest.eu/) - [2016-berlin](2016-berlin)
-0. [RustFest Barcelona 2019](https://barcelona.rustfest.eu/) - [2019-barcelona](2019-barcelona)
+1. [RustFest Berlin 2016](https://2016.rustfest.eu/) - [2016-berlin](2016-berlin)
+1. [RustFest Barcelona 2019](https://barcelona.rustfest.eu/) - [2019-barcelona](2019-barcelona)
