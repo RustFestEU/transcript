@@ -9,3 +9,4 @@ After the conference we provide the transcripts.
 
 1. [RustFest Berlin 2016](https://2016.rustfest.eu/) - [2016-berlin](2016-berlin)
 1. [RustFest Barcelona 2019](https://barcelona.rustfest.eu/) - [2019-barcelona](2019-barcelona)
+1. [RustFest Global 2019](https://rustfest.global/) - [2020-global](2020-global)
