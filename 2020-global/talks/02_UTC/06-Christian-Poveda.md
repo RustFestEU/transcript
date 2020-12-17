@@ -1,15 +1,14 @@
 **Miri, Undefined Behaviour and Foreign Functions**
 
-**Bard:**
-
+**Bard:**  
 Miri ist Rust's interpreter  
 And Christian will gladly debate'er  
 On how to bequeath  
 her the stuff underneath  
 so she can run until much later
 
-**Christian**:
 
+**Christian:**  
 Thank you.
 This talk is called Miri, undefined behaviour and foreign functions.
 So let me me introduce myself.
@@ -365,11 +364,11 @@ That's all, so, thank you for your time.
 I hope you found this interesting, and I think we can do some questions now if you want.
 
 
-**Stefan:**
+**Stefan:**  
 Yes, the question, so, the 11th element in the - said about receiving allocation that was freed, it was out of bounds, so I guess this is the question:
 how far can it track stuff, right? E-yes, so this is not -
 
-**Christian**:
+**Christian:**  
 Yes, this is not clear for me, actually.
 Sometimes, this program fails because, when Miri interprets it, it frees the memory for the array before you read the pointer.
 So it complain about memory being freed, and sometimes the pointer, the array is not deleted yet, so it hasn't been dropped
@@ -378,71 +377,71 @@ So the good news is that any of those are on undefined behaviour,
 but Miri tries to be deterministic as much as it can, but, when you disable it in isolation.
 For example, it's really hard to be deterministic, because you change your file, that might change how everything worked internally.
 
-**Stefan:**
+**Stefan:**  
 So there is a second question:
 when Miri's engine is used to execute comms code during calculation, does it run in fast mode with less validation, and how do I assess the difference?
 
-**Christian:**
+**Christian:**  
 I don't know a lot of ...
 Miri runs without a lot of of the validations.
 It runs when you're running a standalone.
 In the current version, it's faster than what I showed you, but it's because they had no do less checks.
 Let's say the engine is the same, the same engine but in a different car, let's say.
 
-**Stefan:**
+**Stefan:**  
 We don't have dynamic evaluations in const eval.
 
-**Christian:**
+**Christian:**  
 There is a flagging ...
 in Rust, that something unleashed.
 You can run like, let's say, undisrupted constant evaluation, and most of the time, it breaks the compiler, but, yes, you can actually run whatever you want.
 Using Miri inside the compiler.
 But that is super experimental.
 
-**Stefan:**
+**Stefan:**  
 So long-term, one could have a VM, like a full-functioning VM in Miri?
 
-**Christian:**
+**Christian:**  
 In principle, yes, but there are a lot of questions, like,
 for example, you read a file, and you use the file to, I don't know, create some const or define a type that is generic but that makes your compilation unsound because every time you read the file,
 it might change, or using random-number generators.
 
-**Stefan:**
+**Stefan:**  
 Maybe I can introduce my own question here:
 do you think in a very distant future, it will be possible to have Miri included in a binary to have Rust as a scripting language inside your Rust program?
 
-**Christian:**
+**Christian:**  
 Oh, would you. I have no idea!
 I remember I read someone was writing an interpreter for - so you can use it like was a rebel.
 I don't know what happened with that project.
 
-**Stefan:**
+**Stefan:**  
 Was this the Python-like thing?
 
 **Christian**:
 No, it was a  little bit different because it didn't run Rust but Miri, you had to write the MIR of your program together with the Rust code.
 
-**Stefan:**
+**Stefan:**  
 Okay. Interesting. Another question from the audience:
 Would it be possible to do this kind of analysis general LLVM IR?
 
-**Christian:**
+**Christian:**  
 I'm tempted to say yes, yes, you could.
 The thing is that you don't have a lot of the type of information you have when you're interpreting the MIR.
 In the MIR, you have a lifetime for every single value.
 I don't know if you can do that in LLVM IR.
 In principle, yes, you can build, for example, a stack model for VMIR, but the inference is you can build it.
 
-**Stefan:**
+**Stefan:**  
 You would have to add a lot of metadata because new types maybe conscious in ...
 
-**Christian:**
+**Christian:**  
 Yes, it's harder, but I believe it's possible to do that.
 
-**Stefan:**
+**Stefan:**  
 Is there anything you would like to show off, like a final use case, or an idea, hey, if someone is bored, maybe give a shot at this project?
 
-**Christian:**
+**Christian:**  
 Yes, actually, let me ...
 let me open a new Firefox window here.
 If you're bored and you want to do something inside Miri, we have a lot of issues here.
@@ -452,7 +451,7 @@ For example, Miri doesn't support custom allocators, and in the last version, no
 so it is super important now to have a way to use a customer locator for Miri to test with different allocators, for example.
 If you're board, you can wrap any of those issues.
 
-**Stefan:**
+**Stefan:**  
 Cool.
 I'm looking forward to a stable box with customer allocatable support.
 That will be very interesting.
@@ -463,19 +462,5 @@ It was very well received, and great talk.
 Thank you again.
 Ferrous thanks you as well.
 
-**Christian:**
+**Christian:**  
 Thanks so much.
-
-**Stefan:**
-Will you be in the chat afterwards?
-
-**Christian:**
-Yes, I will hang a little bit in the chat.
-
-**Stefan:**
-Wonderful.
-So, thanks, everyone, for listening, and the final talk will commence in ten-ish minutes.
-There will be some announcements before and after, so stick around.
-Also, we have two artists coming up after the last talk.
-Right, thank you, everybody.
-Bye.

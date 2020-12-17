@@ -1,13 +1,14 @@
 **Rust for Artists, Art for Rustaceans**
 
-**Bard:**
+**Bard:**  
 Anastasia plays Rust like a flute  
 or maybe a magical lute  
 to then simulate  
 things that art may create  
 and this art does really compute
 
-**Anastasia**:
+
+**Anastasia:**  
 Hi, and welcome to Rust for artists, art for Rustaceans.
 
 This talk covers from multiple personality disorder like talk about similarities between art, programming, and science, and at the same time showing you complicated drawing algorithms and also has practical tips.

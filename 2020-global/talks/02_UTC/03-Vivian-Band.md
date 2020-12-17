@@ -1,15 +1,14 @@
 **Rust for Safer Protocol Development**
 
-**Bard:**
-
+**Bard:**  
 Vivian wants us to be safe  
 and our code on the web to behave  
 use Rust to generate  
 code that will validate  
 risky inputs, no need to be brave
 
-**Vivian**
 
+**Vivian:**  
 Hello, my name is Vivian Band.
 I'm a second-year PhD at Glasgow University studying network security.
 I was on the safer protocol development project.
@@ -126,121 +125,121 @@ We have a peer-reviewed publication which goes into more detail about our networ
 
 Thank you for your time, and I would be happy to answer any questions.
 
-**Vivian:**
+
+**Vivian:**  
 That was brilliant. Loved it! [Laughter]. Thanks so much.
 
-**Stefan:**
+**Stefan:**  
 Thank you.
 I know we have 25 to 40 second-delay to the stream, so, just to get ahead of time, I have two questions if you don't mind.
 The first one is, there is a push for native implementation of the networking type, so the Rust standard library doesn't Lewis LIPSE any more but directly operates with system calls. Do you think that will affect you in any way like in developing new types?
 
-**Vivian:**
+**Vivian:**  
 Potentially.
 So, the whole point of us developing the network packet representation system was to have something that was completely agnostic of any programming languages, or output libraries we want to use in the actual parser fields themselves, so it should be fairly easy for us to adopt to these things, I think.
 I think we could maybe have to consider, like, how we can convert from network packet representation to different codes - different types featured in the output code, but that's relatively straightforward, I think.
 
-
-**Stefan:**
+**Stefan:**  
 Wonderful. So, this feeds into my other question: so, I guess you can use the higher level parsers for TCP, UDP, what not, regardless of the underlying types of IPV4 versus version 6?
 
-**Vivian:**
+**Vivian:**  
 Yes, so what we are aiming to do is have these run through a single protocol specified in a draft.
 It's very rare that you would have an RFC that specifies multiple protocols, so if you wanted to make an IPV6 generator, go ahead, run it on the RFC.
 We are aiming to introduce our machine-readable ASCII format to feature IETF drafts and hopefully we will see more adoption of that so we can see automated testing going forward.
 What we've done for showing the TCP example, we've gone through an older RFC, and made minimal changes to it to generate parsers, so, if you wanted to do that with protocols, that's absolutely fine as well.
 So, again, in answer to your question: sorry, the question was about multiple protocols nested?
 
-**Stefan:**
+**Stefan:**  
 Yes, if you can use the parser coming out of the RTC for PC6, and what the -
 
-**Vivian:**
+**Vivian:**  
 Yes, we can use this for all sorts of different patrols Coles. The nice thing about parser combinators, you can have a ... if you like. Maybe one day in the future.
 
-**Stefan:**
+**Stefan:**  
 Yes. Cool. Wonderful. There is also a question from the audience: how do you deal with non-bite aligned structures, so, if like a five-bit word crosses the eight -bit alignment?
 
-**Vivian:**
+**Vivian:**  
 So, we had - so I think I had a small file for test when that I was doing the internship about what if this happens and non-bite aligned words was one of them.
 What we found was with the bit-level parsers, it tends to go straight into the next byte if you happen to - if the counter exceeds seven, so it will just run forwards happily.
 We haven't found any issues with that so far. It's been very good to us.
 
-**Stefan:**
+**Stefan:**  
 Yes, it has been released. Version 6 has been out since Tuesday, I think?
 
-**Vivian:**
+**Vivian:**  
 Yes, I haven't had time to update that yet, and this was written on five, so we will see if it works with six and see if there is anything that needs changed.
 
-**Stefan:**
+**Stefan:**  
 Wonderful. If this were a physical conference, we would probably meet Jeffrey who wrote the thing.
 
-**Vivian:**
+**Vivian:**  
 Sure, we would love to.
 
-**Stefan:**
+**Stefan:**  
 Wonderful. Do you want to precise something, or say this is something that came to mind just now?
 
-**Vivian:**
+**Vivian:**  
 No, I think I've kind of said everything that I want to say in the presentation, mostly.
 So what we've - it's mostly a proof-of-concept at the moment.
 So I posted a link to the repository and our paper explaining our system in the conference room chat, so if people want to take a look at our library and have a play about it, see how the generated Rust code looks,
 we will happily take feedback if people want to improve our parsers, so I consider myself a novice at Rust.
 We used using num functions as opposed to macros so we knew what was going on. If people want to talk how to optimise that, make it cleaner or more improvements, that would be great. We would love that.
 
-**Stefan:**
+**Stefan:**  
 Wonderful. So, to the lovely people in the stream, this is about the last chance you get to ask more questions. Has the IETF been receptive to the machine-readable diagram format?
 
-**Vivian:**
+**Vivian:**  
 So, the problem with the IETF is there are so many different groups, it's impossible to get a group consensus for the whole organisation, so what we've got at the moment is a small side meeting at the formal descriptions technique and side groups, I think, which is aiming to say, okay, how can we deploy this?
 So Stephen and Paul Perkins, two people involved in this project are heavily involved with the IETF, so I think they're having discussions to see how we can get this deployed.
 So it's been past attempts about okay, we can have custom tooling to do this and this, all singing and dancing, but we tried to make something relatively simple and unintrusive that could work for multiple workflows.
 
-**Stefan:**
+**Stefan:**  
 Cool.
 
-**Vivian:**
+**Vivian:**  
 So the answer with somebody haven't published using it yet, but watching this space.
 
-**Stefan:**
+**Stefan:**  
 I guess you will be trying to investigate like the correctness of the middle boxes and what-not, or maybe try to circumvent them?
 
-**Vivian:**
+**Vivian:**  
 Yes. So one of the examples that we are working on at the moment is QUIC. QUIC being high-profile, and a complex protocol, I think. If we can successfully parse this, and we can successfully use it for testing, then we think that's quite a good promotion, I suppose.
 
-**Stefan:**
+**Stefan:**  
 Definitely. Having an actually correct implementation that is done when the specification is finished ...
 
-**Vivian:**
+**Vivian:**  
 This was one of the main motivations. You get protocols that are becoming increasingly more complex, like QUIC. It's not surprised, and there will be flows with it. Say you got a package generated by C, and we fed it through our Rust parsers, we could potentially find - so it is written in other languages, we just need the output that they generate.
 
-**Stefan:**
+**Stefan:**  
 So tools like cargoes, expand, the generated code, and maybe check out the state machine that has been generated to see ...
 
-**Vivian:**
+**Vivian:**  
 Yes.
 
-**Stefan:**
+**Stefan:**  
 To see if the specified behaviour makes any sense, right? Or if there is, like, obvious flaws in the -
 
-**Vivian:**
+**Vivian:**  
 Yes, to catch the subtle bugs, which, okay, you know, essentially, what our parsers are testing is your output on the wire correct, doing what you think it's doing? We could maybe come up with more advanced testing, and automated error correction later on possibly, but that's going to take some time to develop.
 
-**Stefan:**
+**Stefan:**  
 Yes. Looks like a long ongoing project.
 
-**Vivian:**
+**Vivian:**  
 For sure. Hopefully, yes!
 
-**Stefan:**
+**Stefan:**  
 Wonderful. So, I'm currently not seeing any more questions. I hope I haven't missed any.
 
-**Vivian:**
+**Vivian:**  
 It seems like that's all of them.
 
-**Stefan:**
+**Stefan:**  
 Wonderful. Thank you again very much.
 
-**Vivian:**
+**Vivian:**  
 Thank you for having me.
 
-**Stefan:**
-Yes, you're welcome. So please stick around, because now it's at all the people, hello? I think I will let you go, so you can enjoy the next act. Thank you.
+**Stefan:**  
+Yes, you're welcome.

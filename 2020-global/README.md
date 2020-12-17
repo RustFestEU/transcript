@@ -10,12 +10,14 @@ Thanks!
 
 ## List of talks
 
+[All collected limericks (speaker introductions)](./llogiq.md) - written and presented by Andre Bogus 'llogiq'
+
 ### APAC Block
 
-0. [Using Rust in Metal Fabrication](./talks/01_APAC/04-Aki.txt) - Aki
-0. [Piecing together Rust: It is more than just writing code](./talks/01_APAC/05-Tarun-Pothulapti.txt) - Tarun Pothulapti
-0. [Everything is serialization](./talks/01_APAC/06-Zac-Burns.txt) - Zac Burns
-0. [Architect a High-performance SQL Query Engine in Rust](./talks/01_APAC/07-Jin-Mingjian.txt) - Jin Mingjian
+0. [Using Rust in Metal Fabrication](./talks/01_APAC/04-Aki-published.md) - Aki
+0. [Piecing together Rust: It is more than just writing code](./talks/01_APAC/05-Tarun-Pothulapti-published.md) - Tarun Pothulapti
+0. [Everything is serialization](./talks/01_APAC/06-Zac-Burns-published.md) - Zac Burns
+0. [Architect a High-performance SQL Query Engine in Rust](./talks/01_APAC/07-Jin-Mingjian-published.md) - Jin Mingjian
 
 ### UTC Block
 
@@ -29,13 +31,13 @@ Thanks!
 
 ### LATAM Block
 
-0. [Learning Rust with Humility and in Three Steps](./talks/03_LATAM/01-Stefan-Baerisch.txt) - Stefan Baerisch
-0. [Ochre: Highly portable GPU-accelerated vector graphics](./talks/03_LATAM/02-glowcoil.txt) - glowcoil
-0. [The Anatomy of Error Messages in Rust](./talks/03_LATAM/03-Sean-Chen.txt) - Sean Chen
-0. [Considering Rust for scientific software](./talks/03_LATAM/04-Max-Orok.txt) - Max Orok
-0. [Project Necromancy: How to Revive a Dead Rust Project](./talks/03_LATAM/05-Micah-Tigley-and-Carlo-Supina.txt) - Micah Tigley & Carlo Supina
-0. [Tier 3 Means Getting Your Hands Dirty](./talks/03_LATAM/06-Andrew-Dona-Couch.txt) - Andrew Dona-Couch
-0. [Rust for Freshmen](./talks/03_LATAM/07-Colton-Donnelly.txt) - Colton Donnelly
+0. [Learning Rust with Humility and in Three Steps](./talks/03_LATAM/01-Stefan-Baerisch-published.md) - Stefan Baerisch
+0. [Ochre: Highly portable GPU-accelerated vector graphics](./talks/03_LATAM/02-glowcoil-published.md) - glowcoil
+0. [The Anatomy of Error Messages in Rust](./talks/03_LATAM/03-Sean-Chen-published.md) - Sean Chen
+0. [Considering Rust for scientific software](./talks/03_LATAM/04-Max-Orok-published.md) - Max Orok
+0. [Project Necromancy: How to Revive a Dead Rust Project](./talks/03_LATAM/05-Micah-Tigley-and-Carlo-Supina-published.md) - Micah Tigley & Carlo Supina
+0. [Tier 3 Means Getting Your Hands Dirty](./talks/03_LATAM/06-Andrew-Dona-Couch-published.md) - Andrew Dona-Couch
+0. [Rust for Freshmen](./talks/03_LATAM/07-Colton-Donnelly-published.md) - Colton Donnelly
 
 ## License
 

@@ -1,15 +1,15 @@
 **Build your own (Rust-y) robot!**
 
 **Bard:**
-Aïssata Maiga lets me know  
+AÃ¯ssata Maiga lets me know  
 how to make bots without Arduino  
 writing Rust to move  
 her bot to my groove  
 Sure there will be some cool stuff to see, no?
 
-**Aïssata**
 
-Hello, I'm Aïssata Maiga, just your regular computer science student and I live in Sweden.
+**AÃ¯ssata:**  
+Hello, I'm AÃ¯ssata Maiga, just your regular computer science student and I live in Sweden.
 I discovered Rust this summer and fell in love with it.
 
 So, let's just start.
@@ -210,68 +210,67 @@ You can ask me any question you like.
 
 That's it, and thank you again, and it's time for the surprise.
 
-**Lyrics:**
+**Lyrics:**  
+> they see me rollin'.  
+> see me riding Rust-y.  
+> wanna see me riding Rust-y!  
+> thinking cool to ride Rust-y. See you riding Rust-y.  
+> wanna see me riding Rust-y  
+> showing, moving, grooving, want to see me riding Rust-y.  
+> wanna see me riding Rust-y  
+> now that I'm riding Rust-y  
+> want to see me - want to see me riding Rust-y.
 
-* they see me rollin'.
-* see me riding Rust-y.
-* wanna see me riding Rust-y!
-* thinking cool to ride Rust-y. See you riding Rust-y.
-* wanna see me riding Rust-y p
-* showing, moving, grooving, want to see me riding Rust-y.
-* wanna see me riding Rust-y.
-* now that I'm riding Rust-y.
-* want to see me - want to see me riding Rust-y.
 
-**Pilar**:
-
+**Pilar**:  
 That was incredible! It's so good that you all could not see me during the talk, because it was just me grinning from ear to ear and clapping my hands off! I said I was excited about this talk, but, wow!
 
-Thank you so much, Aïssata. That was an incredible talk, and, yes, like, you mentioned the community at the end, and your love for it, and your being such an integral part of it, at least to me, shows so much, because it's that spirit - like you just held our hand through all of that.
+Thank you so much, AÃ¯ssata. That was an incredible talk, and, yes, like, you mentioned the community at the end, and your love for it, and your being such an integral part of it, at least to me, shows so much, because it's that spirit - like you just held our hand through all of that.
 If somebody wanted to try that out, it's like I messed up here, there and, you know? Thank you so much.
 
 That was really, really great.
-And as a special treat, I mean, besides the amazing ending, Aïssata is here to join us for a live Q&A, so I'm going to add her on now, and we had a lot of questions in the chat, so we will try to get through as many of those as we can.
+And as a special treat, I mean, besides the amazing ending, AÃ¯ssata is here to join us for a live Q&A, so I'm going to add her on now, and we had a lot of questions in the chat, so we will try to get through as many of those as we can.
 
 So, hi, you're live with us now.
 
-**Aïssata:**
+**AÃ¯ssata:**  
 Thank you very much. Fantastic.
 
-**Pilar:**
+**Pilar:**  
 You had to watch your own talk. I don't know how you could do that.
 Personally, I can't! Don't ask me to! What an amazing talk, really. I was so excited.
 Absolutely called dibs on introducing, and being here for this talk.
 
-**Aïssata:**
+**AÃ¯ssata:**  
 I say something about the sound, and I jump from 340 to 334,000, and because, it was really weird.
 It's because I was talking in metres, and then centimetres, and then I forgot to do that, to explain it? And then, oh, I don't even know what to say, and I saw that in my comments, I write something about the God bat.
 That was embarrassing. Like, you know ... how to be a God bat. I meant the sensor is working like a bat, and well, let's just forget that.
 
-**Pilar:**
+**Pilar:**  
 I mean, if it is fair at all, I think it was very clear. I know we are multi-cultured, and everything, and everyone might not be on the same technological or English-speaking level,
 but I thought you two things you mentioned were fairly clear, but thank you for clearing that up too.
 
-**Aïssata:**
+**AÃ¯ssata:**  
 Speaking about the community, because, instead of thinking about the bad things, the good things, that is true, when I joined the Rust community,
 it was the only time that I used my own name and my own picture on the internet, and I never do that, because, you know, you're always afraid of mean comments, and abuse, but, yes, like from day 1, it never happened.
 It never happened, and that I've felt so welcomed anywhere. I think I made pull requests after a week.
 
-**Pilar:**
+**Pilar:**  
 That's amazing. I know people who have been in the industry for years and years and they're too scared to make PRs to put their stuff out there, so that is really cool. It's so great that you actually went for it, and that you felt safe and comfortable to do so. I hope, you know, that's why I love your mentoring work as well, you mentioning that and sharing so much with us because you're encouraging other people to feel safe, go for it, also try it, and that is amazing.
 Thank you so much.
 Do you mind if I go into a couple of questions that were on the chat?
 
-**Aïssata:**
+**AÃ¯ssata:**  
 No, please, yes. My child is here!
 
-**Pilar:**
+**Pilar:**  
 Don't worry about it. We are all at home and in it together.
 I think a couple of fun ones for you first.
 So, you know, there was kind the line of thinking why robots?
 Is it hard to start off with something that is embedded, and what your next planned robot is?
 I think people are very fascinated by the topic of embedded, and robots, so, please, like I saw how excited you are for it.
 
-**Aïssata:**
+**AÃ¯ssata:**  
 Yes, okay, so what I really wanted to von way with this talk was that it is not that hard.
 You have to have help, and, if you have the right help, it's not that difficult, and the most difficult is really do you I start with it? This is what I wanted to show in my talk: how do I get started?
 I'm pretty sure you have your own ideas and objectives, you have your own crazy stuff that you want to implement, talking robots, so I don't know.
@@ -279,46 +278,37 @@ So I just wanted to be sure.
 The confidence that I'm using, how do they work, so we can put them to this. I don't know, maybe you want to have a fridge that comments if you open it at night.
 This is something you can do with this stuff. But, when ...
 
-**Pilar:**
+**Pilar:**  
 I like how you mention where to get things and how to spot fakes. Watching your talk, I want to do something too. I want to buy components.
 
-**Aïssata:**
+**AÃ¯ssata:**  
 It's easy, and it's really cool and fun and easy. Please go for it. You have to show me. I want to see.
 
-**Pilar:**
+**Pilar:**  
 Thank you for that. Any future plans for more robots.
 
-**Aïssata:**
+**AÃ¯ssata:**  
 I've brought my robot skull. As you can see, it's not done, it can't be closed.
 But this is also, you know, you can do that with whatever small board you want, and then a small sensor, and then it reacts to the sound, but also to shock.
 If you turn the battery on first, because then the demo, the demo is not going to work. And you can put some LED into it, and program that thing with for loops.
 
-**Pilar:**
+**Pilar:**  
 That is so cool. Thank you for bringing it! Wow! That's amazing! I hope people are tuning into the Q&A to get to see this! That's so cool! Wow. Thank you.
 
-**Aïssata:**
+**AÃ¯ssata:**  
 Thank you, too. I'm all sweaty, and happy!
 
-**Pilar:**
+**Pilar:**  
 That's just part of being in the community, and part of getting to partake in this. So, I think I wanted to jump on to more technical questions, but I think we actually have to go to the next talk, but you showed us the next project, which is super cool. Thanks so much for joining us. Thank you for everything.
 
-**Aïssata:**
+**AÃ¯ssata:**  
 Thank you, everyone!
 
-**Pilar:**
+**Pilar:**  
 It's been amazing. Thank you for being here. We will see you in the chat, right?
 
-**Aïssata:**
+**AÃ¯ssata:**  
 Yes, I will stay here. We will be in the chat.
 
-**Pilar:**
-We will see you in the chat. Exactly. Oh, darn, technical thing. I'm so sorry! [Laughter].
-
-**Aïssata:**
-It's okay.
-
-**Pilar:**
-See you, then.
-
-**Aïssata:**
-See you.
+**Pilar:**  
+We will see you in the chat.

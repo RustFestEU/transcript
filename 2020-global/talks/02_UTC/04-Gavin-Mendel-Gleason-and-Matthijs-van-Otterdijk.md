@@ -1,14 +1,14 @@
 **Rust as a foundation in a polyglot development environment**
 
-
-**Bard:**
+**Bard:**  
 Gavin and Matthijs show how one might  
 a large project in Rust rewrite  
 start out small, let it grow  
 until stealing the show  
 from whatever was there before, right?
 
-**Gavin:**
+
+**Gavin:**  
 That's an excellent introduction.
 
 I'm Gavin Mendel-Gleason, the CTO for TerminusDB, and I wanted to talk a little bit today about Rust as a foundation in a polyglot environment.
@@ -124,85 +124,86 @@ So the borrow-checker, there is a cost but huge benefits that come from it - not
 So, if you're interested in an open-source solution, you should give TerminusDB a try.
 And that's it!
 
-**Jeske:**
+
+**Jeske:**  
 Yes thank you so much for the talk. That was really interesting.
 
-**Gavin:**
+**Gavin:**  
 Thank you. Let me check the chat. I don't think there are open questions yet. I have a question. You always build a release mode, or is there speed-up and debug mode also good enough?
 
-**Matthijs:**
+**Matthijs:**  
 No, debug is definitely not fast enough.
 Well, I mean, it is fast enough, it's fast enough when we're just testing out things,
 and it's great sometimes to be able to use a debugger, or something, but like an actual general use, also when we are developing and not developing the low-level library,
 we definitely build a release bug always, and it is a tremendous speed-up between them.
 
-**Jeske:**
+**Jeske:**  
 Cool. Thank you so much.
 I see a lot of clapping hands in the chat right now.
 Thank you for joining in.
 Matthijs, is there a last thing that you would like to add because we have a few minutes also still left?
 
-**Matthijs:**
+**Matthijs:**  
 Wow, no. [Laughter]. I don't know if I could add anything to that!
 
-**Gavin:**
+**Gavin:**  
 People should try Rayon is definitely one thing.
 
-**Matthijs:**
+**Matthijs:**  
 Rayon was a great thing to try.
 We were scared to try it, because oh, data parallelism, scary, but it's literally just replacing a few calls, and it just works.
 We got so much speed out of it, so, yes, Rust's ecosystem is just amazing. We love it.
 
-**Jeske:**
+**Jeske:**  
 There is a warming community, I have to say, also.
 
-**Matthijs:**
+**Matthijs:**  
 It's really great. It's a good community.
 
-**Jeske:**
+**Jeske:**  
 I see a question happening. Do you have any idea what hinders productivity in Rust beside the borrow-checker?
 
-**Gavin:**
+**Gavin:**  
 Well, like, types just introduce extra overhead.
 In prolog, you don't have to worry about garbage collection or how you allocate things.
 It's just a few things to worry about.
 It costs you later in terms of performance but it's really helpful in terms of developer time, and lots of things, it doesn't matter what the constant time cost is, because it's just glue.
 Most software is just glue code, and, if you're just writing glue, you don't want to be worried about lots of details, I think.
 
-**Matthijs:**
+**Matthijs:**  
 There is another thing here, which is to compare with prolog.
 In prolog, you would have a running instance, and then you do live recompilation of parts of that program, so it is a very short loop between writing your code and seeing it in action.
 With Rust, you have to compile, and then you can run the unit tests, and I mean it's not a big thing, but it is a thing. So having that kind of repo experience, that really does help development.
 
-**Jeske:**
+**Jeske:**  
 Thank you. There are some questions popping up for use cases and what applications of use of TerminusDB at the moment? Can you elaborate a little bit on that?
 
-**Gavin:**
+**Gavin:**  
 It's like machine learning where you need to have revision control of your data sets and there is any kind of large-scale graph manipulation if you want to - if you want to keep revisions, and be able to pipeline your data, that's where we would use it.
 We scale up to quite large graphs. You would be able to stick something large in there if you would like.
 
-**Jeske:**
+**Jeske:**  
 I think we are running out of time. Will you both be active in the chat to help around? I see already Matthijs you're in the chat as well.
 
-**Matthijs:**
+**Matthijs:**  
 Yes.
 
-**Jeske:**
+**Jeske:**  
 We had some technical difficulties sometimes which one does with this online experience, I would say, also, it's kind of fun experiences now, I have to say.
 I want to thank you both so much for your time, and interesting presentation, and please do check out the chat.
 And then I see that in eight minutes would be will he start the next speaker already. Please also, for the people watching their live streams, stick around for that. We will be back in eight minutes, I would say. Thank you so much, again, Gavin and Matthijs.
 
-**Gavin:**
+**Gavin:**  
 Thanks for having us.
 
-**Jeske:**
+**Jeske:**  
 See you in the chat.
 
-**Matthijs:**
+**Matthijs:**  
 Thank you for having us. I'm looking forward for the rest of the talks.
 
-**Jeske:**
+**Jeske:**  
 Ciao!
 
-**Matthijs:**
+**Matthijs:**  
 Bye-bye!

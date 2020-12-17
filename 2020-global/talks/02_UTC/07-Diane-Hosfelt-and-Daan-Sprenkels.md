@@ -1,13 +1,14 @@
 **RFC: Secret Types in Rust**
 
-**Bard:**
+**Bard:**  
 Daan and Diane get us to the hype  
 Of keeping secrets in a type  
 Disallowing creation  
 of some optimization  
 that just might tell the feds what you type
 
-**Daan:**
+
+**Daan:**  
 Hello, everybody.
 I'm here with Diane Hosfelt, and we will be talking about secret types in Rust.
 So the main gist of this talk will be that some of you may know that cryptographic engineers tend to write a lot of their code in assembly,
@@ -15,12 +16,12 @@ and there is a good reason for that, and I will explain why that is, but, as a c
 Because of some of the compilation quirks in Rust, that's not always a good idea, and what needs to be done to make Rust programming language we can use for cryptographic code.
 Both Diane and me are here in the at a conference and in the chat, so feel free to ask any questions at the end of the talk, or put them in the chat during the talk, and we will take care of them.
 
-**Diane:**
+**Diane:**  
 Hi, I'm Diane Hosfelt, and this is Batman.
 Before we get started, I have a short disclaimer.
 All of this work was done while I was a Mozilla employee and it in no way reflects Apple's views.
 
-**Daan:**
+**Daan:**  
 First, we will talk about timing side channels work, what they are, why are they dangerous,
 and then we will talk about how Rust is not suitable to write code that is actually - that actually prevents these channels.
 We will look at a couple of hacks that we could use to prevent some of these channels in Rust,
@@ -28,7 +29,7 @@ but then we will go more in depth and look at the RSC on secret types to see how
 
 So, first, ...
 
-**Diane:**
+**Diane:**  
 A side channel is any attack based on information gained from the implementation of a crypto system, not a weakness in the system itself.
 In this case, we are concerned about timing side chapels which occur when attackers analyse the tame taken to execute a a cryptographic algorithm, which can be seen as an implicit output.
 Imagine it takes less time to execute part of the code when a bit is zero than when it does when a bit is one.
@@ -37,7 +38,7 @@ These attacks are a threat in the post-spectre world, primarily used to attack s
 where each bit compromised provides incremental value and the confidential shalt of compromise is desirable.
 The fix is constant time code, or to be more precise, data invariant code, with the time it takes to execute the code doesn't depend on the input.
 
-**Daan:**
+**Daan:**  
 Let me explain to you why at this point it's really hard for us to guarantee that the compiler is constant time.
 So this is - this story will be true for basically any programming language that is compiled.
 There are some exceptions.
@@ -78,7 +79,7 @@ We have these operations, and you don't even see them in the compiled code becau
 And this is actually a pretty big danger for us.
 So that is what we mean when we say compilers are problematic.
 
-**Diane:**
+**Diane:**  
 Obviously, we're at RustFest, so we've all bought into Rust, but the question remains if we can do secret invariant programming with assembly, why do we need to do it in Rust at all?
 Writing cryptographic in high-level languages like Rust is attractive for numerous reasons.
 
@@ -86,7 +87,7 @@ First, they're generally more rateable and accessible to developers and reviewer
 Second, it allows the integration of cryptographic code with the rest of an application without the use of FFI.
 Finally, we are motivated to have a reference implementation for algorithms that is portable to architectures that might not be supported by highly optimised assemble implementations.
 
-**Daan:**
+**Daan:**  
 So, then why do we focus on Rust?
 Why don't we just, if we can't write secure code, why do we want to use Rust in the first place?
 
@@ -143,7 +144,7 @@ so it might be that, in a couple of years, a completely secure version of some s
 So, yes, we like to have guarantees, and we don't want to have just hacks.
 So, for the next part, I will give the floor to Diane, and she will be talking how we can use secret types in Rust to make our lives a little bit better.
 
-**Diane:**
+**Diane:**  
 Why aren't these language-level protections good enough?
 The compiler and instructions.
 it turns out that the general purpose instructions on various platforms take a variable number of cycles,
@@ -174,16 +175,17 @@ Thank you so much for your attention.
 If you have any questions, feel free to ask us.
 While this is a recorded talk, we are currently present and ready to answer questions.
 
-**Pilar:**
+
+**Pilar:**  
 All right.
 Thank you so much, Daan and Diane.
 We're lucky enough to have you both here for a Q&A.
 All right, so you've been joined by your friend too! [Laughter].
 
-**Diane:**
+**Diane:**  
 Batman came back.
 
-**Pilar:**
+**Pilar:**  
 Entirely ignored during the day.
 We do have a couple of questions from the audience, which is great.
 The first one we've got is that this is all very complex.
@@ -193,41 +195,41 @@ Very broad, but I think it would be great to hear your insight on this.
 **Diane:**:
 So there are tools that you can use, verification tools, that can determine if on different inputs, there are different runtimes, so that is one of the ways that you can determine is if a program has non-secret independent runtimes. For part of it. Daan?
 
-**Daan:**
+**Daan:**  
 Yes, the way we discover these kinds of issues is, like, at some point, sometimes, write a piece of assembly,
 and the first thing I do before I write it is just program it in C or Rust and see what the compiler tells me to do,
 and then these are the moments that I stumble on, these, "Wait, if I would do this, this would not be secure."
 And that's when I first discovered this for myself, so, yes.
 
-**Pilar:**
+**Pilar:**  
 Cool. You said that you gave us an insight you go with what the compiler says first and then you can discover it.
 Be curious about what the compiler tells you, not just like, all right.
 Someone has asked if there is a working group working on it on a solution?
 
-**Diane:**
+**Diane:**  
 There isn't a working group.
 There is just the RFC, which has been a little bit stale, because, you know, life gets busy.
 So if anyone's interested in commenting on the RFC, and trying to help me bring it back to life, you know, that is definitely welcome.
 
-**Pilar:**
+**Pilar:**  
 If there is interesting for a working group, then, yes, someone will hop on from the audience.
 
-**Diane:**
+**Diane:**  
 That would be great.
 One of the things that needs to happen on the Rust side and on the LLVM side, we are going to have to eventually do some implementation work.
 You know, it's not enough just to define what has to happen. We have to implement these instructions on the secret types, so that will actually be a lot of work.
 
-**Pilar:**
+**Pilar:**  
 So we have very little time left, but there was a lot of chatter in the chat room, so, I guess people can find you in there, and we can get a few more questions.
 There were lots of questions, and we just didn't have enough time, but thank you so much for joining us.
 It was great to have you here.
 She's asleep. She's melted into a puddle!
 
-**Diane:**
+**Diane:**  
 Say bye to your new friend.
 
-**Pilar:**
+**Pilar:**  
 See you both. Thank you for joining us.
 
-**Diane:**
+**Diane:**  
 Thanks so much!

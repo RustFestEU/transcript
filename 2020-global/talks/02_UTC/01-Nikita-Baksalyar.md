@@ -1,14 +1,14 @@
 **Learnable Programming with Rust**
 
-**Bard:**
-Nikita makes Rust interactive
-so if learning it is your directive
-you won't need to fight
-to see what's inside
+**Bard:**  
+Nikita makes Rust interactive  
+so if learning it is your directive  
+you won't need to fight  
+to see what's inside  
 to become a debugging detective
 
-**Nikita:**
 
+**Nikita:**  
 Hi, I'm Nikita, and today I'm going to share with you a different approach to writing documentation and educating people about programming in Rust.
 Let's start by dephenotyping the problem.
 

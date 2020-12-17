@@ -77,7 +77,9 @@ I am sorry I didn't make it as accessible as planned. I did find it a struggle t
 
 **Moderator:**  
 Yeah, no, no worries about that. It has a lot of, I say, case studies, so it should be -- to be honest, I need some more time to digest your representation I know. I understand how important actually serialization should be in programming. That I think is quite an important message. I agree. 
->> Yeah, that really is the focus of the talk. If you want to focus on the problem and if people are interested in that kind of thing there is other interesting presentations that you could watch. I would recommend watching data oriented programming by Mike Acton. He talks about a lot of things in the same term so that's interesting. Definitely follow there and fall in line with data oriented programming. There is a lot to learn in that field. 
+
+**Zac:**  
+Yeah, that really is the focus of the talk. If you want to focus on the problem and if people are interested in that kind of thing there is other interesting presentations that you could watch. I would recommend watching data oriented programming by Mike Acton. He talks about a lot of things in the same term so that's interesting. Definitely follow there and fall in line with data oriented programming. There is a lot to learn in that field. 
 
 **Moderator:**  
 We have one question. Is there anything Tree-Buf is bad for? 
