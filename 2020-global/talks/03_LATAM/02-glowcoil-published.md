@@ -1,5 +1,13 @@
 **Ochre: Highly portable GPU accelerated vector graphics**
 
+**Bard:**  
+Glowcoil shows how vectors can act  
+to create a great UI, in fact  
+they are easy to do  
+on a slow GPU  
+and they won't fall together when stacked
+
+**Glowcoil:**  
 Hi, I'm Micah Johnston. I also go by the username glowcoil. Today I'm presenting a project I have been working on called Ochre which is a GPU accelerated vector graphics and text renderer library for Rust. And the primary use case that I've intended Ochre for is UI rendering. So, first, I'm gonna try to answer the question why I'm making a vector graphics render in the first place. So, I wouldn't make the claim that vector graphics is by far the dominant type of representation for graphical content in user interfaces today. We use it for our font formats and as well as emoji. And HTML and CSS are... they basically comprise a vector format and a pretty massive amount of UIs use HTML, CSS and the browser rendering engine today.
 
 And then beyond that, most OS platform UI toolkits and cross platform UI toolkits all use... pretty much use vector graphics at this point. And that's for some important reasons. So, first of all, it's just more space efficient to store the vector form of something than the image form. Especially at higher resolutions. But beyond that, it's a resolution independent format. So, suppose you want your app to run on both a retina MacBook and an older 1080p monitor, if you're using images, you have to export a new image for the retina MacBook, whereas they can be rendered the same on similar pixel densities. That's a powerful benefit. Beyond that, it's just a good toolkit for if you have anything that's layout dependent based on the size of why window or if you're doing something that's a wave form visualizer or    or a line graph in a data visualization program. Vector graphics, it's a really good toolkit for procedural visualizations like that.

@@ -42,7 +42,7 @@ as he breaks apart
 the state of the art  
 to make hashtables and b-trees dance
 
-🞱🞱🞱
+❖
 
 **Nikita** makes Rust interactive  
 so if learning it is your directive  
@@ -86,7 +86,7 @@ to then simulate
 things that art may create  
 and this art does really compute
 
-🞱🞱🞱
+❖
 
 **Stefan** gives us three steps to learn Rust  
 Not saying that follow you must,  
