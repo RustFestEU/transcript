@@ -19,13 +19,13 @@ Thanks!
 
 ### UTC Block
 
-0. [Learnable Programming with Rust](./talks/02_UTC/01-Nikita-Baksalyar.txt) - Nikita Baksalyar
-0. [Build your own (Rust-y) robot!](./talks/02_UTC/02-Aissata-Maiga.txt) - Aïssata Maiga
-0. [Rust for Safer Protocol Development](./talks/02_UTC/03-Vivian-Band.txt) - Vivian Band
-0. [Rust as foundation in a polyglot development environment](./talks/02_UTC/04-Gavin-Mendel-Gleason-and-Matthijs-van-Otterdijk.txt) - Gavin Mendel-Gleason & Matthijs van Otterdijk
-0. [Rust for Artists. Art for Rustaceans.](./talks/02_UTC/05-Anastasia-Opara.txt) - Anastasia Opara
-0. [Miri, Undefined Behavior and Foreign Functions](./talks/02_UTC/06-Christian-Poveda.txt) - Christian Poveda
-0. [RFC: Secret types in Rust](./talks/02_UTC/07-Diane-Hosfelt-and-Daan-Sprenkels.txt) - Diane Hosfelt & Daan Sprenkels
+0. [Learnable Programming with Rust](./talks/02_UTC/01-Nikita-Baksalyar.md) - Nikita Baksalyar
+0. [Build your own (Rust-y) robot!](./talks/02_UTC/02-Aissata-Maiga.md) - Aïssata Maiga
+0. [Rust for Safer Protocol Development](./talks/02_UTC/03-Vivian-Band.md) - Vivian Band
+0. [Rust as foundation in a polyglot development environment](./talks/02_UTC/04-Gavin-Mendel-Gleason-and-Matthijs-van-Otterdijk.md) - Gavin Mendel-Gleason & Matthijs van Otterdijk
+0. [Rust for Artists. Art for Rustaceans.](./talks/02_UTC/05-Anastasia-Opara.md) - Anastasia Opara
+0. [Miri, Undefined Behavior and Foreign Functions](./talks/02_UTC/06-Christian-Poveda.md) - Christian Poveda
+0. [RFC: Secret types in Rust](./talks/02_UTC/07-Diane-Hosfelt-and-Daan-Sprenkels.md) - Diane Hosfelt & Daan Sprenkels
 
 ### LATAM Block
 
