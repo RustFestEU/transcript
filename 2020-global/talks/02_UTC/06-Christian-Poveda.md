@@ -67,10 +67,11 @@ You can use unsafe to access fields of unions.
 Unions are like enumerations, but they don't have the consistent back to distinguish each variant,
 so you can literally join two types in a single one, and use every value of type as any of the possible variance at the same time, so you need unsafe to access those fields.
 
-However, for the purposes of this, we are going to focus on the first two, because those are like the more likely - one of the more demon, likely we've been exposed to this at one point.
-And, the first one is the de-referencing raw pointers is worth discussing at the moment.
+However, for the purposes of this, we are going to focus on the first two, because those are like the more common, most likely any of us has been exposed to one of this at one point.
+And, given that the first one is the de-referencing raw pointers, I think it's worth to discuss raw pointers for a moment.
+
 What are raw pointers?
-Many of you, if you have already used Rust, you know that we have references, we have ampersand mute and sand mutable references, and these are like two brothers or sisters, siblings, whatever.
+Many of you, if you have already used Rust, you know that we have references, we have ampersand, mut and ampersand for mutable and immutable references, but those types has like these two brothers or sisters, siblings, whatever.
 They are called raw pointers.
 We have `*const` and `*mut`, and they exist because they don't follow the same rules as references.
 They don't have this liveness constraints.
@@ -110,14 +111,13 @@ So you can use raw pointers however you want, but the reference then, you have t
 Then we have like the safe counterpoint of this function, so we guarantee that,
 if the index you're reading is out of bounds from the length of this array, then we would return none, and if we are sure that we are in bounds, then we return "some", and then do a `get_unchecked` function.
 
-When you run this, for example, let's say this is a crate in the Rust ecosystem, using crates.io.
+When you run this, for example, let's say this is a crate in the Rust ecosystem, using crates.io and someone else decides to use it.
 They might just do something like this.
-They just import our library, by type, colour function that I didn't show, but it's called zeroes.
-They might need to use unsafe, because they need to go super fast with this thing.
+They just import our library, use this byte array type, all our function that I didn't show, because it's not important for the purposes of this talk, that is called and just creates an array full of zeroes.
+And they might need to use unsafe, because they need to go super fast with this thing.
 They will just use `get_unchecked`, and, if we run this, it returns zero.
 It works as intended.
-Some did you might be asking if you do this, you call this function with a ...
-index.
+Some of you might be asking if you do this, you call this function with a [?] index.
 We will get to that later.
 Yes, that's the demo.
 
@@ -150,49 +150,50 @@ Causing that is also undefined behaviour, and there are lots of rules that need 
 So what happens if you break these rules? Basically, Rust cannot work correctly.
 We lose this guarantee that Rust has that of producing programs that do what we want them to do.
 Rust can no longer compile that program correctly, so what this means is that, in the best case, your program might not run, maybe it pros receives them into a folder, memory out of bounds error, or something like that.
-In that case, it might run, but not as you intended to, so that program might do anything.
-For that reason, it's pretty common to see this kind of psychedelic image with unicorns, and a lot of colourful stuff when people discuss undefined behaviour because when we deal with undefined behaviour, we lose track of what our program is doing in the most basic level.
+But in that worst case, it might run, but not as you intended to, so that program might do anything.
+For that reason, it's pretty common to see this kind of psychedelic image with unicorns, and a lot of colourful stuff when people discuss undefined behaviour because when we are dealing with undefined behaviour, we lose track of what our program is doing in the most basic level.
 We don't even know any more.
-So there is good gnaws for us in the Rust community.
 
-If we are using safe Rust, if we promise never, ever, ever to use unsafe, we don't have to worry about undefined behaviours because undefined behaviours should not be happening inside Rust.
-If you are super sure you're not causing undefined behaviour and you get performance benefits, or you can interact with C libraries correctly, and you've got undefined behaviour, that is also good.
-There are also not such good news, and that is the super important part of our ecosystem.
-If we're not causing undesirable behaviour ourselves, someone else in our dependencies might be doing.
+So there are good news for us, Rust developers, people in the Rust community.
+If we are using safe Rust, if we promise never, ever, ever to use unsafe, we don't have to worry about undefined behaviours because undefined behaviours should not happen in safe Rust.
+Also if you are using unsafe and you are super sure you're not causing undefined behaviour you might actually get performance benefits, or you can interact with C libraries and so on correctly, if you don't cause undefined behaviour, that is also good.
 
-Mere, I have interesting statistics about this.
-24% of all the crates that had in crates.io uses them safe directly.
-And - of those 20% crates, all those crates, 74% of them do unsafe calls to functions that are in the same crate, so our crates using unsafe to Saul function that in the standard library, or, in other crates?
-If you want to get more information about this matrix, you can Google or use your favourite web-search engine to look for this paper about how do programmers use unsafe Rust?
-My point is that unsafe is everywhere, not because people aren't good at doing their job, because we actually need it.
+There are also not such good news, and it's that unsafe is super important part of our ecosystem.
+If we're not causing undesirable behaviour ourselves, someone else in one of our dependencies might be doing.
+Here, I have interesting statistics about this.
+20% of all the crates that are in crates.io use them safe directly.
+And of those 20% crates, all those crates, 74% of them do unsafe calls to functions that aren't in the same crate, so our crates that are using unsafe to call functions that are either in the standard library, or, in other crates?
+If you want to get like more information about this metrics, you can Google or use your favourite web-search engine to look for this paper about how do programmers use unsafe Rust?
+But my point here is that unsafe is everywhere, not because people are not good doing their job, but because we need it, we actually need it.
 It's everywhere.
 
-I also have good news.
-There is a tool that you can use to detect undefined behaviour in our programs, called Miri.
-If you want to take a look at the Miri repository now or later, this is the URL.
-You can find all the coding there.
+And so I also have good news, actually the best news.
+There is a tool that you can use to detect undefined behaviour in your programs. And spoiler, it's in the title of this talk, it's called Miri.
+If you want to take a look at the Miri repository now or  maybe later, this is the URL.
+You can find all the code in github.com/rust-lang/miri.
 
-So, what is Miri? It is a virtual machine for Rust programs.
-Miri doesn't compile your program, it interprets it in the same sense that the JVM interprets the other code, or byte code, or the Python interpreter runs Python, or the ...
+So, what's Miri, actually? Miri is a virtual machine for Rust programs.
+This means that Miri doesn't compile your program, it interprets it in the same sense that the JVM interprets JAVA code, or byte code, or that the Python interpreter runs Python, or the Ruby interpreter runs Ruby.
 Miri is like that but for Rust.
-It has a super cool feature that none of the other interpreters has, and it is that it can detect almost cases of undefined behaviour while running code.
-What is interesting is that am so.
+It has a super cool feature that none of the other interpreters has, and it is that it can detect almost all cases of undefined behaviour while running our code.
+And okay, there is also something interesting and it's that some of the code that's used in Miri is used in the engine that does compile-time function evaluation.
+So...
+If you have any const item in your program, you have a constant, you have a const function - part of the Miri code is used to run... that function or that, or to evaluate that constant.
+So it's pretty common to still hear stuff like "Oh yeah Miri is the constant evaluation for Rust".
+But here we wil be talking as Miri is just the standalone tool, outside the compiler, that can interpret your programs.
 
-Code used in Miri is used in the engine that does compile-time function evaluation, so, if you have any c assistant in your programs, you have a const function, part of the code is used to run.
-It is used to evaluate that scant.
-
-Yes, ...
-but here we are talking as Miri is just a standalone tool outside the compiler that can interpret your programs.
 So how to use Miri? You need the version of the fire to do this.
 You have to install the nightly toolchain.
 You can do this by running the `rustup toolchain install nightly`.
-You can install the component.
-You just have to do rustup - and then, after Miri installs, it takes a while compiling but you can run binaries, you can run your whole program if you want with Miri, or you can run just your test suite if you have a test.
+And then you can install Miri just as a component, so it's the same as installing clippy or rustfmt, or whatever.
+You just have to do `rustup component add miri`.
+And then, after Miri installs, it does some additional stuff, it takes a while compiling but you can run binaries.
+You can run your whole program if you want with Miri, or you can run just your test suite if you have tests.
 
 Let's do a demo with the same code I was showing you before.
-Again, we have these super tiny program using an external crate, let's say.
+Again, we have these super tiny program using an external crate, let's say, that is using unsafe.
 And maybe the person that is writing this program doesn't know about the garden at this time that that crate has to be sure that these functions don't cause undefined behaviour.
-You might be attempted to do something like can I read the 11th precision of an array with ten limits? Who is stopping me? The compiler is not complaining.
+You might be attempted to do something like can I read the 11th precision of an array with ten elements? Who is stopping me? The compiler is not complaining.
 It works.
 It actually returns zero.
 That is a perfectly good value because it returns the same as before.
@@ -316,9 +317,8 @@ Let me show you.
 So here we have another user of our library.
 This time, it is using environment variables to set the size and index it wants to read.
 Miri can emulate an environment inside it, so we can do - we can use the size environment variable to set the size of the array.
-We set the index to 1 bus we want to run that, and we disable the isolation.
-And I'm using a Linux machine.
-I'm going to run it for a target that is windows.
+We set the index to 1 because we want to run that, and we disable the isolation.
+And I'm using a Linux machine, but I'm going to run it for a target that is Windows.
 I don't have Windows installed here.
 And it works.
 
@@ -418,7 +418,7 @@ I don't know what happened with that project.
 **Stefan:**  
 Was this the Python-like thing?
 
-**Christian**:
+**Christian:**  
 No, it was a  little bit different because it didn't run Rust but Miri, you had to write the MIR of your program together with the Rust code.
 
 **Stefan:**  

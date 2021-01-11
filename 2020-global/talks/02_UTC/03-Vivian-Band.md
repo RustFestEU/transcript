@@ -61,50 +61,48 @@ How can they be used for the complex combinators in Rust?
 
 Let's go to the bit string when we were explaining our custom types.
 We can automatically generate this as a wrapper under an unsigned 16-bit integer in a Rust output file easily.
-Immediately after that, we can generate a non-based parser for that type.
+Immediately after that, we can generate a nom-based parser for that type.
 This is a little bit more difficult to generate.
 
 There is a lot going on here, so we will highlight a few key details.
-Our first argument for all our parser function assist an input tuple, a borrowed array of bytes which would be an incoming packet of some source.
-Our parsers work at the bit level so our second tuple level is how many bits we've read in the current bite.
+Our first argument for all our parser functions is an input tuple. The first element of this tuple is a borrowed array of bytes, which for protocol testing would be an incoming packet of some sort.
+Our parsers work at the bit level so the second tuple element is an integer which tracks how many bits we've read in the current byte.
 
-Our second argument is the mutable borrow from the context instance since we might want to  update.- our outputs are non-specific result type containing the remaining bytes left to be parsed, an updated bit counter, instantiated with the correct value read from the bite array.
+Our second argument is a mutable borrow from the context instance since we might want to update this, aw well as we [?]. Our outputs are non-specific result type containing the remaining bytes left to be parsed, an updated bit counter, instantiated with the correct value read from the byte array.
 We also return mutable reference to our possibly updated context.
 
-The parser function itself takes a defined number of bits from the input byte array, this this case, it will take 16 bits.
-It assigns the value of those taken bits to the custom bus type as needed.
+The parser function itself takes a defined number of bits from the input byte array, in this this case, it will take 16 bits, and then assigns the value of those taken bits to the custom Rust type as needed.
 
-The order in which we generate these custom types and parsers in the Rust output file is determined by the search.
-We generate a custom type and parser whenever we reach a leaf node and generate the combinator when there are no more leaf nodes found for that parent.
-The overall protocol data unit is a TCP header which is a struct type in our custom network packet representation system, so this is the root of the depth of the search tree, and will generate the password combinator.
+The order in which we generate these custom types and parsers in the Rust output file is determined by depth-first search.
+We generate a custom type and... We generate a custom type and parser whenever we reach a leaf node and generate a parser combinator for the parent nodes when there are no more leaf nodes found for that parent.
+So let's walk through parsing a TCP header. The overall protocol data unit is a TCP header which is a struct type in our custom network packet representation system. So this is the root of the depth-first search search tree, and will generate the parser combinator for this last, after we generated all the required dependent parsers and parser combinators.
 
-The first parser will be for source port which is a 16-bit long bit string which was the parser we walked through earlier.
-Bit strings are leaf nodes so we move to the next child destination port.
-This also a bit string and therefore a leaf node so we write a custom type in a 16-bit parser for this.
+So the first parser will be for source port. This is a 16 long, 16-bit long bit string, that was the parser that we walked through earlier.
+Bit strings are leaf nodes so we move to the next child of the raw TCP header node, destination port.
+This is also a bit string and therefore a leaf node so we write a custom type and a 16-bit parser for this.
 
-The first non-bit string being counter in TCP header is options which is an array type.
+The first non-bit string we encounter in TCP header is Options, which is an array type.
 The elements which could be present in the options array are TCP options.
 TCP options is an enum type with a limited range of possible choices.
-Each of those enum variants are described in their own small ASCII diagrams in another section of the same document.
+Each of these enum variants are described in their own small ASCII diagrams in another section of the same document.
 This makes each enum variant a struct type in our network packet representation system in this case EOL option is a struct.
 
 The value of the field in this ASCII diagram is a bit string.
-This means we are finally reached the leaf node and we can write a custom Rust-type definition and a custom parser, and a Rust-type definition and a parser for its parent node, EOL option.
+This means we are finally reached the leaf node and we can write a custom Rust-type definition and a nom parser, and a Rust-type definition and a parser for its parent node, EOL option.
 We find that there are more TCP option variants so we repeat this process for each one.
-Once we have written parsers for all of the variants, we can write the Rust type definition and parser combinator for the parent nodes and TCP options.
-The last in the packet is the pay loads which we can parse as a bit string.
+Once we have written parsers for all of the variants, we can write the Rust type definition and parser combinator for the parent nodes, TCP Option, and TCP then Options.
+The last field in the packet is the payload, which we can process relatively easily as a stripped-out bit string.
 
-Finally, we write the Rust-type definition ... in one function call.
+Finally, we write the Rust-type definition for the TCP Header struct, and the parser combinator to process the entire protocol data unit in one function call.
 We also create a context object which all parser functions have access to.
 
-So, to recap the system that we developed in this project, we have the machine-readable protocol document at stage one with our minimal changes to ASCII diagrams and text descriptions.
-We have the custom protocol typing system developed in teenage 2, our network packet representation language, and in stage 3, we have the results of the internship ...
-a Rust library file automatically generated from the information we have in stage 2.
+So, to recap the system that we developed in this project. We have the machine-readable protocol document at stage one with our minimal changes to ASCII diagrams and text descriptions.
+We have the custom protocol typing system developed in stage 2, our network packet representation language. In stage 3, we have the results of my internship work, a Rust library file containing correct, usable parser functions, automatically generated from the information we have in stage 2.
 
-Remember earlier when I mentioned that I think of these basics types and parsers as building blocks? To go further with that analogy as quickly as possible a TCP header is like this Lego block.
-It is difficult to build manually without making mistakes.
+Remember earlier when I mentioned that I think of these basics types and parsers as building blocks? To go further with that analogy a TCP header is a lot like this Lego block dinosaur here.
+It contains many different complex elements, and is difficult to build manually without making mistakes.
 
-Our generated parser libraries are not only a manual explaining how this data should be parsed, they also allow protocol developers to build the struct with extracted values with a single function code.
+Our generated parser libraries are not only a manual explaining how this data should be parsed, they also allow protocol developers to build the struct with extracted values with a single function call.
 This is ideal for protocol testing.
 The picture on the left is a genuine sample of our generated TCP parser code from our modified TCP document.
 

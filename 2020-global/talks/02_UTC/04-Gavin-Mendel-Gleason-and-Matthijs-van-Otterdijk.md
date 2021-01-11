@@ -97,7 +97,7 @@ These include things like, you know, patch application, and squash operations, t
 So these are larger orchestrated - they're not as low-level, so they have logic in them.
 
 We also have done some bulk operations that, for instance, in csc loading has been written completely in Rust as well,
-because, if you have hundreds of thousands of rows in your csv, we get a ten- to 20-times speed-up going from prolog to Rust using the same algorithm because there's some kind of constant time that you can imagine expanding out,
+because, if you have hundreds of thousands of rows in your csv, we get a ten to twenty times speed-up going from prolog to Rust using the same algorithm because there's some kind of constant time that you can imagine expanding out,
 but the cost of these operations,
 and for hundreds of thousands of lines, that becomes a really significant time sink, so csv load has now been moved completely into Rust and we imagine large-scale bulk operations will all have to be moved into Rust eventually.
 

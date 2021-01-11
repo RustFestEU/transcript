@@ -222,7 +222,7 @@ That's it, and thank you again, and it's time for the surprise.
 > want to see me - want to see me riding Rust-y.
 
 
-**Pilar**:  
+**Pilar:**  
 That was incredible! It's so good that you all could not see me during the talk, because it was just me grinning from ear to ear and clapping my hands off! I said I was excited about this talk, but, wow!
 
 Thank you so much, Aïssata. That was an incredible talk, and, yes, like, you mentioned the community at the end, and your love for it, and your being such an integral part of it, at least to me, shows so much, because it's that spirit - like you just held our hand through all of that.

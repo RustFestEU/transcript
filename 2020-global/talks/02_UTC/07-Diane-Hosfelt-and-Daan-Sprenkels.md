@@ -192,7 +192,7 @@ The first one we've got is that this is all very complex.
 And how do you discover these kinds of problems, and how do you even begin to think of a solution?
 Very broad, but I think it would be great to hear your insight on this.
 
-**Diane:**:
+**Diane:**  
 So there are tools that you can use, verification tools, that can determine if on different inputs, there are different runtimes, so that is one of the ways that you can determine is if a program has non-secret independent runtimes. For part of it. Daan?
 
 **Daan:**  

@@ -21,7 +21,7 @@ Let's imagine you're someone new to asynchronous programming in Rust and you wan
 So you go to the Tokio's website, and you see they have really nice tutorials.
 Before you can start experimenting with asynchronous code, you need to follow a number of steps because they have prerequisites.
 You need to set up a new Rust project and then add dependencies through Cargo.
-Then you can take a look at the code provided in this example, and this code connects to our Redis-like server, and sends a key to "hello with value "world" and gets the request with the same key and verifies that it has the expected volume.
+Then you can take a look at the code provided in this example, and this code connects to our Redis-like server, and sends a key to "hello" with value "world" and gets the request with the same key and verifies that it has the expected volume.
 Before you can run this example, you need to make sure that a mini Redis is running on your machine.
 
 Why don't we try including all the necessary dependencies right there on the same page, so that a user can immediately run this code and see the results? This is how it might look.
