@@ -1,0 +1,120 @@
+**The Anatomy of Error Messages**
+
+**Bard:**  
+Sean Chen wants to show the appeal  
+of nicely with errors to deal  
+seeing rustc's example  
+there really are ample  
+suggestions you really should steal
+
+
+**Sean Chen:**  
+Oh, man, those are great. Welcome to my talk titled The Anatomy of Error Messages. So, again, I know they gave a little bit of a recap for me. But just to kind of reiterate a little bit about me. I teach computer science for my day job over Zoom. So, I guess I do this kind of thing a lot. But anyways, a shameless plug. I also produce a podcast called the Humans of Open Source where I talk to people who work in open source software. I talk to a lot of people who... especially who work in had Rust open source. So, if you're interested in kind of hearing any of those discussions, shameless plug for my podcast.
+
+And then, the last piece of kind of relevant information here is I co shepherd the Rust Error Handling Working Group. Where we basically work to lobby and advocate for improving Rust's error handling ecosystem. And this last role was kind of... would help to pose this question for me specifically with... well, this question of like, you know, how are Rust's error messages so helpful, right? For me especially I don't think I would have stuck with Rust as long as I have without Rust's error messages being as kind of helpful and straightforward and unintimidating as they are.
+
+So, I think really these are... Rust's error messages are one of the... I suppose one of its killer features. Even though sometimes I also think they're a little bit... what's the word I'm looking for? They're not given as much credit as... as usual. They're just not in the limelight as much, I suppose. And if I had to go ahead and kind of rank different programming languages kind of on a tier list of the quality of their error messages, I would probably go ahead and do it something like this where I would put Rust in S tier. And I think kind of the only other language that I would also say is kind of in the same class would be Elm. Because I know Elm also... the community there also cares a lot about having their error messages be really helpful and unintimidating. And then kind of everything else going down. Something like this.
+
+By the way, this is just my opinion. And I will also say one thing that I think I've gotten a lot of practice with teaching over Zoom every day is I've gotten really good at imagining that my audience always laughs at my jokes. So, that being all said, the norm here with error messages. Here's an example of a C++ error message. But the norm with error messages for developers, for programmers, is there something we have to decipher, right? We have to figure out how to read them, right? A lot of us have gotten pretty good and gotten a lot of practice with the algorithm in our heads with an error message. There's a set of steps we have to follow. I have to decipher what this is actually saying. Of this is a little bit of, I suppose, an egregious example. But it's not just C++. You see this in lots of other languages as well. Here's a Python example. Doesn't exactly tell you straight up what the problem is, right? You kind of have to look at this and try to figure out what the interpreter is telling you. And then, of course, in JavaScript, I just wanted to bring this one up in particular because you get the infamous undefined is not a function error message that is so unhelpful.
+
+Right. So, the form with a lot of error messages and a lot of different programming language ecosystems is just like they're... they leave a lot to be desired, right? And, again, as programmers, we have to kind of learn to decipher them. And especially for me, as someone who teaches neophyte programmers, like error messages are very intimidating for newcomers. For people trying to get into programming for the first time. And especially even more me. I can remember when I first started to learn programming, which was in JavaScript, that was kind of like my first language that I really tried to learn.
+
+But when an error message popped up, I was just so intimidated that I wouldn't even read it, right? I was just kind of like that overwhelmed by every time I saw an error message. And I would actually just go and poke someone who I thought knew what they were doing and ask them, like, hey, can you decipher this for me because I'm too scared to read it.
+
+all this to say, you don't have perfect error messages in Rust. This is a Rust error message that is a little bit obtuse, also leaves something to be desired. Obviously, there's still work to be done in the Rust ecosystem around Rust error messages, even around Rust C. Most of the time you're going to get something a little bit more sane, a little bit more straightforward. hopefully a little bit less intimidating where, you know, you... where it's very straightforward, right? And it points a lot of helpful ASCII art, here is the offending line, here is the location. Here's what I, Rust C, think is wrong. And here is a good suggested fix.
+
+So, the question that I kind of wanted to pose during this talk is this delta between the best in class error messages and kind of everyone else, I suppose, is... is this like... is this a result of culture within those ecosystems? Or is it a question of technology? And I guess what I mean by that is, is there just some crazy kind of like architecture or technology or algorithmic trick that is going on in like the Rust compiler that makes these error messages possible or makes them easier to be, you know, created when something goes wrong in the compilation process inside of Rust C?
+
+So, you kind of buy this dichotomy that I'm presenting. The nice thing from there is we can kind of go ahead and do a little bit of spelunking inside of Rust C to kind of uncover by process of elimination like is this a question of technology? Or is it a question of culture?
+
+So, to start off, if we can kind of distill down error messages into kind of this nice standard format where up at the top here you can see is what's called the level where it tells you, is this an error? Or it could be a warning or could be a lint, for example. You have the error code. Which you might hear it called like the error index. So, there's like this nice error index documentation kind of classifying the error by this index. You can go ahead and like take this error code if Rust C gives it to you. It doesn't give you an error code for every single error message. But for the ones that it does give you, you can go ahead and take that and basically look that up inside of the error index to get some more context, some more information on this type of error that you're seeing.
+
+And then, of course, you have the main error message, the location, the code in question, all the nice ASCII art that's pointing straight at the code in question. And then notes as well as any sub diagnostics to try to be helpful and provide you with a little bit more context as to what... what the error is in your code. There's in nice kind of standard format. And the type or the structure that deals with this at the end of the day inside of rustc itself is this diagnostic type. And so, again, we can see there's a nice kind of one to one mapping of everything we just saw in that kind of standard error message format.
+
+So, the way error messages are kind of surfaced in rustc. First off, we have to talk a little bit about how Rust C compiles the code and runs it. There's actually multiple phases to which the Rust compiler is running your code. First off is the parsing phase. Takes the source code and needs to go ahead and parse that into some internal representation. That's called the parsing phase. And there are certain types of errors that are caught within the parsing phase. So, we can go ahead and look at an example like this.
+
+Just trying to go ahead and collect some numbers into a vector of unsigned 32 bit integers. If you stare at this code hard enough, you might realize, oh, we need a turbofish. Or we didn't correctly write it in this case. So, we're going ahead and collecting, and we use a turbofish to note what kind of collection we want to collect into. We use a turbofish to that. And we didn't use the correct syntax. Rust C says you forgot the turbofish. My suggestion is to go ahead and add those. At the end of the day, inside the Rust compiler, there's functionality that specifically looks for this case and determines that if this is the case, spits out this error message and determines that is the most relevant error message to fix the code that you're trying to run.
+
+And specifically in the case of this error message, again, it happens during the parsing phase and if we're to kind of follow that trail down into Rust C, we can see that inside of this function, that happens again during parsing, this parse.suffix function, down here, we can see this function here, that's called check turbofish, missing angle brackets. So, A + on the function. And here is the actual body of the function itself. And it's basically checking... it basically tries to... what it tries to do, it actually... it assumes whatever is after the two colons of the... it actually tries to parse that as a valid statement. And if it sees that that is actually a correct expression or an expression that makes sense, then it will go ahead and surface the error of, oh, this makes sense to me if I put in angle brackets, so, that's what the problem is. You didn't put angle brackets in, I'm going to go ahead and suggest that you put those in. This function will also specifically check for a extra leading angle bracket. But interestingly, it won't check for if you have an extra trailing angle bracket. That actually then surfaces a different error message all together.
+
+This is just one example of a type of error that's surfaced during parsing and the thing with when you're actually going ahead and parsing, there's this one data structure that is responsible for the entire parsing phase, which is called the parse session here. And so, we can see kind of up here at this type... at the top of this type here, this span diagnostic is what is kind of responsible for holding on to all of the different error messages or diagnostics, I should say, that crop up during the parsing session specifically.
+
+Other sorts of error messages that can crop up, or I should say different phases of the compilation process where, of course, other errors... other sorts of error messages can crop up. Of course, you have one example here that we'll look at mutability. Right? So, there's a separate phase after parsing when rustc is running through your code that specifically checks for mutability. This actually happens during the phase where rustc is kind of validating the borrow checker rules. I'm not sure why it makes sense that mutability is checked when it's checking the borrow checking rules, but that's how it works.
+
+So, with something like this, we go ahead and initialize a string and then we go ahead and try to insert or basically mutate that string. But we forgot to, of course, denote the string is supposed to be mutable. We forgot in this case, that's exactly what rustc tells us. So, again, there is again a function inside of rustc that specifically handles this error class. And we can find that function here called report mutability error. And again, this happens during the borrow checking phase and I definitely cannot take a screenshot of the entirety of this function. It was something like 434 lines of code. So, it was pretty big.
+
+But, of course, during the borrow checking phase as well, it also checks for lifetimes. And wants to ensure that, you know, you don't dangle any references and all that good stuff that the borrow checker is, of course, famous for. And so, an example like this where we're going ahead and trying to push a couple of references to some vector. But doing that inside of a closure, we go ahead and create those references. And then pushing those references to this vector outside of our closure, that's gonna go ahead and yell at us for saying, hey, these references don't live long enough because they get dropped at the end of this closure.
+
+And then this particular class of error then is handled by this function. Again, with A + naming called report borrowed value does not live long enough. These two errors, again, they're happening in the borrow checking phase which at the end of the day is kind of governed by this borrowed checker context struct which is, again, pretty big. But we can see down here, this errors buffer where it's basically holding on to all of the diagnostics that are created during this particular phase.
+
+So, to step back a little bit and try to make sense of all of these different errors... or different ways in which diagnostics are surfaced, when I was doing research for this talk, one thing that kind of kept... one word that kept kind of cropping up in my head while I was, looking through this stuff and digging through rustc. But the thing that cropped up in my mind, the word that I would kind of attribute all of this to is eagerness. And so, what I mean by that is well, both... we can look at this both in kind of the programming context as well as the more general context of what eagerness means, right? So, if we think of eagerness as a programming context, that's the option of laziness. Which is to say, every chance we get to go ahead and do a thing, we're going to do it. Whereas laziness on the opposite end of the spectrum, we're only going to do a thing at the last minute when we can no longer get away with not doing it anymore.
+
+In the programming context, eagerness is showcased when diagnostics are constructed in rustc. Because it turns out every time something could go wrong as in some kind of diagnostic could be addressing some error in the compilation process, rustc will go ahead and do it. And one of the methods in the diagnostic class is this cancel method. What's actually going on, it's basically, any chance it gets to start creating a diagnostic because something might be going on in the compilation process, it will go ahead and do it. At the end of the day, rustc only wants the relevant errors.
+
+When it is compiling, it sees errors that might not be relevant to the task at hand and might cancel those. We can think of that in the more general sense of what the word "Eager" means. Someone wants to help you, or someone is eager to lend you their support, right? And that's exactly what this makes me think of, right? And so, this goes back to... this speaks to, again, the question that we had coming into this talk which was... was this culture of technology. To me, this really speaks about culture. Right?
+
+Rustc and the developers who worked on rustc, they're all in that way eager to help you. They're eager to provide helpful context, provide helpful errors to make your job, your workflow as a developer easier. If you have to spend less time thinking about deciphering messages, that's more time you can work on the code you are writing. It is culture and technology. I think technology takes a little bit of a backseat. Because at the end of the day, even though all the stuff we just saw going through the code examples, it is... it is cool. And it's probably ingenious in a sense.
+
+But at the end of the day, I don't think it is more complex or more crazy or more ingenious than anything else inside of rustc at the end of day. So, in my mind, it really is a question of culture. And more specifically, I think the culture of the community is what informs the technology that we have going on in this case.
+
+And it's been really interesting as well seeing some other research specifically around kind of like culture and error messages and how the two kind of have this feedback loop. So, one thing I actually found interesting was a research paper done in 2011 by some researchers who looked at racket. I should say they... well, they did a bunch of research on students looking into what is... how helpful better error messages are, basically. And again, the takeaway there, no surprise really, but, you know, better error messages led to a better learning experience and a smoother learning curve for students. New students getting into programming. In this case.
+
+And so, you know, this was done in 2011, but I think really the takeaway of this particular research was, well, you know, it's not a question of technology. The technology is all there to actually make it happen. Really, I think it is just a question of increasing the priority of... or, you know, yeah. Basically... making the error messages a higher priority in your language ecosystem at the end of the day. And Rust early on definitely made that a priority and made that a very... as a very conscious choice on the part of the early Rust Core developers.
+
+To go ahead and look at some other languages, here is a blog post that the creator of Elm, again, kind of the other programming language that I would consider to have S tier error messages. So, Evan wrote a very thorough and useful blog post. Specifically on the same thing. But again, in an Elm context. And the thing they found really interesting from this particular blog post is that he says, I recently took a couple of weeks to really focus on this being... improving the error messages in Elm. And so, you know, he took a couple of weeks, which is to say, like, it... but, yeah, it is a time investment. But it wasn't like an exorbitant time investment. And, you know, really sat down and deliberately thought about how can we make error messages in Elm, you know, really good, really helpful? If you've never seen an Elm error message before, it is in format pretty similar, I would say, to Rust's error messages. They have ASCII art in there as well and color code the error messages to make it as straightforward and unintimidating as possible. Right?
+
+And at the end of the day, doing that really helps new people trying to get into your language. But at the same time, it's also I would say really useful for even seasoned developers working in your language, right? Because, again, it just lowers that overhead, that mental overhead of when you encounter an error message. You don't have to go through all of that mental algorithm to go ahead and decipher what that error message is saying. It's just kind of right there and you can just kind of address it and go on with your day. It's super great. And makes for a much better workflow, I think.
+
+Some other languages I'll also quickly mention like Swift and also TypeScript. These languages are doing some interesting things as well. They're I would say taking a slightly different approach. But that's mostly because Swift and TypeScript both have really nice integrations with IDEs. So, you know, Swift with Xcode and TypeScript with VSCode, there's some really cool IDE stuff they can do there. That's a nice and streamlined way to surface error messages. So, I think... I think I've ranked these in the A tier in my tier list. And I think these two languages in particular are doing... I would say they also have kind of embraced this... this notion of improving the culture around error messages and are doing some cool things there as well.
+
+But ultimately, you know, I think it would be super great as this culture of just trying to be more helpful to developers, trying to be more helpful to new learners of a programming language. As that culture kind of like makes its way into other language ecosystems as well, hopefully eventually we'll get to a point where we have something that looks more like this. And overall at the end of the day, I think that would be super great for everybody.
+
+And yeah. That's my talk. Hope you found that insightful. And just some references as well. In case... so, like the paper I talked about is here as well as Evan's... Evan's blog post that I mentioned as well as the rustc Dev guide. That was definitely the most helpful resource when I was doing research into all of this.
+
+
+**Inaki:**  
+Great. Thank you, Sean.
+
+**Sean:**  
+Yep.
+
+**Inaki:**  
+Quick question. Anything you would change about Rust's diagnostic interface? Diagnostics with a capital D.
+
+**Sean:**  
+I would say I think at this point with kind of the format that it has... it presents in the terminal, right? I think that's probably the best you can do there. Some interesting conversations I've had with people who work on this more, I know they've had some pretty cool ideas such as if, hey, if we had better integrations into some kind of IDE, then we would be able to do some of the things that Swift and TypeScript are doing. I don't know if Rust Analyzer is working on that. But it would be great. It's been great seeing if you go back and look at some of the earlier pull requests for how to improve Rust's error messages. So, like... I was thinking of some names and I'm totally blanking. But anyways. Sorry. There have been some pretty interesting ideas that people... contributors to Rust have kind of thought of before for how to go ahead and improve error handling or error handling in rustc specifically. Like yeah. I couldn't name any off of the top of my head right now. But there's some really interesting ideas there. Some didn't end up gaining traction, unfortunately. But yeah.
+
+**Inaki:**  
+What about any missing error messages? Like either in rustc or Clippy or maybe uploaded from Clippy to rustc? Like, for example, the recent C string pointer lint.
+
+**Sean:**  
+Yeah. That's... that's a little bit... that's a little hard for me to say to be honest. Especially the point about Clippy. Because even though I think it would be interesting to kind of like fold Clippy into rustc, at the same time I do also know there's this very deliberate... there's this very deliberate thing where, you know, a lot of... where the philosophy of Rust is just like we want most things to be in libraries. And not folded directly into the standard library. Or folded into the compiler itself.
+
+So, yeah. I think... I would think the current way it's done right now with Clippy is probably what adheres to that philosophy the best in this case.
+
+**Inaki:**  
+Do you feel that the design decisions of Rust with respect to error locality helps the messages compared to, for example, another language like TypeScript?
+
+**Sean:**  
+Yeah. I think so. I would think so. Sorry. I don't have more to say on that.
+
+**Inaki:**  
+And last question. One second. I had it around here somewhere. If there were one area of improvement when it comes to compiler diagnostics in Rust, what would that be?
+
+**Sean:**  
+As far as compiler diagnostics, again, I feel like those are mostly at a pretty good place. And I say that because I know there's concerted effort that continually goes into working on those. I think maybe where it would be a better or more helpful would actually be to devote more time and attention to improving error messages in libraries. And so, actually some of the stuff that... that we do on the Rust error handling working group is more targeting that specifically. Like disseminating this culture of improving error messages to outside rustc. Because, again, I think even though this was a really cool kind of spelunking tour, for the most part I don't worry too much about the state of error handling in rustc itself. People really care about that in the Core team. I think that's probably in as good a spot as it's going to get.
+
+**Inaki:**  
+Cool. Thank you so much for your talk and your answers.
+
+**Sean:**  
+My pleasure.
+
+**Inaki:**  
+It was really interesting. So...
+
+**Sean:**  
+Yeah. Thank you so much. And thanks so much to everyone who put on this wonderful conference and giving me the opportunity to give this talk. It was great.
+
+**Inaki:**  
+All right.
